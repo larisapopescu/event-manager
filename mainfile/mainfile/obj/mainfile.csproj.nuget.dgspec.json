@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Narcisidk\\RiderProjects\\event-manager\\mainfile\\mainfile\\mainfile.csproj": {}
+    "C:\\Users\\Narcisidk\\Documents\\GitHub\\event-manager\\mainfile\\mainfile\\mainfile.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Narcisidk\\RiderProjects\\event-manager\\mainfile\\mainfile\\mainfile.csproj": {
+    "C:\\Users\\Narcisidk\\Documents\\GitHub\\event-manager\\mainfile\\mainfile\\mainfile.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Narcisidk\\RiderProjects\\event-manager\\mainfile\\mainfile\\mainfile.csproj",
+        "projectUniqueName": "C:\\Users\\Narcisidk\\Documents\\GitHub\\event-manager\\mainfile\\mainfile\\mainfile.csproj",
         "projectName": "mainfile",
-        "projectPath": "C:\\Users\\Narcisidk\\RiderProjects\\event-manager\\mainfile\\mainfile\\mainfile.csproj",
+        "projectPath": "C:\\Users\\Narcisidk\\Documents\\GitHub\\event-manager\\mainfile\\mainfile\\mainfile.csproj",
         "packagesPath": "C:\\Users\\Narcisidk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Narcisidk\\RiderProjects\\event-manager\\mainfile\\mainfile\\obj\\",
+        "outputPath": "C:\\Users\\Narcisidk\\Documents\\GitHub\\event-manager\\mainfile\\mainfile\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Narcisidk\\AppData\\Roaming\\NuGet\\NuGet.Config"
