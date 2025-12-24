@@ -18,7 +18,7 @@ class Program
         Console.Write("Password you wanna hash: ");
         string inputPassword = Console.ReadLine();
         Console.WriteLine($"hashed password: {Hashing.ToSHA256(inputPassword)}");
-        //guid (Global Unique Identifier)
+        //guid (Global Unique Identifier) ok test
         Guid id = Guid.NewGuid();
         Console.WriteLine($"id: {id}");
         
