@@ -15,14 +15,13 @@ class Program
             p.Afisare();
         }
         //hashing passwords
-        Console.Write("Password you wanna hash: ");
+        Console.Write("Password you wanna hash: \n\n");
         string inputPassword = Console.ReadLine();
         Console.WriteLine($"hashed password: {Hashing.ToSHA256(inputPassword)}");
-        //guid (Global Unique Identifier) ok test
-        Guid id = Guid.NewGuid();
-        Console.WriteLine($"id: {id}");
         
-        
+        //Ticket
+        Ticket t = new Ticket("VIP", "You are allowed to enter and sit on a chair if you stay silent", "0", 199.99m);
+        t.Afisare();
         Console.WriteLine("End.");
     }
 }
