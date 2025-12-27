@@ -26,24 +26,30 @@ class Program
         }
         
         //create new user
-        Console.Write("Username: ");
-        string username = Console.ReadLine();
-        Console.Write("Password: ");
-        string password = Console.ReadLine();
-        string hashedPassword=Hashing.ToSHA256(password);
+        Console.Write("Do you want to create a new account?");
+        string createAccount= Console.ReadLine();
+        if (createAccount == "yes")
+        {
+            Console.Write("Username: ");
+            string username = Console.ReadLine();
+            Console.Write("Password: ");
+            string password = Console.ReadLine();
+            string hashedPassword=Hashing.ToSHA256(password);
 
-        Console.Write("Do you want an organizer account? y/n\n");
-        string accountChoice = Console.ReadLine();
-        if (accountChoice == "y")
-        {
-            User newUser=new Organizer(username, hashedPassword);
-            utilizatori.Add(newUser);
+            Console.Write("Do you want an organizer account? y/n\n");
+            string accountChoice = Console.ReadLine();
+            if (accountChoice == "y")
+            {
+                User newUser=new Organizer(username, hashedPassword);
+                utilizatori.Add(newUser);
+            }
+            else
+            {
+                User newUser=new Client(username, hashedPassword);
+                utilizatori.Add(newUser);
+            }
         }
-        else
-        {
-            User newUser=new Client(username, hashedPassword);
-            utilizatori.Add(newUser);
-        }
+        
         
         string updatedJson=JsonSerializer.Serialize(utilizatori, options);
         File.WriteAllText(filePath, updatedJson);
