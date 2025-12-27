@@ -6,12 +6,14 @@ public class Client : User
     {
         
     }
-    //public Client() : base("", "", "Client") 
-    //{
-    //}
+    public Client() : base("", "", "Client") 
+    {
+        
+    }
     
     public override void DisplayMenu()
     {
         throw new NotImplementedException();
     }
+    
 }

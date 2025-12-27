@@ -6,6 +6,10 @@ public class Organizer : User
     {
         
     }
+    public Organizer() : base("", "", "Organizer")
+    {
+        
+    }
     public override void DisplayMenu()
     {
         throw new NotImplementedException();
