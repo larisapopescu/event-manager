@@ -16,5 +16,11 @@
     "Username": "Larisa",
     "Password": "9471291f35cb2c9cdbdc144a1892a07e4c250731b0d532bdadca2b91a0d5a425",
     "Role": "Client"
+  },
+  {
+    "$type": "Organizer",
+    "Username": "eu",
+    "Password": "1f1755dee126b10f4d15456c22962bdee2fa4b2c7cafabd9fa49b75502435afd",
+    "Role": "Organizer"
   }
 ]
