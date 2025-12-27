@@ -1,0 +1,20 @@
+[
+  {
+    "$type": "Client",
+    "Username": "Narcis",
+    "Password": "f249edcbe01df7934d3159385e202a687432e01a2cc2afb36b8af5631b337c96",
+    "Role": "Client"
+  },
+  {
+    "$type": "Client",
+    "Username": "victor",
+    "Password": "635cf416ef23aaf2d7742bf998707300ed9893b81b2fbd7109fe25f2998e08be",
+    "Role": "Client"
+  },
+  {
+    "$type": "Client",
+    "Username": "Larisa",
+    "Password": "9471291f35cb2c9cdbdc144a1892a07e4c250731b0d532bdadca2b91a0d5a425",
+    "Role": "Client"
+  }
+]
