@@ -1,5 +1,7 @@
 ﻿namespace mainfile;
-
+using System.Text.Json.Serialization;
+[JsonDerivedType(typeof(Client), "Client")]
+[JsonDerivedType(typeof(Organizer), "Organizer")]
 public abstract class User
 {
     public string Username { get; set; }

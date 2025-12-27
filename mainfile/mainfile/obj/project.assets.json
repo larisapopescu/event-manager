@@ -8,19 +8,19 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Narcisidk\\.nuget\\packages\\": {}
+    "C:\\Users\\drile\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Narcisidk\\Documents\\GitHub\\event-manager\\mainfile\\mainfile\\mainfile.csproj",
+      "projectUniqueName": "C:\\Users\\drile\\RiderProjects\\event-manager\\mainfile\\mainfile\\mainfile.csproj",
       "projectName": "mainfile",
-      "projectPath": "C:\\Users\\Narcisidk\\Documents\\GitHub\\event-manager\\mainfile\\mainfile\\mainfile.csproj",
-      "packagesPath": "C:\\Users\\Narcisidk\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Narcisidk\\Documents\\GitHub\\event-manager\\mainfile\\mainfile\\obj\\",
+      "projectPath": "C:\\Users\\drile\\RiderProjects\\event-manager\\mainfile\\mainfile\\mainfile.csproj",
+      "packagesPath": "C:\\Users\\drile\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\drile\\RiderProjects\\event-manager\\mainfile\\mainfile\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Narcisidk\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\drile\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -65,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\Narcisidk\\.dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\drile\\.dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
