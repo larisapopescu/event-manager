@@ -22,5 +22,29 @@
     "Username": "eu",
     "Password": "1f1755dee126b10f4d15456c22962bdee2fa4b2c7cafabd9fa49b75502435afd",
     "Role": "Organizer"
+  },
+  {
+    "$type": "Organizer",
+    "Username": "idk123",
+    "Password": "04263944a024c4d9353925279e6b320a4f9f10aeee72f3528d4cff078eaec896",
+    "Role": "Organizer"
+  },
+  {
+    "$type": "Organizer",
+    "Username": "Narcis2",
+    "Password": "a41e2dcabf6eec4a48bbc9e5b8abfaa3c43c43919e03ceec67190fb41f219362",
+    "Role": "Organizer"
+  },
+  {
+    "$type": "Client",
+    "Username": "Narcis",
+    "Password": "c707f9e1be84083489dedef7c356ff4e68f5f2d9029483af202f6080308c53f3",
+    "Role": "Client"
+  },
+  {
+    "$type": "Organizer",
+    "Username": "redbulloilalitroi",
+    "Password": "10c0b559f019327f7ce9dd5d95748e0f45e0f5b88e9e1b7d67cd3919c1935d55",
+    "Role": "Organizer"
   }
 ]
