@@ -1,8 +1,15 @@
 [
   {
     "$type": "Organizer",
+    "CreatedEvents": [],
     "Username": "narcisidk",
     "Password": "60f3ec7768df1ddd251cd7ee9bac73b4df8742ee6472a8100ef3d468d3d31dd9",
     "Role": "Organizer"
+  },
+  {
+    "$type": "Client",
+    "Username": "larisaboss",
+    "Password": "3efbfdce84e06af8a41eeaa4fe4943fd810031e102726710f939c9a5e113a4ad",
+    "Role": "Client"
   }
 ]

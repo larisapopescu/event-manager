@@ -22,8 +22,8 @@ class Program
 
             if (choice == "1")
             {
-                User SessionUser=AuthService.Login(utilizatori);
-                if (SessionUser!=null) SessionUser.DisplayMenu();
+                User sessionUser=AuthService.Login(utilizatori);
+                if (sessionUser!=null) sessionUser.DisplayMenu();
                 else Console.WriteLine("Username or password is incorrect");
             }
             else if (choice == "2")
