@@ -4,9 +4,9 @@ using System.Text.Json.Serialization;
 [JsonDerivedType(typeof(Organizer), "Organizer")]
 public abstract class User
 {
-    public string Username { get; set; }
-    public string Password { get; set; } // hashing function
-    public string Role { get; set; } // Organizer or Client (maybe bool instead of string) 
+    public string Username { get; private set; }
+    public string Password { get; private set; } // hashing function
+    public string Role { get; private set; } // Organizer or Client (maybe bool instead of string) 
 
     public User(string Username, string Password, string Role)
     {

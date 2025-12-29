@@ -2,14 +2,18 @@
 
 public class Organizer : User
 {
+    
     public List<Event> CreatedEvents { get; set; } = new List<Event>();
+    
+    //folosit doar la creare
     public Organizer(string Username, string Password) : base(Username, Password, "Organizer")
     {
-        
+        Console.WriteLine("organizer custom");
     }
-    public Organizer() : base("", "", "Organizer")
+    //folosit doar la deserializare
+    protected Organizer() : base("", "", "Organizer")
     {
-        
+        Console.WriteLine("organizer null");
     }
     //needs rework
     public override void DisplayMenu()

@@ -17,18 +17,34 @@ public static class AuthService
     //register func
     public static void RegisterUser(List<User> Utilizatori, string FilePath, JsonSerializerOptions Options)
     {
-        Console.WriteLine("\nUsername: ");
-        string username = Console.ReadLine();
-        //check if user already exists
-        if (Utilizatori.Any(u => u.Username.Equals(username, StringComparison.OrdinalIgnoreCase)))
+        string username =" ";
+        while (true)
         {
-            Console.WriteLine("Username already exists");
-            return;
+            Console.Write("\nUsername: ");
+            username = Console.ReadLine();
+
+            if (string.IsNullOrWhiteSpace(username))
+            {
+                Console.WriteLine("Username is empty");
+            }
+            else if(Utilizatori.Any(u => u.Username.Equals(username, StringComparison.OrdinalIgnoreCase)))
+            {
+                Console.WriteLine("Username is already in use");
+            }
+            else
+            {
+                break;
+            }
         }
+        //check if password is empty or white space
         Console.Write("Password: ");
         string password = Console.ReadLine();
+        while (string.IsNullOrWhiteSpace(password))
+        {
+           Console.WriteLine("Error: password cannot be empty"); 
+           password = Console.ReadLine();
+        }
         string hashedPassword=Hashing.ToSHA256(password);
-        
         Console.Write("Do you want an organizer account? (y/n): ");
         string choice = Console.ReadLine();
         User newUser;

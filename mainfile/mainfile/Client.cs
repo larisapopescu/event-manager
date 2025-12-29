@@ -4,11 +4,11 @@ public class Client : User
 {
     public Client(string Username, string Password) : base(Username, Password, "Client")
     {
-        
+        Console.WriteLine("client Custom");
     }
     public Client() : base("", "", "Client") 
     {
-        
+        Console.WriteLine("Client null");
     }
     //needs to be worked on
     public override void DisplayMenu()
