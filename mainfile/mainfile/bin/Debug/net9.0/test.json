@@ -23,5 +23,12 @@
     "Username": "da",
     "Password": "aa58b21b01d6b8a99c1a5856962dbac36c758a79dc0a77c2e013ce2c39ecdc8a",
     "Role": "Client"
+  },
+  {
+    "$type": "Organizer",
+    "CreatedEvents": [],
+    "Username": "oxi",
+    "Password": "b8ae8ab6d2cecdcc43a0416720440625bcf23980902541a3d88458768ca484ad",
+    "Role": "Organizer"
   }
 ]
