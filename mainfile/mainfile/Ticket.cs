@@ -1,9 +1,8 @@
 ﻿namespace mainfile;
 public class Ticket
 {
-    //this class is hopefully not prone to change anymore
-    //IS sectioned in 2 classes! ticketType and ticket
-    public string TicketId {get; private set;} // is generated using guid (Global Unique Identifier)
+    // ID unic generat automat (GUID) pentru a identifica biletul
+    public string TicketId {get; private set;} 
     public string EventName {get; private set;}
     public string CategoryName {get; private set;}
     public decimal PricePaid {get; private set;}
@@ -11,11 +10,11 @@ public class Ticket
 
     public Ticket(string EventName, string CategoryName, decimal PricePaid)
     {
-        this.TicketId = Guid.NewGuid().ToString();
+        this.TicketId = Guid.NewGuid().ToString(); // Generare ID unic
         this.EventName = EventName;
         this.CategoryName = CategoryName;
         this.PricePaid = PricePaid;
-        this.PurchaseDate = DateTime.Now;
+        this.PurchaseDate = DateTime.Now; // Data curentă
     }
 
     public void Afisare()

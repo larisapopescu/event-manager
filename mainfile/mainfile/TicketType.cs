@@ -1,13 +1,12 @@
-﻿
-namespace mainfile;
+﻿namespace mainfile;
 using System.Text.Json.Serialization;
 
 public class TicketType
 {
     public string CategoryName { get; private set; }
     public decimal Price { get; private set; }
-    public int MaxQuantity { get; private set; }
-    public int SoldCount { get; private set; }
+    public int MaxQuantity { get; private set; } // Stoc total
+    public int SoldCount { get; private set; } // Câte s-au vândut
 
     [JsonConstructor]
     public TicketType(string CategoryName, decimal Price, int MaxQuantity, int SoldCount = 0)
@@ -18,6 +17,7 @@ public class TicketType
         this.SoldCount = SoldCount;
     }
 
+    // Proprietate care verifică rapid dacă mai sunt locuri
     public bool IsAvailable
     {
         get
@@ -26,6 +26,7 @@ public class TicketType
         }
     }
 
+    // Metoda apelată la cumpărare
     public void IncrementSales()
     {
         if (IsAvailable)

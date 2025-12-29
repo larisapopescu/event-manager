@@ -2,16 +2,20 @@
 
 namespace mainfile;
 using System.Text.Json.Serialization;
+
 public class Event
 {
+    // Proprietăți setate ca private set pentru a proteja datele (încapsulare)
     public string EventName { get;private set; }
     public string EventDescription { get;private set; }
     public string EventLocation { get;private set; }
-    public string EventStatus { get; set; } // scheduled, modified or canceled
+    public string EventStatus { get; set; } // Starea: scheduled, modified, canceled
     public DateTime EventDate { get;private set; }
     public int EventCapacity { get;private set; }
     
+    // Lista cu tipurile de bilete disponibile (VIP, Standard)
     public List<TicketType> OptiuniTichete { get; set; } = new List<TicketType>();
+
     [JsonConstructor]
     public Event(string EventName, string EventDescription, string EventLocation, string EventStatus, DateTime EventDate,
         int EventCapacity, List<TicketType> OptiuniTichete)
@@ -25,29 +29,32 @@ public class Event
         this.OptiuniTichete = OptiuniTichete ?? new List<TicketType>();
     }
 
+    // Adaugă o categorie nouă de bilete cu validare de capacitate
     public void AddTicketType(string categoryName, decimal ticketPrice, int quantity)
     {
-        // Calculate the total number of tickets already allocated across all categories
+        // 1. Calculăm câte bilete sunt deja planificate
         int currentlyPlanned = 0;
         foreach (var t in OptiuniTichete)
         {
             currentlyPlanned = currentlyPlanned + t.MaxQuantity;
         }
         
-        //verify that adding this new category won't exceed the event capacity
+        // 2. Verificăm dacă adăugarea noii cantități depășește capacitatea sălii
         if (currentlyPlanned + quantity > EventCapacity)
         {
             throw new Exception("Event Capacity exceeded");
         }
-        //Initialize a new ticket category
+        
+        // 3. Creăm și adăugăm noul tip de bilet
         TicketType newTier=new TicketType(categoryName, ticketPrice, quantity);
-        //add the new category to the event's ticket options
         OptiuniTichete.Add(newTier);
     }
 
+    // Actualizează detaliile evenimentului cu validări stricte
     public void UpdateDetails(string NewName, string NewDescription, string NewLocation, DateTime NewDate,
         int NewCapacity)
     {
+        // Verificăm dacă noua capacitate este suficientă pentru biletele deja create
         int currentlyPlanned = 0;
         foreach (var t in OptiuniTichete)
         {
@@ -58,10 +65,13 @@ public class Event
             throw new Exception($"Cannot reduce capacity to {NewCapacity} you already have {currentlyPlanned} tickets allocated");
         }
         
+        // Actualizăm câmpurile doar dacă nu sunt goale
         if(!string.IsNullOrEmpty(NewName)) EventName = NewName;
         if(!string.IsNullOrEmpty(NewDescription)) EventDescription = NewDescription;
         if(!string.IsNullOrEmpty(NewLocation))EventLocation = NewLocation;
         EventCapacity = NewCapacity;
+        
+        // Validare dată: Nu putem muta evenimentul în trecut
         if (NewDate > DateTime.MinValue)
         {
             if (NewDate < DateTime.Now)
@@ -73,6 +83,7 @@ public class Event
                 EventDate = NewDate;
             }
         }
+        // Dacă se fac modificări, statusul devine automat "Modified"
         EventStatus = "Modified";
     }
 }

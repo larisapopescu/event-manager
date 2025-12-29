@@ -1,14 +1,19 @@
 ﻿namespace mainfile;
 using System.Text.Json.Serialization;
+
 public class Client : User
 {
+    // Portofelul clientului: Lista de bilete cumpărate
     public List<Ticket> Tichetemele { get; set; }=new List<Ticket>();
+    
     [JsonConstructor]
     public Client(string Username, string Password,List<Ticket> Tichetemele) : base(Username, Password, "Client")
     {
+        // Dacă lista este null la citire, inițializăm una goală
         this.Tichetemele = Tichetemele ?? new List<Ticket>();
     }
-    //needs to be worked on
+
+    // Meniul Clientului (urmează a fi implementat complet)
     public override void DisplayMenu()
     {
         bool logout=false;
@@ -23,17 +28,11 @@ public class Client : User
             string choice=Console.ReadLine();
             switch (choice)
             {
-                case "1":
-                    break;
-                case "2":
-                    break;
-                case "3":
-                    break;
-                case "4":
-                    logout = true;
-                    break;
-                default:
-                    break;
+                case "1": break;
+                case "2": break;
+                case "3": break;
+                case "4": logout = true; break;
+                default: break;
             }
         }
     }

@@ -5,7 +5,7 @@ namespace mainfile;
 
 public class Organizer : User
 {
-
+    // Lista de evenimente create de acest organizator specific
     public List<Event> CreatedEvents { get; set; } = new List<Event>();
 
     [JsonConstructor]
@@ -14,7 +14,7 @@ public class Organizer : User
         Console.WriteLine("organizer json");
     }
 
-    //needs rework
+    // Meniul specific Organizatorului
     public override void DisplayMenu()
     {
         bool logout = false;
@@ -32,19 +32,19 @@ public class Organizer : User
             switch (choice)
             {
                 case "1":
-                    ManageEvent();
+                    ManageEvent(); // Sub-meniu pentru CRUD evenimente
                     break;
                 case "2":
-                    ManageTicketTypes();
+                    ManageTicketTypes(); // Adăugare bilete (VIP, Standard etc.)
                     break;
                 case "3":
-                    SalesStatusManagement();
+                    SalesStatusManagement(); // Rapoarte vânzări
                     break;
                 case "4":
-                    ChangeEventStatus();
+                    ChangeEventStatus(); // Anulare/Modificare status
                     break;
                 case "5":
-                    logout = true;
+                    logout = true; // Ieșire din cont
                     break;
                 default:
                     break;
@@ -52,7 +52,7 @@ public class Organizer : User
         }
     }
 
-    //1.manage events menu
+    // Sub-meniu pentru gestionarea evenimentelor (Creare, Modificare, Ștergere)
     private void ManageEvent()
     {
         bool exit = false;
@@ -85,9 +85,11 @@ public class Organizer : User
         }
     }
 
+    // Metoda de creare a unui eveniment nou
     public void CreateEvent()
     {
         Console.WriteLine("Creating Event");
+        // ... (Citire date de la tastatură) ...
         Console.Write("Enter Event name: ");
         string eventName = Console.ReadLine();
         Console.Write("Enter description: ");
@@ -99,12 +101,14 @@ public class Organizer : User
         Console.Write("Enter Capacity: ");
         int.TryParse(Console.ReadLine(), out int capacity);
 
+        // Instanțiere obiect Event și adăugare în listă
         Event newEvent = new Event(eventName, eventDescription, eventLocation, "scheduled",
             date, capacity, new List<TicketType>());
         CreatedEvents.Add(newEvent);
         Console.WriteLine("Event created!");
     }
 
+    // Metoda de modificare a unui eveniment existent
     public void ModifyEvent()
     {
         if (CreatedEvents.Count == 0)
@@ -113,15 +117,18 @@ public class Organizer : User
             return;
         }
 
+        // Afișare listă pentru selecție
         for (int i = 0; i < CreatedEvents.Count; i++)
         {
             Console.WriteLine($"{i + 1}.  {CreatedEvents[i].EventName}");
         }
 
         Console.Write("Enter Event number: ");
+        // Validare input index
         if (int.TryParse(Console.ReadLine(), out int index) && index > 0 && index <= CreatedEvents.Count)
         {
             Event ev = CreatedEvents[index - 1];
+            // ... (Citire noile date) ...
             Console.WriteLine($"editing event {ev.EventName}");
             Console.Write($"Enter new Event name: ");
             string newName = Console.ReadLine();
@@ -137,8 +144,10 @@ public class Organizer : User
             Console.WriteLine($"Event capacity: {ev.EventCapacity}");
             Console.Write("Enter new Capacity: ");
             int.TryParse(Console.ReadLine(), out int newcapacity);
+            
             try
             {
+                // Apelăm metoda din Event pentru a valida regulile de business (ex: data în viitor)
                 ev.UpdateDetails(newName, newDescription, eventLocation, newdate, newcapacity);
                 Console.WriteLine("Event modified!");
             }
@@ -153,6 +162,7 @@ public class Organizer : User
         }
     }
 
+    // Ștergerea unui eveniment
     public void DeleteEvent()
     {
         Console.WriteLine("Deleting Event");
@@ -162,6 +172,7 @@ public class Organizer : User
             return;
         }
 
+        // Afișare evenimente
         for (int i = 0; i < CreatedEvents.Count; i++)
         {
             Console.WriteLine($"{i + 1}.  {CreatedEvents[i].EventName}");
@@ -171,6 +182,8 @@ public class Organizer : User
         if (int.TryParse(Console.ReadLine(), out int index) && index > 0 && index <= CreatedEvents.Count)
         {
             Event ev = CreatedEvents[index - 1];
+            
+            // Verificare critică: Nu ștergem evenimentul dacă s-au vândut deja bilete!
             int totalTicketSold = 0;
             foreach (var t in ev.OptiuniTichete)
             {
@@ -194,6 +207,7 @@ public class Organizer : User
         }
     }
 
+    // Gestionarea tipurilor de bilete (ex: VIP, Standard) pentru un eveniment
     public void ManageTicketTypes()
     {
         if (CreatedEvents.Count == 0)
@@ -203,6 +217,7 @@ public class Organizer : User
         }
 
         Console.Write("\n--- Manage Ticket Types ---");
+        // Listare evenimente
         for (int i = 0; i < CreatedEvents.Count; i++)
         {
             Console.WriteLine($"{i + 1}. {CreatedEvents[i].EventName}");
@@ -216,6 +231,8 @@ public class Organizer : User
             while (!back)
             {
                 Console.WriteLine($"--- Managing tickets for Event {ev.EventName} ---");
+                
+                // Calcul locuri ocupate vs locuri rămase
                 int currentlyAllocated = 0;
                 foreach (var t in ev.OptiuniTichete)
                 {
@@ -231,11 +248,13 @@ public class Organizer : User
                 string choice = Console.ReadLine();
                 if (choice == "1")
                 {
+                    // Validare capacitate înainte de a cere datele
                     if (remaining <= 0)
                     {
                         Console.WriteLine("Error: You can't add more tickets");
                         continue;
                     }
+                    // Citire date bilet
                     Console.WriteLine($"Enter Category name (Eg: VIP, Standard, Early Bird): ");
                     string CategoryName = Console.ReadLine();
                     Console.WriteLine($"Enter Price($): ");
@@ -244,6 +263,7 @@ public class Organizer : User
                     int.TryParse(Console.ReadLine(), out int Quantity);
                     try
                     {
+                        // Încercare adăugare bilet în eveniment
                         ev.AddTicketType(CategoryName, Price, Quantity);
                         Console.WriteLine("Ticket type created!");
                     }
@@ -260,6 +280,7 @@ public class Organizer : User
         }
     }
 
+    // Dashboard pentru vizualizarea vânzărilor și veniturilor
     public void SalesStatusManagement()
     {
         if (CreatedEvents.Count == 0)
@@ -272,6 +293,8 @@ public class Organizer : User
         {
             int totalSold = 0;
             decimal totalRevenue = 0;
+            
+            // Calcul totaluri (bani și cantitate)
             foreach (var t in ev.OptiuniTichete)
             {
                 totalSold += t.SoldCount;
@@ -293,6 +316,7 @@ public class Organizer : User
         }
     }
 
+    // Modificarea stării evenimentului (ex: din Scheduled în Canceled)
     public void ChangeEventStatus()
     {
         if (CreatedEvents.Count == 0)
@@ -301,6 +325,7 @@ public class Organizer : User
             return;
         }
 
+        // Selecție eveniment
         for (int i = 0; i < CreatedEvents.Count; i++)
         {
             Console.WriteLine($"{i + 1}.  {CreatedEvents[i].EventName}");
@@ -320,18 +345,10 @@ public class Organizer : User
             string newStatus = "";
             switch (choice)
             {
-                case "1":
-                    newStatus= "Scheduled";
-                    break;
-                case "2":
-                    newStatus= "Modified";
-                    break;
-                case "3":
-                    newStatus= "Canceled";
-                    break;
-                case "4":
-                    newStatus= "Completed";
-                    break;
+                case "1": newStatus= "Scheduled"; break;
+                case "2": newStatus= "Modified"; break;
+                case "3": newStatus= "Canceled"; break;
+                case "4": newStatus= "Completed"; break;
                 default:
                     Console.WriteLine("Invalid Status selected");
                     return;
@@ -345,4 +362,3 @@ public class Organizer : User
         }
     }
 }
-    
