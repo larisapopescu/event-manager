@@ -1,19 +1,17 @@
-﻿namespace mainfile;
+﻿using System.Text.Json.Serialization;
+
+namespace mainfile;
 
 public class Organizer : User
 {
     
     public List<Event> CreatedEvents { get; set; } = new List<Event>();
     
-    //folosit doar la creare
+    //folosit doar la deserializare
+    [JsonConstructor]
     public Organizer(string Username, string Password) : base(Username, Password, "Organizer")
     {
-        Console.WriteLine("organizer custom");
-    }
-    //folosit doar la deserializare
-    protected Organizer() : base("", "", "Organizer")
-    {
-        Console.WriteLine("organizer null");
+        Console.WriteLine("organizer json");
     }
     //needs rework
     public override void DisplayMenu()

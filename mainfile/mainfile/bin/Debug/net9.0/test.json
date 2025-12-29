@@ -2,42 +2,26 @@
   {
     "$type": "Organizer",
     "CreatedEvents": [],
-    "Username": "narcisidk",
-    "Password": "60f3ec7768df1ddd251cd7ee9bac73b4df8742ee6472a8100ef3d468d3d31dd9",
-    "Role": "Organizer"
-  },
-  {
-    "$type": "Organizer",
-    "CreatedEvents": [],
-    "Username": "oxi",
-    "Password": "aa58b21b01d6b8a99c1a5856962dbac36c758a79dc0a77c2e013ce2c39ecdc8a",
-    "Role": "Organizer"
-  },
-  {
-    "$type": "Organizer",
-    "CreatedEvents": [],
-    "Username": "da",
-    "Password": "aa58b21b01d6b8a99c1a5856962dbac36c758a79dc0a77c2e013ce2c39ecdc8a",
-    "Role": "Organizer"
-  },
-  {
-    "$type": "Organizer",
-    "CreatedEvents": [],
-    "Username": "eus",
-    "Password": "220bf9aa889b37518dcbdad2ac3a678fd71fde7ea519673b2e9c444b5df689b6",
-    "Role": "Organizer"
-  },
-  {
-    "$type": "Organizer",
-    "CreatedEvents": [],
     "Username": "narcis",
-    "Password": "aa58b21b01d6b8a99c1a5856962dbac36c758a79dc0a77c2e013ce2c39ecdc8a",
+    "Password": "a9b46c39b8ebae313f9f39b09868b7bbc592d90ed563fe27f9dce3215d71f192",
     "Role": "Organizer"
   },
   {
     "$type": "Client",
-    "Username": "larisa",
-    "Password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+    "Username": "larisaboss",
+    "Password": "fa43c2953469087aa5fd9dbd58af16298281edf97e48270ce43ed4591f62f415",
+    "Role": "Client"
+  },
+  {
+    "$type": "Client",
+    "Username": "eu",
+    "Password": "aa58b21b01d6b8a99c1a5856962dbac36c758a79dc0a77c2e013ce2c39ecdc8a",
+    "Role": "Client"
+  },
+  {
+    "$type": "Client",
+    "Username": "da",
+    "Password": "aa58b21b01d6b8a99c1a5856962dbac36c758a79dc0a77c2e013ce2c39ecdc8a",
     "Role": "Client"
   }
 ]

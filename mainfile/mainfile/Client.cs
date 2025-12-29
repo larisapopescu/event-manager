@@ -1,14 +1,11 @@
 ﻿namespace mainfile;
-
+using System.Text.Json.Serialization;
 public class Client : User
 {
+    [JsonConstructor]
     public Client(string Username, string Password) : base(Username, Password, "Client")
     {
         Console.WriteLine("client Custom");
-    }
-    public Client() : base("", "", "Client") 
-    {
-        Console.WriteLine("Client null");
     }
     //needs to be worked on
     public override void DisplayMenu()
@@ -39,5 +36,4 @@ public class Client : User
             }
         }
     }
-    
 }

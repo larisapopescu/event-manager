@@ -12,11 +12,12 @@ class Program
         string filePath = "test.json";
         var options = new JsonSerializerOptions()
         {
-            WriteIndented = true
+            WriteIndented = true,
+            PropertyNameCaseInsensitive=true
         };
         //load savedUsers
         List<User> utilizatori=AuthService.LoadUsers(filePath, options);
-
+        
         while (true)
         {
             Console.Write("\n1.Login\n2.Register\n3.Exit\n");
@@ -36,7 +37,6 @@ class Program
             {
                 break;
             }
-            
             
         }
     }
