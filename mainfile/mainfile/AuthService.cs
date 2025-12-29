@@ -20,7 +20,7 @@ public static class AuthService
         string username =" ";
         while (true)
         {
-            Console.Write("\nUsername: ");
+            Console.Write("Username: ");
             username = Console.ReadLine();
 
             if (string.IsNullOrWhiteSpace(username))
