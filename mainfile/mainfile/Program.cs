@@ -1,5 +1,6 @@
 ﻿using System.Text.Json;
 using System.Linq;
+using System.Runtime.InteropServices.JavaScript;
 using System.Security.Cryptography;
 
 namespace mainfile;
@@ -26,7 +27,11 @@ class Program
             if (choice == "1")
             {
                 User sessionUser=AuthService.Login(utilizatori);
-                if (sessionUser!=null) sessionUser.DisplayMenu();
+                if (sessionUser != null)
+                {
+                    sessionUser.DisplayMenu();
+                    AuthService.Save(utilizatori,filePath, options);
+                }
                 else Console.WriteLine("Username or password is incorrect");
             }
             else if (choice == "2")
@@ -37,7 +42,8 @@ class Program
             {
                 break;
             }
-            
         }
+        DateOnly currentDate = DateOnly.FromDateTime(DateTime.Now);
+        Console.WriteLine(currentDate.ToString("dd/MM/yyyy"));
     }
 }

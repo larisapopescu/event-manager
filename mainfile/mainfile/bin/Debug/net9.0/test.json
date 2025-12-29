@@ -1,34 +1,18 @@
 [
   {
     "$type": "Organizer",
-    "CreatedEvents": [],
-    "Username": "narcis",
-    "Password": "a9b46c39b8ebae313f9f39b09868b7bbc592d90ed563fe27f9dce3215d71f192",
-    "Role": "Organizer"
-  },
-  {
-    "$type": "Client",
-    "Username": "larisaboss",
-    "Password": "fa43c2953469087aa5fd9dbd58af16298281edf97e48270ce43ed4591f62f415",
-    "Role": "Client"
-  },
-  {
-    "$type": "Client",
+    "CreatedEvents": [
+      {
+        "EventName": "gratar",
+        "EventDescription": "nu mai vreau mici",
+        "EventLocation": "acasa la raul",
+        "EventStatus": "Modified",
+        "EventDate": "2026-12-30T00:00:00",
+        "EventCapacity": 5
+      }
+    ],
     "Username": "eu",
-    "Password": "aa58b21b01d6b8a99c1a5856962dbac36c758a79dc0a77c2e013ce2c39ecdc8a",
-    "Role": "Client"
-  },
-  {
-    "$type": "Client",
-    "Username": "da",
-    "Password": "aa58b21b01d6b8a99c1a5856962dbac36c758a79dc0a77c2e013ce2c39ecdc8a",
-    "Role": "Client"
-  },
-  {
-    "$type": "Organizer",
-    "CreatedEvents": [],
-    "Username": "oxi",
-    "Password": "b8ae8ab6d2cecdcc43a0416720440625bcf23980902541a3d88458768ca484ad",
+    "Password": "a9b46c39b8ebae313f9f39b09868b7bbc592d90ed563fe27f9dce3215d71f192",
     "Role": "Organizer"
   }
 ]

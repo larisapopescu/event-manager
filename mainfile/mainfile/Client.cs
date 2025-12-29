@@ -2,10 +2,11 @@
 using System.Text.Json.Serialization;
 public class Client : User
 {
+    public List<Ticket> Tichetemele { get; set; }=new List<Ticket>();
     [JsonConstructor]
-    public Client(string Username, string Password) : base(Username, Password, "Client")
+    public Client(string Username, string Password,List<Ticket> Tichetemele) : base(Username, Password, "Client")
     {
-        Console.WriteLine("client Custom");
+        this.Tichetemele = Tichetemele ?? new List<Ticket>();
     }
     //needs to be worked on
     public override void DisplayMenu()

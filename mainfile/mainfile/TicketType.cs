@@ -10,15 +10,15 @@ public class TicketType
     public int SoldCount { get; private set; }
 
     [JsonConstructor]
-    public TicketType(string categoryName, decimal price, int maxQuantity, int soldCount = 0)
+    public TicketType(string CategoryName, decimal Price, int MaxQuantity, int SoldCount = 0)
     {
-        CategoryName = categoryName;
-        Price = price;
-        MaxQuantity = maxQuantity;
-        SoldCount = soldCount;
+        this.CategoryName = CategoryName;
+        this.Price = Price;
+        this.MaxQuantity = MaxQuantity;
+        this.SoldCount = SoldCount;
     }
 
-    public bool isAvailable
+    public bool IsAvailable
     {
         get
         {
@@ -28,7 +28,7 @@ public class TicketType
 
     public void IncrementSales()
     {
-        if (isAvailable)
+        if (IsAvailable)
         {
             SoldCount++;
         }

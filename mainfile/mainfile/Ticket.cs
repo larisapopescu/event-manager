@@ -9,12 +9,12 @@ public class Ticket
     public decimal PricePaid {get; private set;}
     public DateTime PurchaseDate {get; private set;}
 
-    public Ticket(string eventName, string categoryName, decimal pricePaid)
+    public Ticket(string EventName, string CategoryName, decimal PricePaid)
     {
         this.TicketId = Guid.NewGuid().ToString();
-        this.EventName = eventName;
-        this.CategoryName = categoryName;
-        this.PricePaid = pricePaid;
+        this.EventName = EventName;
+        this.CategoryName = CategoryName;
+        this.PricePaid = PricePaid;
         this.PurchaseDate = DateTime.Now;
     }
 
@@ -27,6 +27,4 @@ public class Ticket
         Console.WriteLine($"Price: {PricePaid}");
         Console.WriteLine($"PurchaseDate: {PurchaseDate}");
     }
-    //Guid id = Guid.NewGuid();
-    //Console.WriteLine($"id: {id}");
 }

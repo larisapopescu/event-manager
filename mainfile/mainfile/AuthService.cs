@@ -14,7 +14,8 @@ public static class AuthService
         }
         return new List<User>();
     }
-    //register func
+    
+    //register
     public static void RegisterUser(List<User> Utilizatori, string FilePath, JsonSerializerOptions Options)
     {
         string username =" ";
@@ -54,13 +55,14 @@ public static class AuthService
         }
         else
         {
-            newUser=new Client(username, hashedPassword);
+            newUser=new Client(username, hashedPassword,new List<Ticket>());
         }
         Utilizatori.Add(newUser);
         string json = JsonSerializer.Serialize(Utilizatori, Options);
         File.WriteAllText(FilePath, json);
     }
-    //login func
+    
+    //login
     public static User Login(List<User> Utilizatori)
     {
         Console.Write("Username: ");
@@ -70,8 +72,9 @@ public static class AuthService
         string hp = Hashing.ToSHA256(p);
         return Utilizatori.FirstOrDefault(user => user.Username == u && user.Password == hp);
     }
+    
     //update list
-    private static void Save(List<User> Utilizatori, string FilePath, JsonSerializerOptions Options)
+    public static void Save(List<User> Utilizatori, string FilePath, JsonSerializerOptions Options)
     {
         string json = JsonSerializer.Serialize(Utilizatori, Options);
         File.WriteAllText(FilePath, json);
