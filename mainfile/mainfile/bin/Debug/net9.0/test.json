@@ -6,13 +6,61 @@
         "EventName": "gratar",
         "EventDescription": "nu mai vreau mici",
         "EventLocation": "acasa la raul",
-        "EventStatus": "Modified",
+        "EventStatus": "Completed",
         "EventDate": "2026-12-30T00:00:00",
-        "EventCapacity": 5
+        "EventCapacity": 5,
+        "OptiuniTichete": [
+          {
+            "CategoryName": "VIP",
+            "Price": 50,
+            "MaxQuantity": 2,
+            "SoldCount": 0,
+            "IsAvailable": true
+          },
+          {
+            "CategoryName": "Bere",
+            "Price": 90,
+            "MaxQuantity": 2,
+            "SoldCount": 0,
+            "IsAvailable": true
+          },
+          {
+            "CategoryName": "Intarziat",
+            "Price": 20,
+            "MaxQuantity": 1,
+            "SoldCount": 0,
+            "IsAvailable": true
+          }
+        ]
       }
     ],
     "Username": "eu",
     "Password": "a9b46c39b8ebae313f9f39b09868b7bbc592d90ed563fe27f9dce3215d71f192",
+    "Role": "Organizer"
+  },
+  {
+    "$type": "Organizer",
+    "CreatedEvents": [
+      {
+        "EventName": "party la mine acasa",
+        "EventDescription": "narcis e invitat special",
+        "EventLocation": "la mine acasa duh",
+        "EventStatus": "Modified",
+        "EventDate": "2025-12-30T00:00:00",
+        "EventCapacity": 4,
+        "OptiuniTichete": [
+          {
+            "CategoryName": "dani mocanu",
+            "Price": 50,
+            "MaxQuantity": 2,
+            "SoldCount": 0,
+            "IsAvailable": true
+          }
+        ]
+      }
+    ],
+    "Username": "larisaboss",
+    "Password": "100e4fa6aa8a4de30fc9659a34c88b3c167284d84d9721240c54af7dd06adbc1",
     "Role": "Organizer"
   }
 ]

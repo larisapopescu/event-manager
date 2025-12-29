@@ -43,7 +43,5 @@ class Program
                 break;
             }
         }
-        DateOnly currentDate = DateOnly.FromDateTime(DateTime.Now);
-        Console.WriteLine(currentDate.ToString("dd/MM/yyyy"));
     }
 }
