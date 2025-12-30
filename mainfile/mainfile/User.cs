@@ -18,7 +18,8 @@ public abstract class User
     }
     
     // Metodă abstractă: obligă clasele copil să își definească propriul meniu
-    public abstract void DisplayMenu();
+    public abstract void DisplayMenu(List<Event> evenimente);
+
 
     public void Afisare()
     {

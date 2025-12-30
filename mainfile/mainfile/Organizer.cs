@@ -15,7 +15,7 @@ public class Organizer : User
     }
 
     // Meniul specific Organizatorului
-    public override void DisplayMenu()
+    public override void DisplayMenu(List<Event> evenimente)
     {
         bool logout = false;
         while (!logout)
@@ -104,8 +104,10 @@ public class Organizer : User
         // Instanțiere obiect Event și adăugare în listă
         Event newEvent = new Event(eventName, eventDescription, eventLocation, "scheduled",
             date, capacity, new List<TicketType>());
-        CreatedEvents.Add(newEvent);
-        Console.WriteLine("Event created!");
+        /*CreatedEvents.Add(newEvent); // evenimentul meu (organizer)
+        evenimente.Add(newEvent);    // evenimentul global (toata aplicatia)*/
+
+        Console.WriteLine("Event created successfully!");
     }
 
     // Metoda de modificare a unui eveniment existent

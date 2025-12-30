@@ -14,7 +14,7 @@ public class Client : User
     }
 
     // Meniul Clientului (urmează a fi implementat complet)
-    public override void DisplayMenu()
+    public override void DisplayMenu(List<Event> evenimente)
     {
         bool logout=false;
         while (!logout)

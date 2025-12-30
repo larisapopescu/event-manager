@@ -11,6 +11,7 @@ class Program
     {
         // Calea către fișierul JSON unde stocăm toți utilizatorii
         string filePath = "test.json";
+        string eventsPath = "events.json";
         
         // Configurări pentru JSON: 
         // WriteIndented face fișierul ușor de citit de către oameni.
@@ -23,7 +24,7 @@ class Program
         
         // PAS 1: Încărcăm lista de utilizatori (Clienti și Organizatori) din fișier la pornirea aplicației
         List<User> utilizatori = AuthService.LoadUsers(filePath, options);
-        
+        List<Event> evenimente= EventsStore.LoadEvents(eventsPath, options);// lista evenimente
         // Bucla infinită a meniului principal (Start Menu)
         while (true)
         {
@@ -39,9 +40,10 @@ class Program
                 {
                     // Dacă login-ul reușește, afișăm meniul specific rolului (Client sau Organizator)
                     // Polimorfism: metoda DisplayMenu() corectă este apelată automat
-                    sessionUser.DisplayMenu();
+                    sessionUser.DisplayMenu(evenimente);
                     
                     // După ce utilizatorul face logout (iese din DisplayMenu), salvăm modificările
+                    EventsStore.SaveEvents(evenimente, eventsPath, options);
                     AuthService.Save(utilizatori,filePath, options);
                 }
                 else Console.WriteLine("Username or password is incorrect");
