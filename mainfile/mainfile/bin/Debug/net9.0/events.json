@@ -1,0 +1,33 @@
+[
+  {
+    "EventName": "Craciun",
+    "EventDescription": "masa",
+    "EventLocation": "acasa",
+    "EventStatus": "scheduled",
+    "EventDate": "2025-12-25T00:00:00",
+    "EventCapacity": 10,
+    "OptiuniTichete": [
+      {
+        "CategoryName": "vip",
+        "Price": 200,
+        "MaxQuantity": 5,
+        "SoldCount": 0,
+        "IsAvailable": true
+      },
+      {
+        "CategoryName": "stabdard ",
+        "Price": 20,
+        "MaxQuantity": 3,
+        "SoldCount": 0,
+        "IsAvailable": true
+      },
+      {
+        "CategoryName": "early bird",
+        "Price": 45,
+        "MaxQuantity": 1,
+        "SoldCount": 0,
+        "IsAvailable": true
+      }
+    ]
+  }
+]

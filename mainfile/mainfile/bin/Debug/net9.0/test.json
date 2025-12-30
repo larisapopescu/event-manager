@@ -1,9 +1,34 @@
 [
   {
+    "$type": "Organizer",
+    "CreatedEvents": [
+      {
+        "EventName": "Craciun",
+        "EventDescription": "masa",
+        "EventLocation": "acasa",
+        "EventStatus": "scheduled",
+        "EventDate": "2025-12-25T00:00:00",
+        "EventCapacity": 10,
+        "OptiuniTichete": [
+          {
+            "CategoryName": "vip",
+            "Price": 200,
+            "MaxQuantity": 5,
+            "SoldCount": 0,
+            "IsAvailable": true
+          }
+        ]
+      }
+    ],
+    "Username": "larisaorganizator",
+    "Password": "d39814833b65aad1b71047ded63d4eec9ec628cdc6c7f4b5f8c41762ee811698",
+    "Role": "Organizer"
+  },
+  {
     "$type": "Client",
     "Tichetemele": [],
-    "Username": "larisa",
-    "Password": "56849f011557ef3b6a7b7924942f1c60899b55b8db869a5ef884ef0e07551912",
+    "Username": "larisaclient",
+    "Password": "d39814833b65aad1b71047ded63d4eec9ec628cdc6c7f4b5f8c41762ee811698",
     "Role": "Client"
   }
 ]

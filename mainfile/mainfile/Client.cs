@@ -4,36 +4,292 @@ using System.Text.Json.Serialization;
 public class Client : User
 {
     // Portofelul clientului: Lista de bilete cumpărate
-    public List<Ticket> Tichetemele { get; set; }=new List<Ticket>();
-    
+    public List<Ticket> Tichetemele { get; private set; } = new List<Ticket>();
+
     [JsonConstructor]
-    public Client(string Username, string Password,List<Ticket> Tichetemele) : base(Username, Password, "Client")
+    public Client(string Username, string Password, List<Ticket> Tichetemele) : base(Username, Password, "Client")
     {
         // Dacă lista este null la citire, inițializăm una goală
         this.Tichetemele = Tichetemele ?? new List<Ticket>();
     }
-
+    public void AddTicket(Ticket ticket) // adaug un bilet in lista clientului
+    {
+        Tichetemele.Add(ticket);
+    }
     // Meniul Clientului (urmează a fi implementat complet)
     public override void DisplayMenu(List<Event> evenimente)
     {
-        bool logout=false;
+        bool logout = false;
         while (!logout)
         {
             Console.WriteLine($"\n --- Client MENU: {Username} ---");
             Console.WriteLine("1.Search event");
-            Console.WriteLine("2.Manage own tickets");
-            Console.WriteLine("3.Purchase history");
-            Console.WriteLine("4.Logout");
+            Console.WriteLine("2.Viewing event details");
+            Console.WriteLine("3.Buying tickets");
+            Console.WriteLine("4.Managing personal tickets");
+            Console.WriteLine("5.Purchase history");
+            Console.WriteLine("6.Logout");
             Console.Write("option: ");
-            string choice=Console.ReadLine();
+            string choice = Console.ReadLine();
             switch (choice)
             {
-                case "1": break;
-                case "2": break;
-                case "3": break;
-                case "4": logout = true; break;
-                default: break;
+                case "1":
+                    if (evenimente.Count == 0)
+                    {
+                        Console.WriteLine("No events found");
+                        Console.ReadKey();
+                        break;
+                    }
+
+                    bool found = false;
+                    while (!found)
+                    {
+                        Console.WriteLine("\n------Search events by-------");
+                        Console.WriteLine("1.Enter event's name");
+                        Console.WriteLine("2.Enter event's date");
+                        Console.WriteLine("3.Enter event's location");
+                        Console.WriteLine("4.Enter event's description");
+                        Console.WriteLine("5.Return");
+                        Console.WriteLine("Enter your option :");
+                        string option = Console.ReadLine();
+                        switch (option)
+                        {
+                            case "1":
+                                Console.WriteLine("Enter event's name");
+                                string name = Console.ReadLine();
+                                bool verificare = false;
+                                foreach (var ev in evenimente)
+                                {
+                                    if (ev.EventName != null &&
+                                        ev.EventName.Contains(name ?? "", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        Console.WriteLine(
+                                            $"{ev.EventName} | {ev.EventDate:yyyy-MM-dd} | {ev.EventLocation} | {ev.EventStatus}");
+                                        verificare = true;
+                                    }
+
+                                }
+
+                                if (!verificare)
+                                {
+                                    Console.WriteLine("Invalid event name");
+                                }
+
+                                break;
+                            case "2":
+                                Console.WriteLine("Enter event's date");
+                                string input = Console.ReadLine();
+
+
+                                if (DateTime.TryParse(input, out DateTime date))
+                                {
+                                    foreach (var ev in evenimente)
+                                    {
+                                        if (ev.EventDate.Date == date.Date)
+                                        {
+                                            Console.WriteLine(
+                                                $"{ev.EventName} | {ev.EventDate:yyyy-MM-dd} | {ev.EventLocation} | {ev.EventStatus}");
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Invalid event date");
+                                }
+
+                                break;
+                            case "3":
+                                Console.WriteLine("Enter event's location");
+                                string location = Console.ReadLine();
+                                bool verificare3 = false;
+                                foreach (var ev in evenimente)
+                                {
+                                    if (ev.EventLocation != null && ev.EventLocation.Contains(location ?? "",
+                                            StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        Console.WriteLine(
+                                            $"{ev.EventName} | {ev.EventDate:yyyy-MM-dd} | {ev.EventLocation} | {ev.EventStatus}");
+                                        verificare3 = true;
+                                    }
+
+                                }
+
+                                if (!verificare3)
+                                    Console.WriteLine("Invalid event location");
+
+                                break;
+                            case "4":
+                                Console.WriteLine("Enter event's description");
+                                string description = Console.ReadLine();
+                                bool verificare4 = false;
+                                foreach (var ev in evenimente)
+                                {
+                                    if (ev.EventDescription != null && ev.EventDescription.Contains(description ?? "",
+                                            StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        Console.WriteLine(
+                                            $"{ev.EventName} | {ev.EventDate:yyyy-MM-dd} | {ev.EventLocation} | {ev.EventStatus}");
+                                        verificare4 = true;
+                                    }
+                                }
+
+                                if (!verificare4)
+                                {
+                                    Console.WriteLine("Invalid event description");
+                                }
+
+                                break;
+                            case "5":
+                                found = true;
+                                break;
+                            default:
+                                Console.WriteLine("Invalid option");
+                                break;
+
+                        }
+                    }
+
+                    break;
+                case "2":
+                    if (evenimente.Count == 0)
+                    {
+                        Console.WriteLine("No events found");
+                        Console.ReadKey();
+                        break;
+                    }
+                    Console.WriteLine("\n------Events list ------");//lista de evenimente din care clientul isi alege 
+                    for (int i = 0; i < evenimente.Count; i++)
+                    {
+                        Console.WriteLine($"{i + 1}. {evenimente[i].EventName}");
+                    }
+                    Console.WriteLine("Choose event number");
+                    if (!int.TryParse(Console.ReadLine(), out int index))
+                    {
+                        Console.WriteLine("Invalid number");
+                        break;
+                    }
+                    
+                    if (index < 1 || index > evenimente.Count)
+                    {
+                        Console.WriteLine("Invalid number");
+                    }
+                    Event e =evenimente[index-1];
+                    Console.WriteLine("\n--- Event Details ---");
+                    Console.WriteLine($"Name: {e.EventName}");
+                    Console.WriteLine($"Description: {e.EventDescription}");
+                    Console.WriteLine($"Location: {e.EventLocation}");
+                    Console.WriteLine($"Date: {e.EventDate:yyyy-MM-dd}");
+                    Console.WriteLine($"Status: {e.EventStatus}");
+                    Console.WriteLine($"Capacity: {e.EventCapacity}");
+                    Console.WriteLine("\n----Tickets-----");
+                    if (e.OptiuniTichete == null || e.OptiuniTichete.Count == 0)
+                    {
+                        Console.WriteLine("No ticket is available for this event");
+                    }
+                    else
+                    {
+                        foreach (var t in e.OptiuniTichete)
+                        {
+                            int ramase = t.MaxQuantity - t.SoldCount;
+                            Console.WriteLine($"Category: {t.CategoryName} | Price: {t.Price} | Remaining: {ramase}");
+                        }
+                    }
+                    break;
+                case "3":
+                    if (evenimente.Count == 0)
+                    {
+                        Console.WriteLine("No events found");
+                        Console.ReadKey();
+                        break;
+                    }
+                    Console.WriteLine("\n-----Events list------");
+                    for (int i = 0; i < evenimente.Count; i++)
+                    {
+                        Console.WriteLine($"{i + 1}. {evenimente[i].EventName} | {evenimente[i].EventDate:yyyy-MM-dd} | {evenimente[i].EventLocation} | {evenimente[i].EventStatus}");
+                    }
+                    Console.Write("Choose event number: ");
+                    if (!int.TryParse(Console.ReadLine(), out int eventIndex))
+                    {
+                        Console.WriteLine("Invalid number");
+                        break;
+                    }
+
+                    if (eventIndex < 1 || eventIndex > evenimente.Count)
+                    {
+                        Console.WriteLine("Invalid event number");
+                        break;
+                    }
+
+                    Event e3 = evenimente[eventIndex - 1];
+                    if (e3.EventStatus != null && e3.EventStatus.Equals("canceled", StringComparison.OrdinalIgnoreCase))// in cazul in care e anulat
+                    {
+                        Console.WriteLine("This event is canceled,you cannot buy tickets");
+                        Console.ReadKey();
+                        break;
+                    }
+                    if (e3.OptiuniTichete == null || e3.OptiuniTichete.Count == 0)
+                    {
+                        Console.WriteLine("No ticket is available for this event");
+                    }
+                    Console.WriteLine("\n----Tickets-----");
+                    for (int i = 0; i < e3.OptiuniTichete.Count; i++)
+                    {
+                        var t=e3.OptiuniTichete[i];
+                        int ramase=t.MaxQuantity - t.SoldCount;
+                        Console.WriteLine($"Category: {t.CategoryName} | Price: {t.Price} | Remaining: {ramase}");
+                    }
+                    Console.WriteLine("Choose ticket number");
+                    if (!int.TryParse(Console.ReadLine(), out int typeIndex))
+                    {
+                        Console.WriteLine("Invalid number");
+                        break;
+                    }
+                    if (typeIndex < 1 || typeIndex > e3.OptiuniTichete.Count)
+                    {
+                        Console.WriteLine("Invalid ticket type number");
+                        break;
+                    }
+                    TicketType chosenType = e3.OptiuniTichete[typeIndex - 1];
+                    Console.Write("How many tickets do you want to buy? ");
+                    if (!int.TryParse(Console.ReadLine(), out int cantitate))
+                    {
+                        Console.WriteLine("Invalid quantity.");
+                        break;
+                    }
+                    if (cantitate <= 0)
+                    {
+                        Console.WriteLine("Quantity must be greater than 0.");
+                        break;
+                    }
+                    int ramase3= chosenType.MaxQuantity - chosenType.SoldCount;
+                    if (cantitate > ramase3)
+                    {
+                        Console.WriteLine($"Not enough tickets available. Remaining: {ramase3}");
+                        break;
+                    }
+                    // cumparam qty bilete
+                    try
+                    {
+                        for (int i = 0; i < cantitate; i++)
+                        {
+                            chosenType.IncrementSales(); // creste SoldCount
+                            Ticket newTicket = new Ticket(e3.EventName, chosenType.CategoryName, chosenType.Price);
+                            AddTicket(newTicket);
+                        }
+
+                        Console.WriteLine($" You bought {cantitate} ticket/s");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Purchase failed: {ex.Message}");
+                    }
+                    break;
             }
         }
     }
 }
+
+                                    
+                        
+                        
+                    

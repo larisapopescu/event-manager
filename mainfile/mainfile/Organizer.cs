@@ -32,16 +32,16 @@ public class Organizer : User
             switch (choice)
             {
                 case "1":
-                    ManageEvent(); // Sub-meniu pentru CRUD evenimente
+                    ManageEvent(evenimente); // Sub-meniu pentru CRUD evenimente
                     break;
                 case "2":
-                    ManageTicketTypes(); // Adăugare bilete (VIP, Standard etc.)
+                    ManageTicketTypes(evenimente); // Adăugare bilete (VIP, Standard etc.)
                     break;
                 case "3":
                     SalesStatusManagement(); // Rapoarte vânzări
                     break;
                 case "4":
-                    ChangeEventStatus(); // Anulare/Modificare status
+                    ChangeEventStatus(evenimente); // Anulare/Modificare status
                     break;
                 case "5":
                     logout = true; // Ieșire din cont
@@ -53,7 +53,7 @@ public class Organizer : User
     }
 
     // Sub-meniu pentru gestionarea evenimentelor (Creare, Modificare, Ștergere)
-    private void ManageEvent()
+    private void ManageEvent(List<Event> evenimente)
     {
         bool exit = false;
         while (!exit)
@@ -68,7 +68,7 @@ public class Organizer : User
             switch (choice)
             {
                 case "1":
-                    CreateEvent();
+                    CreateEvent(evenimente);
                     break;
                 case "2":
                     ModifyEvent();
@@ -86,7 +86,7 @@ public class Organizer : User
     }
 
     // Metoda de creare a unui eveniment nou
-    public void CreateEvent()
+    public void CreateEvent(List<Event> evenimente)
     {
         Console.WriteLine("Creating Event");
         // ... (Citire date de la tastatură) ...
@@ -102,10 +102,9 @@ public class Organizer : User
         int.TryParse(Console.ReadLine(), out int capacity);
 
         // Instanțiere obiect Event și adăugare în listă
-        Event newEvent = new Event(eventName, eventDescription, eventLocation, "scheduled",
-            date, capacity, new List<TicketType>());
-        /*CreatedEvents.Add(newEvent); // evenimentul meu (organizer)
-        evenimente.Add(newEvent);    // evenimentul global (toata aplicatia)*/
+        Event newEvent = new Event(eventName, eventDescription, eventLocation, "scheduled", date, capacity, new List<TicketType>());
+        CreatedEvents.Add(newEvent); // evenimentul meu (organizer)
+        evenimente.Add(newEvent);    // evenimentul global (toata aplicatia)
 
         Console.WriteLine("Event created successfully!");
     }
@@ -210,9 +209,9 @@ public class Organizer : User
     }
 
     // Gestionarea tipurilor de bilete (ex: VIP, Standard) pentru un eveniment
-    public void ManageTicketTypes()
+    public void ManageTicketTypes(List<Event> evenimente)
     {
-        if (CreatedEvents.Count == 0)
+        if (evenimente.Count == 0)
         {
             Console.WriteLine("\nNo events created");
             return;
@@ -220,15 +219,15 @@ public class Organizer : User
 
         Console.Write("\n--- Manage Ticket Types ---");
         // Listare evenimente
-        for (int i = 0; i < CreatedEvents.Count; i++)
+        for (int i = 0; i < evenimente.Count; i++)
         {
-            Console.WriteLine($"{i + 1}. {CreatedEvents[i].EventName}");
+            Console.WriteLine($"{i + 1}. {evenimente[i].EventName}");
         }
 
         Console.Write("Enter Event number: ");
-        if (int.TryParse(Console.ReadLine(), out int index) && index > 0 && index <= CreatedEvents.Count)
+        if (int.TryParse(Console.ReadLine(), out int index) && index > 0 && index <= evenimente.Count)
         {
-            Event ev = CreatedEvents[index - 1];
+            Event ev = evenimente[index - 1];
             bool back = false;
             while (!back)
             {
@@ -319,23 +318,23 @@ public class Organizer : User
     }
 
     // Modificarea stării evenimentului (ex: din Scheduled în Canceled)
-    public void ChangeEventStatus()
+    public void ChangeEventStatus(List<Event> evenimente)
     {
-        if (CreatedEvents.Count == 0)
+        if (evenimente.Count == 0)
         {
             Console.WriteLine("No events created");
             return;
         }
 
         // Selecție eveniment
-        for (int i = 0; i < CreatedEvents.Count; i++)
+        for (int i = 0; i < evenimente.Count; i++)
         {
-            Console.WriteLine($"{i + 1}.  {CreatedEvents[i].EventName}");
+            Console.WriteLine($"{i + 1}.  {evenimente[i].EventName}");
         }
         Console.Write("Enter Event number: ");
-        if (int.TryParse(Console.ReadLine(), out int index) && index > 0 && index <= CreatedEvents.Count)
+        if (int.TryParse(Console.ReadLine(), out int index) && index > 0 && index <= evenimente.Count)
         {
-            Event ev = CreatedEvents[index - 1];
+            Event ev = evenimente[index - 1];
             Console.WriteLine($"Current Status: {ev.EventStatus.ToUpper()}");
             Console.WriteLine($"Choose new Status");
             Console.WriteLine("1.Scheduled");

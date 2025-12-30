@@ -14,9 +14,8 @@ public class Event
     public int EventCapacity { get;private set; }
     
     // Lista cu tipurile de bilete disponibile (VIP, Standard)
+    [JsonPropertyName("OptiuniTichete")]
     public List<TicketType> OptiuniTichete { get; set; } = new List<TicketType>();
-
-    [JsonConstructor]
     public Event(string EventName, string EventDescription, string EventLocation, string EventStatus, DateTime EventDate,
         int EventCapacity, List<TicketType> OptiuniTichete)
     {
