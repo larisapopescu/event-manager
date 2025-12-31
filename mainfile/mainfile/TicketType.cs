@@ -38,4 +38,12 @@ public class TicketType
             throw new Exception("All tickets are sold");
         }
     }
+
+    public void DecrementSales()// scadere vanzari
+    {
+        if (SoldCount > 0)
+        {
+            SoldCount--;
+        }
+    }
 }

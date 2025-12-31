@@ -1,5 +1,8 @@
-﻿namespace mainfile;
+﻿using System.Runtime.InteropServices.JavaScript;
+
+namespace mainfile;
 using System.Text.Json.Serialization;
+using System.Linq;
 
 public class Client : User
 {
@@ -16,7 +19,7 @@ public class Client : User
     {
         Tichetemele.Add(ticket);
     }
-    // Meniul Clientului (urmează a fi implementat complet)
+    // Meniul Clientului 
     public override void DisplayMenu(List<Event> evenimente)
     {
         bool logout = false;
@@ -27,8 +30,7 @@ public class Client : User
             Console.WriteLine("2.Viewing event details");
             Console.WriteLine("3.Buying tickets");
             Console.WriteLine("4.Managing personal tickets");
-            Console.WriteLine("5.Purchase history");
-            Console.WriteLine("6.Logout");
+            Console.WriteLine("5.Logout");
             Console.Write("option: ");
             string choice = Console.ReadLine();
             switch (choice)
@@ -42,7 +44,7 @@ public class Client : User
                     }
 
                     bool found = false;
-                    while (!found)
+                    while (!found)// aici un switch ca sa putem cauta un eveniment in functie de ce stim despre el
                     {
                         Console.WriteLine("\n------Search events by-------");
                         Console.WriteLine("1.Enter event's name");
@@ -150,7 +152,7 @@ public class Client : User
                     }
 
                     break;
-                case "2":
+                case "2"://Viewing event details
                     if (evenimente.Count == 0)
                     {
                         Console.WriteLine("No events found");
@@ -195,7 +197,7 @@ public class Client : User
                         }
                     }
                     break;
-                case "3":
+                case "3"://Buying tickets
                     if (evenimente.Count == 0)
                     {
                         Console.WriteLine("No events found");
@@ -205,7 +207,7 @@ public class Client : User
                     Console.WriteLine("\n-----Events list------");
                     for (int i = 0; i < evenimente.Count; i++)
                     {
-                        Console.WriteLine($"{i + 1}. {evenimente[i].EventName} | {evenimente[i].EventDate:yyyy-MM-dd} | {evenimente[i].EventLocation} | {evenimente[i].EventStatus}");
+                        Console.WriteLine($"{i+1}.{evenimente[i].EventName} | {evenimente[i].EventDate:yyyy-MM-dd} | {evenimente[i].EventLocation} | {evenimente[i].EventStatus}");
                     }
                     Console.Write("Choose event number: ");
                     if (!int.TryParse(Console.ReadLine(), out int eventIndex))
@@ -236,7 +238,7 @@ public class Client : User
                     {
                         var t=e3.OptiuniTichete[i];
                         int ramase=t.MaxQuantity - t.SoldCount;
-                        Console.WriteLine($"Category: {t.CategoryName} | Price: {t.Price} | Remaining: {ramase}");
+                        Console.WriteLine($"{i+1}.Category: {t.CategoryName} | Price: {t.Price} | Remaining: {ramase}");
                     }
                     Console.WriteLine("Choose ticket number");
                     if (!int.TryParse(Console.ReadLine(), out int typeIndex))
@@ -267,7 +269,7 @@ public class Client : User
                         Console.WriteLine($"Not enough tickets available. Remaining: {ramase3}");
                         break;
                     }
-                    // cumparam qty bilete
+                    // cumparam cantitate de bilete
                     try
                     {
                         for (int i = 0; i < cantitate; i++)
@@ -283,6 +285,127 @@ public class Client : User
                     {
                         Console.WriteLine($"Purchase failed: {ex.Message}");
                     }
+                    break;
+                case "4":
+                    bool caz4 = false;
+                    while (!caz4)// tot ca la 1 un mic meniu
+                    {
+                        Console.WriteLine("\n----------Managing personal tickets--------");
+                        Console.WriteLine("1.Active tickets");
+                        Console.WriteLine("2.Purchase history");
+                        Console.WriteLine("3.Cancel a ticket");
+                        Console.WriteLine("4.Return");
+                        Console.WriteLine("Choose an option");
+                        string op=Console.ReadLine();
+                        switch (op)
+                        {
+                            case "1":
+                                Console.WriteLine("\n-----------Active tickets----------");
+                                bool verificare = false;
+                                foreach (var t in Tichetemele)
+                                {
+                                    Event E=evenimente.FirstOrDefault(x=> x.EventName==t.EventName);
+                                    if (E != null && E.EventDate.Date >= DateTime.Now.Date)
+                                    {
+                                        Console.WriteLine($"{t.EventName} | {t.CategoryName} | {t.PricePaid} | {t.PurchaseDate} | Ticket ID : {t.TicketId} ");
+                                        verificare = true;
+                                    }
+                                }
+                                if (!verificare)
+                                {
+                                    Console.WriteLine("No available tickets found");
+                                }
+                                break;
+                            case "2":
+                                Console.WriteLine("\n--------History tickets------------");
+                                bool verificare2 = false;
+                                foreach (var t in Tichetemele)
+                                {
+                                    Event e2=evenimente.FirstOrDefault(x=> x.EventName==t.EventName);
+                                    if (e2 != null && e2.EventDate.Date < DateTime.Now.Date)// evenimente trecute "<"
+                                    {
+                                        Console.WriteLine($"{t.EventName} | {t.CategoryName} | {t.PricePaid} | {t.PurchaseDate} | Ticket ID : {t.TicketId} ");
+                                            verificare2 = true;
+                                    }
+                                }
+                                if (!verificare2)
+                                {
+                                    Console.WriteLine("No history available");
+                                }
+                                break;
+                            case "3":
+                                Console.WriteLine("\n-------Cancel ticket----------");
+                                if (Tichetemele.Count == 0)
+                                {
+                                    Console.WriteLine("No tickets available");
+                                }
+                                var activeTickets=new List<Ticket>();
+                                Console.WriteLine("----------Your tikets------");
+                                for (int i = 0; i < Tichetemele.Count; i++)
+                                {
+                                    var t=Tichetemele[i];
+                                    Event ev=evenimente.FirstOrDefault(x=> x.EventName==t.EventName);
+                                    if (ev != null && ev.EventDate.Date >= DateTime.Now.Date) // DACA biletul e activ
+                                    {
+                                        activeTickets.Add(t);
+                                        Console.WriteLine($"{activeTickets.Count}.{t.EventName} | {t.CategoryName} | {t.PricePaid}$ | {ev.EventDate:yyyy-MM-dd}");
+                                    }
+                                }
+                                if (activeTickets.Count == 0)
+                                {
+                                    Console.WriteLine("No tickets available");
+                                    break;
+                                }
+                                Console.WriteLine("Choose a ticket to cancel");
+                                if (!int.TryParse(Console.ReadLine(), out int index3))
+                                {
+                                    Console.WriteLine("Invalid number");
+                                    break;
+                                }
+
+                                if (index3 < 1 || index3 >= Tichetemele.Count)
+                                {
+                                    Console.WriteLine("Invalid number");
+                                    break;
+                                }
+                                Ticket selected=activeTickets[index3-1];
+                                Event evSelected = evenimente.FirstOrDefault(x => x.EventName == selected.EventName);
+                                if (evSelected == null)
+                                {
+                                    Console.WriteLine("Event not found");
+                                    break;
+                                }
+                                // regulile pentru a putea anula un eveniment
+                                if (evSelected != null && evSelected.EventStatus.Equals("Completed", StringComparison.OrdinalIgnoreCase) || evSelected.EventStatus.Equals("Cancelled", StringComparison.OrdinalIgnoreCase))
+                                {
+                                    Console.WriteLine("You cannot cancel tickets for completed/canceled events");// mai sus verificam daca e copleted sau canceld
+                                    Console.ReadKey();
+                                    break;
+                                }
+                                TimeSpan dif=evSelected.EventDate-DateTime.Now;
+                                if (dif.TotalHours < 72)// nu putem anula un eveniment cu mai putin de 72 de ore inainte
+                                {
+                                    Console.WriteLine("You cannot cancel an event less than 72h before");
+                                    Console.ReadKey();
+                                    break;
+                                }
+                                TicketType tichet=evSelected.OptiuniTichete.FirstOrDefault(x=> x.CategoryName == selected.CategoryName);
+                                if (tichet != null)
+                                {
+                                    tichet.DecrementSales();
+                                }
+                                Tichetemele.RemoveAt(index3);// scoatem tichetul din portofel
+                                Console.WriteLine("Ticket canceled successfully!");
+                                Console.ReadKey();
+                                break;
+                            case "4":
+                                caz4 = true;
+                                break;
+                        }
+                    }
+                    break;
+                case "5":
+                    logout = true;
                     break;
             }
         }
