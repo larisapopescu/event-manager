@@ -1,62 +1,75 @@
 [
   {
-    "EventName": "Craciun",
-    "EventDescription": "masa",
-    "EventLocation": "acasa",
-    "EventStatus": "scheduled",
-    "EventDate": "2025-12-25T00:00:00",
+    "EventName": "eveniment1o1",
+    "EventDescription": "testulnr2",
+    "EventLocation": "adsd",
+    "EventStatus": "Modified",
+    "EventDate": "2026-01-01T00:00:00",
     "EventCapacity": 10,
+    "OrganizerUsername": "larisao1",
     "OptiuniTichete": [
       {
+        "CategoryName": "standard",
+        "Price": 10,
+        "MaxQuantity": 8,
+        "SoldCount": 0,
+        "IsAvailable": true
+      },
+      {
         "CategoryName": "vip",
-        "Price": 200,
-        "MaxQuantity": 5,
-        "SoldCount": 0,
-        "IsAvailable": true
-      },
-      {
-        "CategoryName": "stabdard ",
-        "Price": 20,
-        "MaxQuantity": 3,
-        "SoldCount": 0,
-        "IsAvailable": true
-      },
-      {
-        "CategoryName": "early bird",
-        "Price": 45,
-        "MaxQuantity": 1,
+        "Price": 100,
+        "MaxQuantity": 2,
         "SoldCount": 0,
         "IsAvailable": true
       }
     ]
   },
   {
-    "EventName": "Eveniment Caritabil",
-    "EventDescription": "pentru catei",
-    "EventLocation": "Roma",
+    "EventName": "eveniment2o1",
+    "EventDescription": "test",
+    "EventLocation": "sd",
     "EventStatus": "scheduled",
-    "EventDate": "2026-07-20T00:00:00",
-    "EventCapacity": 100,
+    "EventDate": "2026-02-02T00:00:00",
+    "EventCapacity": 10,
+    "OrganizerUsername": "larisao1",
     "OptiuniTichete": [
       {
-        "CategoryName": "standard ",
+        "CategoryName": "standard",
         "Price": 20,
-        "MaxQuantity": 70,
-        "SoldCount": 4,
+        "MaxQuantity": 7,
+        "SoldCount": 3,
         "IsAvailable": true
       },
       {
         "CategoryName": "vip",
-        "Price": 100,
-        "MaxQuantity": 25,
-        "SoldCount": 4,
+        "Price": 245,
+        "MaxQuantity": 3,
+        "SoldCount": 3,
+        "IsAvailable": false
+      }
+    ]
+  },
+  {
+    "EventName": "eveniment3o2",
+    "EventDescription": "test",
+    "EventLocation": "dfgh",
+    "EventStatus": "scheduled",
+    "EventDate": "2026-12-22T00:00:00",
+    "EventCapacity": 20,
+    "OrganizerUsername": "larisao2",
+    "OptiuniTichete": [
+      {
+        "CategoryName": "stabdard",
+        "Price": 23,
+        "MaxQuantity": 12,
+        "SoldCount": 2,
         "IsAvailable": true
       },
       {
-        "CategoryName": "early bird",
-        "Price": 15,
-        "MaxQuantity": 5,
-        "SoldCount": 0,
+        "CategoryName": "vip",
+        "Price": 234,
+        "MaxQuantity": 8,
+        "SoldCount": 2,
         "IsAvailable": true
       }
     ]

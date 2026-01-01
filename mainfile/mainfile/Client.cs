@@ -388,9 +388,21 @@ public class Client : User
                                     break;
                                 }
                                 TimeSpan dif=evSelected.EventDate-DateTime.Now;
-                                if (dif.TotalHours < 72)// nu putem anula un eveniment cu mai putin de 72 de ore inainte
+                                if (dif.TotalHours < 48)// nu putem anula un eveniment cu mai putin de 48 de ore inainte
                                 {
-                                    Console.WriteLine("You cannot cancel an event less than 72h before");
+                                    Console.WriteLine("You cannot cancel an event less than 48h before");
+                                    break;
+                                }
+
+                                if (dif.TotalDays >= 7)
+                                {
+                                    Console.WriteLine("Since you cancelled more than a week before the event, you will receive 100% of the ticket price back the following week");
+                                    break;
+                                }
+
+                                if (dif.TotalDays < 7 && dif.TotalHours > 48)
+                                {
+                                    Console.WriteLine("Since you cancelled less than a week before the event you will receive 50% of the ticket price back the following week ");
                                     break;
                                 }
                                 TicketType tichet=evSelected.OptiuniTichete.FirstOrDefault(x=> x.CategoryName == selected.CategoryName);
