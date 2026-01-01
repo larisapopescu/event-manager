@@ -226,12 +226,18 @@ public class Client : User
                     if (e3.EventStatus != null && e3.EventStatus.Equals("canceled", StringComparison.OrdinalIgnoreCase))// in cazul in care e anulat
                     {
                         Console.WriteLine("This event is canceled,you cannot buy tickets");
-                        Console.ReadKey();
                         break;
                     }
                     if (e3.OptiuniTichete == null || e3.OptiuniTichete.Count == 0)
                     {
                         Console.WriteLine("No ticket is available for this event");
+                        break;
+                    }
+
+                    if (e3.EventDate < DateTime.Now)
+                    {
+                        Console.WriteLine("This event happened, you cannot buy a ticket");// daca deja s a intamplat 
+                        break;
                     }
                     Console.WriteLine("\n----Tickets-----");
                     for (int i = 0; i < e3.OptiuniTichete.Count; i++)
@@ -240,7 +246,7 @@ public class Client : User
                         int ramase=t.MaxQuantity - t.SoldCount;
                         Console.WriteLine($"{i+1}.Category: {t.CategoryName} | Price: {t.Price} | Remaining: {ramase}");
                     }
-                    Console.WriteLine("Choose ticket number");
+                    Console.WriteLine("Choose ticket category number");
                     if (!int.TryParse(Console.ReadLine(), out int typeIndex))
                     {
                         Console.WriteLine("Invalid number");
@@ -275,8 +281,8 @@ public class Client : User
                         for (int i = 0; i < cantitate; i++)
                         {
                             chosenType.IncrementSales(); // creste SoldCount
-                            Ticket newTicket = new Ticket(e3.EventName, chosenType.CategoryName, chosenType.Price);
-                            AddTicket(newTicket);
+                            Ticket biletnou= new Ticket(e3.EventName, chosenType.CategoryName, chosenType.Price);
+                            AddTicket(biletnou);
                         }
 
                         Console.WriteLine($" You bought {cantitate} ticket/s");
@@ -333,7 +339,7 @@ public class Client : User
                                     Console.WriteLine("No history available");
                                 }
                                 break;
-                            case "3":
+                            case "3"://partea de anulare a evenimentului
                                 Console.WriteLine("\n-------Cancel ticket----------");
                                 if (Tichetemele.Count == 0)
                                 {
@@ -379,14 +385,12 @@ public class Client : User
                                 if (evSelected != null && evSelected.EventStatus.Equals("Completed", StringComparison.OrdinalIgnoreCase) || evSelected.EventStatus.Equals("Cancelled", StringComparison.OrdinalIgnoreCase))
                                 {
                                     Console.WriteLine("You cannot cancel tickets for completed/canceled events");// mai sus verificam daca e copleted sau canceld
-                                    Console.ReadKey();
                                     break;
                                 }
                                 TimeSpan dif=evSelected.EventDate-DateTime.Now;
                                 if (dif.TotalHours < 72)// nu putem anula un eveniment cu mai putin de 72 de ore inainte
                                 {
                                     Console.WriteLine("You cannot cancel an event less than 72h before");
-                                    Console.ReadKey();
                                     break;
                                 }
                                 TicketType tichet=evSelected.OptiuniTichete.FirstOrDefault(x=> x.CategoryName == selected.CategoryName);
@@ -396,7 +400,6 @@ public class Client : User
                                 }
                                 Tichetemele.RemoveAt(index3);// scoatem tichetul din portofel
                                 Console.WriteLine("Ticket canceled successfully!");
-                                Console.ReadKey();
                                 break;
                             case "4":
                                 caz4 = true;

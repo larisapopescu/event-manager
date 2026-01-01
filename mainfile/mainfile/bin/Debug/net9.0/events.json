@@ -42,14 +42,14 @@
         "CategoryName": "standard ",
         "Price": 20,
         "MaxQuantity": 70,
-        "SoldCount": 0,
+        "SoldCount": 4,
         "IsAvailable": true
       },
       {
         "CategoryName": "vip",
         "Price": 100,
         "MaxQuantity": 25,
-        "SoldCount": 0,
+        "SoldCount": 4,
         "IsAvailable": true
       },
       {

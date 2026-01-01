@@ -57,7 +57,64 @@
   },
   {
     "$type": "Client",
-    "Tichetemele": [],
+    "Tichetemele": [
+      {
+        "TicketId": "b3b205c3-53ab-49d8-afcf-ee4068feddee",
+        "EventName": "Eveniment Caritabil",
+        "CategoryName": "vip",
+        "PricePaid": 100,
+        "PurchaseDate": "2026-01-01T15:13:48.2781607+02:00"
+      },
+      {
+        "TicketId": "000f2227-c483-4aa2-9668-1be7dfe4f65e",
+        "EventName": "Eveniment Caritabil",
+        "CategoryName": "vip",
+        "PricePaid": 100,
+        "PurchaseDate": "2026-01-01T15:13:48.2901426+02:00"
+      },
+      {
+        "TicketId": "54656801-655a-45d9-bfbc-f48bdce041e1",
+        "EventName": "Eveniment Caritabil",
+        "CategoryName": "vip",
+        "PricePaid": 100,
+        "PurchaseDate": "2026-01-01T15:13:48.2901523+02:00"
+      },
+      {
+        "TicketId": "36229245-88d7-49a2-9faa-7a0a9eae299c",
+        "EventName": "Eveniment Caritabil",
+        "CategoryName": "vip",
+        "PricePaid": 100,
+        "PurchaseDate": "2026-01-01T15:13:48.2901587+02:00"
+      },
+      {
+        "TicketId": "0858f61f-a584-4015-868f-d0772610a7f9",
+        "EventName": "Eveniment Caritabil",
+        "CategoryName": "standard ",
+        "PricePaid": 20,
+        "PurchaseDate": "2026-01-01T15:14:13.6148813+02:00"
+      },
+      {
+        "TicketId": "5166c164-7672-4286-9d10-4711f02b05cb",
+        "EventName": "Eveniment Caritabil",
+        "CategoryName": "standard ",
+        "PricePaid": 20,
+        "PurchaseDate": "2026-01-01T15:14:13.6151491+02:00"
+      },
+      {
+        "TicketId": "ae0d1461-b2ee-4987-8881-549d0cc95dd3",
+        "EventName": "Eveniment Caritabil",
+        "CategoryName": "standard ",
+        "PricePaid": 20,
+        "PurchaseDate": "2026-01-01T15:14:13.6151511+02:00"
+      },
+      {
+        "TicketId": "64d766c9-ae96-4b5d-ba68-fb45876a9f50",
+        "EventName": "Eveniment Caritabil",
+        "CategoryName": "standard ",
+        "PricePaid": 20,
+        "PurchaseDate": "2026-01-01T15:14:13.615152+02:00"
+      }
+    ],
     "Username": "larisaclient",
     "Password": "d39814833b65aad1b71047ded63d4eec9ec628cdc6c7f4b5f8c41762ee811698",
     "Role": "Client"
