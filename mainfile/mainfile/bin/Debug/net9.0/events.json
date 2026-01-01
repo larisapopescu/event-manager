@@ -1,0 +1,64 @@
+[
+  {
+    "EventName": "Craciun",
+    "EventDescription": "masa",
+    "EventLocation": "acasa",
+    "EventStatus": "scheduled",
+    "EventDate": "2025-12-25T00:00:00",
+    "EventCapacity": 10,
+    "OptiuniTichete": [
+      {
+        "CategoryName": "vip",
+        "Price": 200,
+        "MaxQuantity": 5,
+        "SoldCount": 0,
+        "IsAvailable": true
+      },
+      {
+        "CategoryName": "stabdard ",
+        "Price": 20,
+        "MaxQuantity": 3,
+        "SoldCount": 0,
+        "IsAvailable": true
+      },
+      {
+        "CategoryName": "early bird",
+        "Price": 45,
+        "MaxQuantity": 1,
+        "SoldCount": 0,
+        "IsAvailable": true
+      }
+    ]
+  },
+  {
+    "EventName": "Eveniment Caritabil",
+    "EventDescription": "pentru catei",
+    "EventLocation": "Roma",
+    "EventStatus": "scheduled",
+    "EventDate": "2026-07-20T00:00:00",
+    "EventCapacity": 100,
+    "OptiuniTichete": [
+      {
+        "CategoryName": "standard ",
+        "Price": 20,
+        "MaxQuantity": 70,
+        "SoldCount": 4,
+        "IsAvailable": true
+      },
+      {
+        "CategoryName": "vip",
+        "Price": 100,
+        "MaxQuantity": 25,
+        "SoldCount": 4,
+        "IsAvailable": true
+      },
+      {
+        "CategoryName": "early bird",
+        "Price": 15,
+        "MaxQuantity": 5,
+        "SoldCount": 0,
+        "IsAvailable": true
+      }
+    ]
+  }
+]

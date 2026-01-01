@@ -1,0 +1,15 @@
+C:\Users\laris\Desktop\event-manager\mainfile\mainfile\bin\Debug\net9.0\mainfile.exe
+C:\Users\laris\Desktop\event-manager\mainfile\mainfile\bin\Debug\net9.0\mainfile.deps.json
+C:\Users\laris\Desktop\event-manager\mainfile\mainfile\bin\Debug\net9.0\mainfile.runtimeconfig.json
+C:\Users\laris\Desktop\event-manager\mainfile\mainfile\bin\Debug\net9.0\mainfile.dll
+C:\Users\laris\Desktop\event-manager\mainfile\mainfile\bin\Debug\net9.0\mainfile.pdb
+C:\Users\laris\Desktop\event-manager\mainfile\mainfile\obj\Debug\net9.0\mainfile.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\laris\Desktop\event-manager\mainfile\mainfile\obj\Debug\net9.0\mainfile.AssemblyInfoInputs.cache
+C:\Users\laris\Desktop\event-manager\mainfile\mainfile\obj\Debug\net9.0\mainfile.AssemblyInfo.cs
+C:\Users\laris\Desktop\event-manager\mainfile\mainfile\obj\Debug\net9.0\mainfile.csproj.CoreCompileInputs.cache
+C:\Users\laris\Desktop\event-manager\mainfile\mainfile\obj\Debug\net9.0\mainfile.sourcelink.json
+C:\Users\laris\Desktop\event-manager\mainfile\mainfile\obj\Debug\net9.0\mainfile.dll
+C:\Users\laris\Desktop\event-manager\mainfile\mainfile\obj\Debug\net9.0\refint\mainfile.dll
+C:\Users\laris\Desktop\event-manager\mainfile\mainfile\obj\Debug\net9.0\mainfile.pdb
+C:\Users\laris\Desktop\event-manager\mainfile\mainfile\obj\Debug\net9.0\mainfile.genruntimeconfig.cache
+C:\Users\laris\Desktop\event-manager\mainfile\mainfile\obj\Debug\net9.0\ref\mainfile.dll
