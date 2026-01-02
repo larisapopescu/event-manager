@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\laris\\Desktop\\event-manager\\mainfile\\mainfile\\mainfile.csproj": {}
+    "C:\\Users\\Denisa\\OneDrive\\Desktop\\ProiectPoo\\mainfile\\mainfile\\mainfile.csproj": {}
   },
   "projects": {
-    "C:\\Users\\laris\\Desktop\\event-manager\\mainfile\\mainfile\\mainfile.csproj": {
+    "C:\\Users\\Denisa\\OneDrive\\Desktop\\ProiectPoo\\mainfile\\mainfile\\mainfile.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\laris\\Desktop\\event-manager\\mainfile\\mainfile\\mainfile.csproj",
+        "projectUniqueName": "C:\\Users\\Denisa\\OneDrive\\Desktop\\ProiectPoo\\mainfile\\mainfile\\mainfile.csproj",
         "projectName": "mainfile",
-        "projectPath": "C:\\Users\\laris\\Desktop\\event-manager\\mainfile\\mainfile\\mainfile.csproj",
-        "packagesPath": "C:\\Users\\laris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\laris\\Desktop\\event-manager\\mainfile\\mainfile\\obj\\",
+        "projectPath": "C:\\Users\\Denisa\\OneDrive\\Desktop\\ProiectPoo\\mainfile\\mainfile\\mainfile.csproj",
+        "packagesPath": "C:\\Users\\Denisa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Denisa\\OneDrive\\Desktop\\ProiectPoo\\mainfile\\mainfile\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\laris\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Denisa\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\laris\\.dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

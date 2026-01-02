@@ -15,78 +15,100 @@
     "$type": "Client",
     "Tichetemele": [
       {
-        "TicketId": "dd73d814-b59a-4a22-a926-008507f7b4a5",
+        "TicketId": "e5c22a2f-cb6e-4db1-b557-97e301b3ea8f",
         "EventName": "eveniment2o1",
         "CategoryName": "vip",
         "PricePaid": 245,
-        "PurchaseDate": "2026-01-01T23:01:15.2464269+02:00"
+        "PurchaseDate": "2026-01-02T18:30:00.9340585+02:00"
       },
       {
-        "TicketId": "8bb97d2b-5d2b-4749-bc73-433458aa3e31",
+        "TicketId": "b566545d-46b8-4a3f-b212-894e91a61f44",
         "EventName": "eveniment2o1",
         "CategoryName": "vip",
         "PricePaid": 245,
-        "PurchaseDate": "2026-01-01T23:01:15.2527085+02:00"
+        "PurchaseDate": "2026-01-02T18:30:00.936316+02:00"
       },
       {
-        "TicketId": "89102330-57f9-4d02-9fcc-27b091bfa7f0",
+        "TicketId": "553084b9-a6bf-43d8-8069-39cb6398a233",
         "EventName": "eveniment2o1",
         "CategoryName": "vip",
         "PricePaid": 245,
-        "PurchaseDate": "2026-01-01T23:01:15.2527191+02:00"
+        "PurchaseDate": "2026-01-02T18:30:00.9363229+02:00"
       },
       {
-        "TicketId": "c1f82db1-2838-47e3-aa39-d9c28fba9a3d",
+        "TicketId": "8c08ac95-1073-4413-a5a0-4020bd4d1e7a",
         "EventName": "eveniment2o1",
         "CategoryName": "standard",
         "PricePaid": 20,
-        "PurchaseDate": "2026-01-01T23:01:15.252726+02:00"
+        "PurchaseDate": "2026-01-02T18:30:00.9363267+02:00"
       },
       {
-        "TicketId": "5134a9c1-a09d-4a07-8bb7-99ae9e8c1cf0",
+        "TicketId": "44e3c266-e9c0-4161-a450-1f3d64fec40f",
         "EventName": "eveniment2o1",
         "CategoryName": "standard",
         "PricePaid": 20,
-        "PurchaseDate": "2026-01-01T23:01:15.2527333+02:00"
+        "PurchaseDate": "2026-01-02T18:30:00.9363301+02:00"
       },
       {
-        "TicketId": "aeaf80e6-bf07-4d8e-ba3e-90c7c05fda33",
+        "TicketId": "c4cc3bab-6c0a-47d9-b4b8-dc820ec714dc",
         "EventName": "eveniment2o1",
         "CategoryName": "standard",
         "PricePaid": 20,
-        "PurchaseDate": "2026-01-01T23:01:15.2527406+02:00"
+        "PurchaseDate": "2026-01-02T18:30:00.9363406+02:00"
       },
       {
-        "TicketId": "1f596e86-ce1d-496b-88e4-c0d3fb20f9e5",
+        "TicketId": "59b1bacd-89d2-4f3d-b0c0-d83aee30a99b",
         "EventName": "eveniment3o2",
         "CategoryName": "stabdard",
         "PricePaid": 23,
-        "PurchaseDate": "2026-01-01T23:01:15.2527473+02:00"
+        "PurchaseDate": "2026-01-02T18:30:00.9363442+02:00"
       },
       {
-        "TicketId": "32df00af-5a9f-4361-a27b-d5a05b75a4cd",
+        "TicketId": "f38cdf2c-8d92-4368-b4f6-3c33dad704ab",
         "EventName": "eveniment3o2",
         "CategoryName": "stabdard",
         "PricePaid": 23,
-        "PurchaseDate": "2026-01-01T23:01:15.2527536+02:00"
+        "PurchaseDate": "2026-01-02T18:30:00.9363478+02:00"
       },
       {
-        "TicketId": "ed94e683-c3fa-477e-a2be-15444ea304bc",
+        "TicketId": "590c134c-ba31-4a8f-bad5-8593648b9d52",
         "EventName": "eveniment3o2",
         "CategoryName": "vip",
         "PricePaid": 234,
-        "PurchaseDate": "2026-01-01T23:01:15.2527627+02:00"
+        "PurchaseDate": "2026-01-02T18:30:00.9363513+02:00"
       },
       {
-        "TicketId": "597de974-4863-42c2-b930-457b9e244d63",
+        "TicketId": "b47d41d6-8812-422a-b5eb-c5edac2785db",
         "EventName": "eveniment3o2",
         "CategoryName": "vip",
         "PricePaid": 234,
-        "PurchaseDate": "2026-01-01T23:01:15.2527692+02:00"
+        "PurchaseDate": "2026-01-02T18:30:00.9363551+02:00"
       }
     ],
     "Username": "larisac",
     "Password": "d39814833b65aad1b71047ded63d4eec9ec628cdc6c7f4b5f8c41762ee811698",
+    "Role": "Client"
+  },
+  {
+    "$type": "Client",
+    "Tichetemele": [
+      {
+        "TicketId": "cfbb7cc3-8c73-4e59-8c7f-488d45667d00",
+        "EventName": "eveniment2o1",
+        "CategoryName": "standard",
+        "PricePaid": 20,
+        "PurchaseDate": "2026-01-02T18:31:05.4293281+02:00"
+      }
+    ],
+    "Username": "DenisaClient",
+    "Password": "cccc7e92bbce7dd167a45ffb09b652a1d39ec4a5529ed21425df4a859e14e586",
+    "Role": "Client"
+  },
+  {
+    "$type": "Client",
+    "Tichetemele": [],
+    "Username": "DenisaA",
+    "Password": "cccc7e92bbce7dd167a45ffb09b652a1d39ec4a5529ed21425df4a859e14e586",
     "Role": "Client"
   }
 ]

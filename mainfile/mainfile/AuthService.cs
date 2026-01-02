@@ -1,25 +1,43 @@
-﻿using System.Text.Json;
+﻿//AuthService.cs
+
+using System.Text.Json;
 
 namespace mainfile;
 
 public static class AuthService
 {
-    // Încarcă datele din fișierul JSON și le transformă în obiecte
-    public static List<User> LoadUsers(string FilePath, JsonSerializerOptions Options)
+    // Încarcă utilizatorii din fișier JSON și le transformă în obiecte
+    public static List<User> LoadUsers(
+        string filePath,
+        JsonSerializerOptions options,
+        ILogger logger)
     {
-        if (File.Exists(FilePath))
+        logger.Info("Se incearcă incarcarea utilizatorilor.");
+
+        if (File.Exists(filePath))
         {
-            string json =File.ReadAllText(FilePath);
+            string json = File.ReadAllText(filePath);
+            
             // Deserializare: Text -> Listă de Useri
-            return JsonSerializer.Deserialize<List<User>>(json, Options) ?? new List<User>();
+            
+            logger.Info("Fisier utilizatori gasit si citit.");
+            return JsonSerializer.Deserialize<List<User>>(json, options) ?? new List<User>();
         }
+
+        logger.Warning("Fisierul de utilizatori nu exista. Se creează listă goala.");
         return new List<User>();
     }
-    
+
     // Logica de înregistrare cont nou
-    public static void RegisterUser(List<User> Utilizatori, string FilePath, JsonSerializerOptions Options)
+    public static void RegisterUser(
+        List<User> utilizatori,
+        string filePath,
+        JsonSerializerOptions options,
+        ILogger logger)
     {
-        string username =" ";
+        logger.Info("Incepe procesul de inregistrare.");
+
+        string username;
         while (true)
         {
             Console.Write("Username: ");
@@ -27,11 +45,16 @@ public static class AuthService
 
             if (string.IsNullOrWhiteSpace(username))
             {
+                logger.Warning("Username gol introdus.");
                 Console.WriteLine("Username is empty");
             }
+            
             // Verificare duplicate: nu putem avea doi useri cu același nume
-            else if(Utilizatori.Any(u => u.Username.Equals(username, StringComparison.OrdinalIgnoreCase)))
+            
+            else if (utilizatori.Any(u =>
+                u.Username.Equals(username, StringComparison.OrdinalIgnoreCase)))
             {
+                logger.Warning("Incercare de username duplicat.");
                 Console.WriteLine("Username is already in use");
             }
             else
@@ -39,13 +62,15 @@ public static class AuthService
                 break;
             }
         }
-        
+
         Console.Write("Password: ");
         string password = Console.ReadLine();
+
         while (string.IsNullOrWhiteSpace(password))
         {
-           Console.WriteLine("Error: password cannot be empty"); 
-           password = Console.ReadLine();
+            logger.Warning("Parola goala introdusa.");
+            Console.WriteLine("Error: password cannot be empty");
+            password = Console.ReadLine();
         }
         
         // Hășuim parola pentru securitate (nu o salvăm text clar)
@@ -53,43 +78,69 @@ public static class AuthService
         
         Console.Write("Do you want an organizer account? (y/n): ");
         string choice = Console.ReadLine();
+
         User newUser;
         
         // Creare instanță în funcție de rolul ales
         if (choice == "y")
         {
-            newUser= new Organizer(username, hashedPassword);
+            logger.Info("Se creeaza cont de Organizer.");
+            newUser = new Organizer(username, hashedPassword);
         }
         else
         {
-            newUser=new Client(username, hashedPassword,new List<Ticket>());
+            logger.Info("Se creeaza cont de Client.");
+            newUser = new Client(username, hashedPassword, new List<Ticket>());
         }
+
+        // Adăugare în listă și salvare imediată în fișie
         
-        // Adăugare în listă și salvare imediată în fișier
-        Utilizatori.Add(newUser);
-        string json = JsonSerializer.Serialize(Utilizatori, Options);
-        File.WriteAllText(FilePath, json);
+        utilizatori.Add(newUser);
+
+        string json = JsonSerializer.Serialize(utilizatori, options);
+        File.WriteAllText(filePath, json);
+
+        logger.Info($"Utilizatorul {username} a fost inregistrat cu succes.");
     }
-    
-    // Logica de login
-    public static User Login(List<User> Utilizatori)
+
+    // Login
+    public static User Login(List<User> utilizatori, ILogger logger)
     {
         Console.Write("Username: ");
         string u = Console.ReadLine();
+
         Console.Write("Password: ");
         string p = Console.ReadLine();
         
         // Hășuim parola introdusă pentru a o compara cu cea stocată
         string hp = Hashing.ToSHA256(p);
-        
+
         // Căutăm utilizatorul care are ȘI username-ul ȘI parola corecte
-        return Utilizatori.FirstOrDefault(user => user.Username == u && user.Password == hp);
+        User user = utilizatori.FirstOrDefault(
+            user => user.Username == u && user.Password == hp);
+
+        if (user != null)
+        {
+            logger.Info($"Login reusit pentru utilizatorul {u}.");
+        }
+        else
+        {
+            logger.Warning($"Login esuat pentru username-ul {u}.");
+        }
+
+        return user;
     }
-    
-    // Metodă generică pentru salvarea listei curente în fișier
-    public static void Save(List<User> Utilizatori, string FilePath, JsonSerializerOptions Options)
+
+    // Metodă generică pentru salvarea listei curente în fișie
+    public static void Save(
+        List<User> utilizatori,
+        string filePath,
+        JsonSerializerOptions options,
+        ILogger logger)
     {
-        string json = JsonSerializer.Serialize(Utilizatori, Options);
-        File.WriteAllText(FilePath, json);
+        string json = JsonSerializer.Serialize(utilizatori, options);
+        File.WriteAllText(filePath, json);
+
+        logger.Info("Lista de utilizatori a fost salvata.");
     }
 }
