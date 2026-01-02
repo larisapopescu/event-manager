@@ -73,5 +73,30 @@
         "IsAvailable": true
       }
     ]
+  },
+  {
+    "EventName": "Rock",
+    "EventDescription": "Fextival Rock",
+    "EventLocation": "Mures",
+    "EventStatus": "Scheduled",
+    "EventDate": "2027-11-21T00:00:00",
+    "EventCapacity": 400,
+    "OrganizerUsername": "DenisaO",
+    "OptiuniTichete": [
+      {
+        "CategoryName": "VIP",
+        "Price": 300,
+        "MaxQuantity": 100,
+        "SoldCount": 2,
+        "IsAvailable": true
+      },
+      {
+        "CategoryName": "Standard",
+        "Price": 100,
+        "MaxQuantity": 300,
+        "SoldCount": 0,
+        "IsAvailable": true
+      }
+    ]
   }
 ]

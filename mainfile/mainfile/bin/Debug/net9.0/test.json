@@ -15,74 +15,74 @@
     "$type": "Client",
     "Tichetemele": [
       {
-        "TicketId": "e5c22a2f-cb6e-4db1-b557-97e301b3ea8f",
+        "TicketId": "9e0cc897-45a1-4cb2-b0c5-9f4370e4d2b3",
         "EventName": "eveniment2o1",
         "CategoryName": "vip",
         "PricePaid": 245,
-        "PurchaseDate": "2026-01-02T18:30:00.9340585+02:00"
+        "PurchaseDate": "2026-01-02T19:57:33.2153358+02:00"
       },
       {
-        "TicketId": "b566545d-46b8-4a3f-b212-894e91a61f44",
+        "TicketId": "7ec76c97-f37e-4a65-a811-2d87ff367f57",
         "EventName": "eveniment2o1",
         "CategoryName": "vip",
         "PricePaid": 245,
-        "PurchaseDate": "2026-01-02T18:30:00.936316+02:00"
+        "PurchaseDate": "2026-01-02T19:57:33.2176657+02:00"
       },
       {
-        "TicketId": "553084b9-a6bf-43d8-8069-39cb6398a233",
+        "TicketId": "68a7a551-8d72-4170-a4ad-e402e843c3c3",
         "EventName": "eveniment2o1",
         "CategoryName": "vip",
         "PricePaid": 245,
-        "PurchaseDate": "2026-01-02T18:30:00.9363229+02:00"
+        "PurchaseDate": "2026-01-02T19:57:33.2176719+02:00"
       },
       {
-        "TicketId": "8c08ac95-1073-4413-a5a0-4020bd4d1e7a",
+        "TicketId": "15e106e2-2830-480b-8dc3-0b05f594cfcc",
         "EventName": "eveniment2o1",
         "CategoryName": "standard",
         "PricePaid": 20,
-        "PurchaseDate": "2026-01-02T18:30:00.9363267+02:00"
+        "PurchaseDate": "2026-01-02T19:57:33.2176757+02:00"
       },
       {
-        "TicketId": "44e3c266-e9c0-4161-a450-1f3d64fec40f",
+        "TicketId": "3fc7fed4-3ea9-4f58-a357-8e160229f914",
         "EventName": "eveniment2o1",
         "CategoryName": "standard",
         "PricePaid": 20,
-        "PurchaseDate": "2026-01-02T18:30:00.9363301+02:00"
+        "PurchaseDate": "2026-01-02T19:57:33.2176792+02:00"
       },
       {
-        "TicketId": "c4cc3bab-6c0a-47d9-b4b8-dc820ec714dc",
+        "TicketId": "ad4cf38f-2329-4463-9c27-26ab77d72ea7",
         "EventName": "eveniment2o1",
         "CategoryName": "standard",
         "PricePaid": 20,
-        "PurchaseDate": "2026-01-02T18:30:00.9363406+02:00"
+        "PurchaseDate": "2026-01-02T19:57:33.2176833+02:00"
       },
       {
-        "TicketId": "59b1bacd-89d2-4f3d-b0c0-d83aee30a99b",
+        "TicketId": "1141fd82-a295-435f-9f07-8c65ad010640",
         "EventName": "eveniment3o2",
         "CategoryName": "stabdard",
         "PricePaid": 23,
-        "PurchaseDate": "2026-01-02T18:30:00.9363442+02:00"
+        "PurchaseDate": "2026-01-02T19:57:33.2176869+02:00"
       },
       {
-        "TicketId": "f38cdf2c-8d92-4368-b4f6-3c33dad704ab",
+        "TicketId": "5aab6124-09d1-4cb7-968f-6e5ca4564228",
         "EventName": "eveniment3o2",
         "CategoryName": "stabdard",
         "PricePaid": 23,
-        "PurchaseDate": "2026-01-02T18:30:00.9363478+02:00"
+        "PurchaseDate": "2026-01-02T19:57:33.217691+02:00"
       },
       {
-        "TicketId": "590c134c-ba31-4a8f-bad5-8593648b9d52",
+        "TicketId": "bd429f70-3646-465e-9530-76e303110fed",
         "EventName": "eveniment3o2",
         "CategoryName": "vip",
         "PricePaid": 234,
-        "PurchaseDate": "2026-01-02T18:30:00.9363513+02:00"
+        "PurchaseDate": "2026-01-02T19:57:33.2176944+02:00"
       },
       {
-        "TicketId": "b47d41d6-8812-422a-b5eb-c5edac2785db",
+        "TicketId": "bb806670-cbf5-4807-ae07-19f5e76c9b09",
         "EventName": "eveniment3o2",
         "CategoryName": "vip",
         "PricePaid": 234,
-        "PurchaseDate": "2026-01-02T18:30:00.9363551+02:00"
+        "PurchaseDate": "2026-01-02T19:57:33.217698+02:00"
       }
     ],
     "Username": "larisac",
@@ -93,11 +93,25 @@
     "$type": "Client",
     "Tichetemele": [
       {
-        "TicketId": "cfbb7cc3-8c73-4e59-8c7f-488d45667d00",
+        "TicketId": "1aa64656-dc2d-4812-8da9-31f5cdb19198",
         "EventName": "eveniment2o1",
         "CategoryName": "standard",
         "PricePaid": 20,
-        "PurchaseDate": "2026-01-02T18:31:05.4293281+02:00"
+        "PurchaseDate": "2026-01-02T19:57:33.2182354+02:00"
+      },
+      {
+        "TicketId": "e80b95a9-00d8-4531-825d-5d588e16b82c",
+        "EventName": "Rock",
+        "CategoryName": "VIP",
+        "PricePaid": 300,
+        "PurchaseDate": "2026-01-02T19:57:33.2182413+02:00"
+      },
+      {
+        "TicketId": "a453510e-7951-46e9-afc0-2fca74fe501d",
+        "EventName": "Rock",
+        "CategoryName": "VIP",
+        "PricePaid": 300,
+        "PurchaseDate": "2026-01-02T19:57:33.2182451+02:00"
       }
     ],
     "Username": "DenisaClient",
@@ -108,6 +122,25 @@
     "$type": "Client",
     "Tichetemele": [],
     "Username": "DenisaA",
+    "Password": "cccc7e92bbce7dd167a45ffb09b652a1d39ec4a5529ed21425df4a859e14e586",
+    "Role": "Client"
+  },
+  {
+    "$type": "Organizer",
+    "Username": "DenisaO",
+    "Password": "cccc7e92bbce7dd167a45ffb09b652a1d39ec4a5529ed21425df4a859e14e586",
+    "Role": "Organizer"
+  },
+  {
+    "$type": "Organizer",
+    "Username": "DenisaO2",
+    "Password": "cccc7e92bbce7dd167a45ffb09b652a1d39ec4a5529ed21425df4a859e14e586",
+    "Role": "Organizer"
+  },
+  {
+    "$type": "Client",
+    "Tichetemele": [],
+    "Username": "DenisaC",
     "Password": "cccc7e92bbce7dd167a45ffb09b652a1d39ec4a5529ed21425df4a859e14e586",
     "Role": "Client"
   }

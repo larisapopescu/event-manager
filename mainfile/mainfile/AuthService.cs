@@ -82,6 +82,13 @@ public static class AuthService
         User newUser;
         
         // Creare instanță în funcție de rolul ales
+        // choice poate sa fie doar y sau n
+        if (choice != "y" || choice != "n")
+        {
+            Console.Write("Do you want an organizer account? (y/n): ");
+            choice = Console.ReadLine(); 
+            
+        }
         if (choice == "y")
         {
             logger.Info("Se creeaza cont de Organizer.");

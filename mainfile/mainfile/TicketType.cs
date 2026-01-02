@@ -1,8 +1,9 @@
 ﻿namespace mainfile;
 using System.Text.Json.Serialization;
-
 public class TicketType
 {
+    private ILogger logger = new ConsoleLogger();
+    
     public string CategoryName { get; private set; }
     public decimal Price { get; private set; }
     public int MaxQuantity { get; private set; } // Stoc total
@@ -15,8 +16,19 @@ public class TicketType
         this.Price = Price;
         this.MaxQuantity = MaxQuantity;
         this.SoldCount = SoldCount;
+        
+        logger.Info($"TicketType created: {CategoryName}, ");
     }
 
+    // Optional: permite setarea loggerului din exterior
+    public void SetLogger(ILogger logger)
+    {
+        if (logger != null)
+        {
+            this.logger = logger;
+        }
+    }
+    
     // Proprietate care verifică rapid dacă mai sunt locuri
     public bool IsAvailable
     {
@@ -32,9 +44,11 @@ public class TicketType
         if (IsAvailable)
         {
             SoldCount++;
+            logger.Info($"Ticket sold for category {CategoryName}.");
         }
         else
         {
+            logger.Error($"No tickets available for category {CategoryName}");
             throw new Exception("All tickets are sold");
         }
     }
@@ -44,6 +58,11 @@ public class TicketType
         if (SoldCount > 0)
         {
             SoldCount--;
+            logger.Info($"Ticket refunded for category {CategoryName}. Sold={SoldCount}/{MaxQuantity}");
+        }
+        else
+        {
+            logger.Error($"No tickets available for category {CategoryName}");
         }
     }
 }

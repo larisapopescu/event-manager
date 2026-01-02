@@ -6,6 +6,7 @@ using System.Text.Json.Serialization;
 [JsonDerivedType(typeof(Organizer), "Organizer")]
 public abstract class User
 {
+    protected ILogger logger = new ConsoleLogger();
     public string Username { get; private set; }
     public string Password { get; private set; } // Aici se stochează hash-ul parolei, nu parola în clar
     public string Role { get; private set; } // Rolul: "Organizer" sau "Client"
@@ -15,6 +16,17 @@ public abstract class User
         this.Username=Username;
         this.Password=Password;
         this.Role=Role;
+        
+        logger.Info($"User created: {Username} with role {Role}");
+    }
+    
+    // Optional: permite setarea loggerului din exterior
+    public void SetLogger(ILogger logger)
+    {
+        if (logger != null)
+        {
+            this.logger = logger;
+        }
     }
     
     // Metodă abstractă: obligă clasele copil să își definească propriul meniu
@@ -23,6 +35,6 @@ public abstract class User
 
     public void Afisare()
     {
-        Console.WriteLine($"You logged in as a {Role}, {Username}!");
+        logger.Info($"You logged in as a {Role}, {Username}!");
     }
 }

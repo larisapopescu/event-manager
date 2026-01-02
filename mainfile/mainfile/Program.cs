@@ -38,6 +38,7 @@ class Program
         while (true)
         {
             Console.Write("\n1.Login\n2.Register\n3.Exit\n");
+            Console.WriteLine();
             string choice = Console.ReadLine();
 
             if (choice == "1")
