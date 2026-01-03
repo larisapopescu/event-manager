@@ -15,74 +15,74 @@
     "$type": "Client",
     "Tichetemele": [
       {
-        "TicketId": "732d2e1f-9921-4fe1-9d34-d7d50744109d",
+        "TicketId": "6986bd9e-bd80-4cae-be6a-4138f137ca77",
         "EventName": "eveniment2o1",
         "CategoryName": "vip",
         "PricePaid": 245,
-        "PurchaseDate": "2026-01-03T03:40:20.2211192+02:00"
+        "PurchaseDate": "2026-01-03T04:46:39.3270792+02:00"
       },
       {
-        "TicketId": "10445094-d67b-43ea-a238-984e259293af",
+        "TicketId": "091485e2-5f46-48a8-aa41-cc0180754f4a",
         "EventName": "eveniment2o1",
         "CategoryName": "vip",
         "PricePaid": 245,
-        "PurchaseDate": "2026-01-03T03:40:20.2233755+02:00"
+        "PurchaseDate": "2026-01-03T04:46:39.329308+02:00"
       },
       {
-        "TicketId": "9f08c334-3951-4793-83ec-dfda05f2d2df",
+        "TicketId": "90632b50-0653-4d86-b2d8-c4b7f9994ae7",
         "EventName": "eveniment2o1",
         "CategoryName": "vip",
         "PricePaid": 245,
-        "PurchaseDate": "2026-01-03T03:40:20.223382+02:00"
+        "PurchaseDate": "2026-01-03T04:46:39.329314+02:00"
       },
       {
-        "TicketId": "7c559f97-7da2-45ce-87da-9b83ec81094b",
+        "TicketId": "b295f1b1-8fa9-419d-aa3f-5ceb00138178",
         "EventName": "eveniment2o1",
         "CategoryName": "standard",
         "PricePaid": 20,
-        "PurchaseDate": "2026-01-03T03:40:20.2233859+02:00"
+        "PurchaseDate": "2026-01-03T04:46:39.3293179+02:00"
       },
       {
-        "TicketId": "8ef1c0e5-ee5e-4836-9e3b-9e19ee125027",
+        "TicketId": "34545b8f-85ff-4c5e-bdf2-c467054199d8",
         "EventName": "eveniment2o1",
         "CategoryName": "standard",
         "PricePaid": 20,
-        "PurchaseDate": "2026-01-03T03:40:20.2233894+02:00"
+        "PurchaseDate": "2026-01-03T04:46:39.3293213+02:00"
       },
       {
-        "TicketId": "50c2c745-15ab-4578-826d-edee1ab17d5b",
+        "TicketId": "6096b475-1d34-4e18-bb89-535b7218b2ce",
         "EventName": "eveniment2o1",
         "CategoryName": "standard",
         "PricePaid": 20,
-        "PurchaseDate": "2026-01-03T03:40:20.2233934+02:00"
+        "PurchaseDate": "2026-01-03T04:46:39.3293252+02:00"
       },
       {
-        "TicketId": "64ae9377-7fb6-437f-b2fb-6fce35b34fa9",
+        "TicketId": "706b6220-90c6-4cea-be31-010042ebcb45",
         "EventName": "eveniment3o2",
         "CategoryName": "stabdard",
         "PricePaid": 23,
-        "PurchaseDate": "2026-01-03T03:40:20.2233975+02:00"
+        "PurchaseDate": "2026-01-03T04:46:39.3293287+02:00"
       },
       {
-        "TicketId": "2d9317dc-0feb-4b2b-a547-54fd3f90fe8d",
+        "TicketId": "630cf362-bc05-4c3d-9802-cdf0a2ecbae0",
         "EventName": "eveniment3o2",
         "CategoryName": "stabdard",
         "PricePaid": 23,
-        "PurchaseDate": "2026-01-03T03:40:20.2234009+02:00"
+        "PurchaseDate": "2026-01-03T04:46:39.3293364+02:00"
       },
       {
-        "TicketId": "20b074b8-4a27-4222-bc40-ed759349510a",
+        "TicketId": "b8822619-8e18-44f2-90e8-700e310674d1",
         "EventName": "eveniment3o2",
         "CategoryName": "vip",
         "PricePaid": 234,
-        "PurchaseDate": "2026-01-03T03:40:20.2234044+02:00"
+        "PurchaseDate": "2026-01-03T04:46:39.3293406+02:00"
       },
       {
-        "TicketId": "c0fd9873-4bf2-47f6-8860-9283a072138b",
+        "TicketId": "48fdefa3-069e-4e66-bf03-8ae4e8e4615f",
         "EventName": "eveniment3o2",
         "CategoryName": "vip",
         "PricePaid": 234,
-        "PurchaseDate": "2026-01-03T03:40:20.2234079+02:00"
+        "PurchaseDate": "2026-01-03T04:46:39.3293442+02:00"
       }
     ],
     "Username": "larisac",
@@ -93,116 +93,186 @@
     "$type": "Client",
     "Tichetemele": [
       {
-        "TicketId": "f9436dfa-04ec-411a-8bb9-1fb0ac86f4ed",
+        "TicketId": "20bcdaa2-aaee-4e47-9f20-a0733cddfc87",
         "EventName": "eveniment2o1",
         "CategoryName": "standard",
         "PricePaid": 20,
-        "PurchaseDate": "2026-01-03T03:40:20.2237307+02:00"
+        "PurchaseDate": "2026-01-03T04:46:39.3296494+02:00"
       },
       {
-        "TicketId": "807dd484-d7cf-41ea-bf0b-98cd47ebe2c7",
+        "TicketId": "2f03a281-537a-46e6-afdf-f7a5f4be3e8e",
         "EventName": "Rock",
         "CategoryName": "VIP",
         "PricePaid": 300,
-        "PurchaseDate": "2026-01-03T03:40:20.2237357+02:00"
+        "PurchaseDate": "2026-01-03T04:46:39.3296543+02:00"
       },
       {
-        "TicketId": "2595fbe7-2b86-4bc4-9c5d-e4b44aa4a2c5",
+        "TicketId": "8995c755-730e-4206-a764-af098480e080",
         "EventName": "Rock",
         "CategoryName": "VIP",
         "PricePaid": 300,
-        "PurchaseDate": "2026-01-03T03:40:20.2237393+02:00"
+        "PurchaseDate": "2026-01-03T04:46:39.3296578+02:00"
       },
       {
-        "TicketId": "44fa75aa-f103-4d92-b0a4-9a731f9b8faa",
+        "TicketId": "bb3a2e26-6dc2-4212-8df5-21a68f184fbf",
         "EventName": "Rock",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-03T03:40:20.2237428+02:00"
+        "PurchaseDate": "2026-01-03T04:46:39.3296613+02:00"
       },
       {
-        "TicketId": "f7dcad2d-ccb0-4f03-ab04-ae98917f8d04",
+        "TicketId": "d3b6f8e0-eabd-4c91-9b63-b84fc6f4e2d3",
         "EventName": "Rock",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-03T03:40:20.2237466+02:00"
+        "PurchaseDate": "2026-01-03T04:46:39.3296646+02:00"
       },
       {
-        "TicketId": "b5857d0d-313a-4e79-aa41-7e239381c96c",
+        "TicketId": "6fa01ee9-342d-40ad-aec2-323c96b9dbc9",
         "EventName": "Rock",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-03T03:40:20.2237544+02:00"
+        "PurchaseDate": "2026-01-03T04:46:39.3296683+02:00"
       },
       {
-        "TicketId": "7d002fee-9892-40b4-817f-8ab58335ca50",
+        "TicketId": "0e9dac21-b6da-4b63-aa64-5b01fe8d891e",
         "EventName": "Rock",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-03T03:40:20.223758+02:00"
+        "PurchaseDate": "2026-01-03T04:46:39.3296721+02:00"
       },
       {
-        "TicketId": "5c174af5-312d-44b1-8ee3-d5fbbbf782d2",
+        "TicketId": "acdbae8f-9653-4d77-8fed-415f0efc7bdb",
         "EventName": "Rock",
         "CategoryName": "VIP",
         "PricePaid": 300,
-        "PurchaseDate": "2026-01-03T03:40:20.2237614+02:00"
+        "PurchaseDate": "2026-01-03T04:46:39.3296755+02:00"
       },
       {
-        "TicketId": "bdbed80b-59de-4897-98ad-73eb6a64a295",
+        "TicketId": "49676204-6184-4380-bd70-f5a76984d318",
         "EventName": "Rock",
         "CategoryName": "VIP",
         "PricePaid": 300,
-        "PurchaseDate": "2026-01-03T03:40:20.2237648+02:00"
+        "PurchaseDate": "2026-01-03T04:46:39.329679+02:00"
       },
       {
-        "TicketId": "c9d7d37d-15ee-4278-9b88-9584b7d2be4e",
+        "TicketId": "3adb3494-1084-4426-9274-b855ad245224",
         "EventName": "Rock",
         "CategoryName": "VIP",
         "PricePaid": 300,
-        "PurchaseDate": "2026-01-03T03:40:20.2237683+02:00"
+        "PurchaseDate": "2026-01-03T04:46:39.3296826+02:00"
       },
       {
-        "TicketId": "8710d9a0-bdbd-4cdd-ba8c-863ba7f0a51f",
+        "TicketId": "ed576a96-430f-4aec-8817-1f925f9b11d8",
         "EventName": "Rock",
         "CategoryName": "VIP",
         "PricePaid": 300,
-        "PurchaseDate": "2026-01-03T03:40:20.2237718+02:00"
+        "PurchaseDate": "2026-01-03T04:46:39.329686+02:00"
       },
       {
-        "TicketId": "dc2621ae-5633-44b6-968f-3ba9df38be6c",
+        "TicketId": "e6a2ee3d-862c-4381-ad9c-26a0ef49e276",
         "EventName": "Rock",
         "CategoryName": "VIP",
         "PricePaid": 300,
-        "PurchaseDate": "2026-01-03T03:40:20.2237751+02:00"
+        "PurchaseDate": "2026-01-03T04:46:39.3296894+02:00"
       },
       {
-        "TicketId": "2b5e68a0-510c-42b7-a6c3-27e343ff1a68",
+        "TicketId": "96d9dc9d-f9cb-40a2-9de0-3314128aea82",
         "EventName": "Rock",
         "CategoryName": "VIP",
         "PricePaid": 300,
-        "PurchaseDate": "2026-01-03T03:40:20.2237787+02:00"
+        "PurchaseDate": "2026-01-03T04:46:39.3296928+02:00"
       },
       {
-        "TicketId": "99b21c35-10ea-42ae-bb83-e62508f2adf8",
+        "TicketId": "acdcb6bb-7a28-496a-a627-61adc080a56c",
         "EventName": "Rock",
         "CategoryName": "VIP",
         "PricePaid": 300,
-        "PurchaseDate": "2026-01-03T03:40:20.2237821+02:00"
+        "PurchaseDate": "2026-01-03T04:46:39.3296961+02:00"
       },
       {
-        "TicketId": "44661fbf-d18a-477a-ad01-0a095420ed83",
+        "TicketId": "befb820c-c616-4bd0-9384-1b3cb4e3ea4e",
         "EventName": "Rock",
         "CategoryName": "VIP",
         "PricePaid": 300,
-        "PurchaseDate": "2026-01-03T03:40:20.2237855+02:00"
+        "PurchaseDate": "2026-01-03T04:46:39.3296997+02:00"
       },
       {
-        "TicketId": "6fc22395-29b9-488f-bcc8-ccf98f538fb9",
+        "TicketId": "9bcff5ec-4ba5-4090-be9c-82f81248b8f3",
         "EventName": "Rock",
         "CategoryName": "VIP",
         "PricePaid": 300,
-        "PurchaseDate": "2026-01-03T03:40:20.2237889+02:00"
+        "PurchaseDate": "2026-01-03T04:46:39.3297031+02:00"
+      },
+      {
+        "TicketId": "f4e475c4-64f9-4c9a-85a6-2e59a649e424",
+        "EventName": "eveniment3o2",
+        "CategoryName": "stabdard",
+        "PricePaid": 23,
+        "PurchaseDate": "2026-01-03T04:47:02.7151903+02:00"
+      },
+      {
+        "TicketId": "900b4f88-3380-48a9-b223-eae7a52f38e9",
+        "EventName": "Rock",
+        "CategoryName": "VIP",
+        "PricePaid": 300,
+        "PurchaseDate": "2026-01-03T04:48:13.3678416+02:00"
+      },
+      {
+        "TicketId": "1a0ba4ef-8d72-40a0-bb09-8f8aa4667637",
+        "EventName": "Rock",
+        "CategoryName": "VIP",
+        "PricePaid": 300,
+        "PurchaseDate": "2026-01-03T04:48:13.3678497+02:00"
+      },
+      {
+        "TicketId": "3e636e5f-33b2-4528-81de-3ec798098425",
+        "EventName": "Rock",
+        "CategoryName": "VIP",
+        "PricePaid": 300,
+        "PurchaseDate": "2026-01-03T04:48:13.3678616+02:00"
+      },
+      {
+        "TicketId": "b8b75e6c-af5c-46c0-91cb-24362b246fc2",
+        "EventName": "Rock",
+        "CategoryName": "VIP",
+        "PricePaid": 300,
+        "PurchaseDate": "2026-01-03T04:48:13.3678632+02:00"
+      },
+      {
+        "TicketId": "9d01e976-2e6c-41e1-aad8-c12291b0c0f7",
+        "EventName": "Rock",
+        "CategoryName": "VIP",
+        "PricePaid": 300,
+        "PurchaseDate": "2026-01-03T04:48:13.3678654+02:00"
+      },
+      {
+        "TicketId": "afc724e5-5f3d-477e-a22f-0b62e1a687f9",
+        "EventName": "Rock",
+        "CategoryName": "VIP",
+        "PricePaid": 300,
+        "PurchaseDate": "2026-01-03T04:48:13.3678663+02:00"
+      },
+      {
+        "TicketId": "7cad3725-31e6-47f0-afe2-8b1887c08a77",
+        "EventName": "Rock",
+        "CategoryName": "VIP",
+        "PricePaid": 300,
+        "PurchaseDate": "2026-01-03T04:48:13.3678671+02:00"
+      },
+      {
+        "TicketId": "14b383a9-709c-4873-a7cd-816ef060d429",
+        "EventName": "Rock",
+        "CategoryName": "VIP",
+        "PricePaid": 300,
+        "PurchaseDate": "2026-01-03T04:48:13.3678686+02:00"
+      },
+      {
+        "TicketId": "538ced4a-c3cf-4166-8c75-ee54240cd096",
+        "EventName": "Rock",
+        "CategoryName": "VIP",
+        "PricePaid": 300,
+        "PurchaseDate": "2026-01-03T04:48:13.3678708+02:00"
       }
     ],
     "Username": "DenisaClient",

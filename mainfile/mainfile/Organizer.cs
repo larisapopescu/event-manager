@@ -360,7 +360,7 @@ public class Organizer : User
         var evenimentem = MyEvents(evenimente);
         if (evenimentem.Count == 0)
         {
-            Console.WriteLine("No events created");
+            logger.Error("No events created");
             return;
         }
 
@@ -389,15 +389,15 @@ public class Organizer : User
                 case "3": newStatus= "Canceled"; break;
                 case "4": newStatus= "Completed"; break;
                 default:
-                    Console.WriteLine("Invalid Status selected");
+                    logger.Error("Invalid Status selected");
                     return;
             }
              ev.EventStatus = newStatus;
-             Console.WriteLine("Status updated!");
+             logger.Info("Status updated!");
         }
         else
         {
-            Console.WriteLine("Invalid input");
+            logger.Error("Invalid input");
         }
     }
 }
