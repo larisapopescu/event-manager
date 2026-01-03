@@ -21,7 +21,7 @@ public class Event
     public List<TicketType> OptiuniTichete { get; set; } = new List<TicketType>();
 
     // NU schimbam constructorul existent
-    protected Event(
+    public Event(
         string EventName,
         string EventDescription,
         string EventLocation,
