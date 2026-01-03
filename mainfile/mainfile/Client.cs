@@ -6,6 +6,9 @@ using System.Linq;
 
 public class Client : User
 {
+    // seteam ilogger
+    private ILogger logger = new ConsoleLogger();
+    
     // Portofelul clientului: Lista de bilete cumpărate
     public List<Ticket> Tichetemele { get; private set; } = new List<Ticket>();
 
@@ -13,11 +16,20 @@ public class Client : User
     public Client(string Username, string Password, List<Ticket> Tichetemele) : base(Username, Password, "Client")
     {
         // Dacă lista este null la citire, inițializăm una goală
+        //logger.Info($"Client created: {Username}");
         this.Tichetemele = Tichetemele ?? new List<Ticket>();
+    }
+    
+    public void SetLogger(ILogger logger)
+    {
+        if (logger != null)
+            this.logger = logger;
     }
     public void AddTicket(Ticket ticket) // adaug un bilet in lista clientului
     {
         Tichetemele.Add(ticket);
+        //logger.Info($"Ticket added for client {Username} - Event: {ticket.EventName}");
+
     }
     // Meniul Clientului 
     public override void DisplayMenu(List<Event> evenimente)
@@ -32,12 +44,19 @@ public class Client : User
             Console.WriteLine("4.Managing personal tickets");
             Console.WriteLine("5.Logout");
             Console.Write("option: ");
-            string choice = Console.ReadLine();
+
+
+            string choice = Console.ReadLine();      
+            //logger.Info($"Client {Username} selected option {choice}");
+            
+            
             switch (choice)
             {
                 case "1":
                     if (evenimente.Count == 0)
                     {
+                        logger.Warning("Search attempted with no events");
+
                         Console.WriteLine("No events found");
                         Console.ReadKey();
                         break;
@@ -74,14 +93,16 @@ public class Client : User
 
                                 if (!verificare)
                                 {
-                                    Console.WriteLine("Invalid event name");
+                                    logger.Warning("Invalid event name search");
                                 }
 
                                 break;
                             case "2":
+                                
                                 Console.WriteLine("Enter event's date");
                                 string input = Console.ReadLine();
 
+                                bool DataValida = false;
 
                                 if (DateTime.TryParse(input, out DateTime date))
                                 {
@@ -89,6 +110,7 @@ public class Client : User
                                     {
                                         if (ev.EventDate.Date == date.Date)
                                         {
+                                            DataValida = true;
                                             Console.WriteLine(
                                                 $"{ev.EventName} | {ev.EventDate:yyyy-MM-dd} | {ev.EventLocation} | {ev.EventStatus}");
                                         }
@@ -96,7 +118,12 @@ public class Client : User
                                 }
                                 else
                                 {
-                                    Console.WriteLine("Invalid event date");
+                                    logger.Warning("Invalid date input");  
+                                }
+
+                                if (DataValida == false)
+                                {
+                                    logger.Warning("Invalid date input");  
                                 }
 
                                 break;
@@ -113,11 +140,14 @@ public class Client : User
                                             $"{ev.EventName} | {ev.EventDate:yyyy-MM-dd} | {ev.EventLocation} | {ev.EventStatus}");
                                         verificare3 = true;
                                     }
+                                    
 
                                 }
 
                                 if (!verificare3)
-                                    Console.WriteLine("Invalid event location");
+                                {
+                                    logger.Warning("Invalid location input"); 
+                                }
 
                                 break;
                             case "4":
@@ -137,7 +167,7 @@ public class Client : User
 
                                 if (!verificare4)
                                 {
-                                    Console.WriteLine("Invalid event description");
+                                    logger.Warning("Invalid event description search");
                                 }
 
                                 break;
@@ -145,7 +175,7 @@ public class Client : User
                                 found = true;
                                 break;
                             default:
-                                Console.WriteLine("Invalid option");
+                                logger.Error("Invalid option");
                                 break;
 
                         }
@@ -153,9 +183,13 @@ public class Client : User
 
                     break;
                 case "2"://Viewing event details
+                    
+                    logger.Info("Viewing event details");
+                    
                     if (evenimente.Count == 0)
                     {
-                        Console.WriteLine("No events found");
+                        
+                        logger.Error("No events found");
                         Console.ReadKey();
                         break;
                     }
@@ -167,13 +201,13 @@ public class Client : User
                     Console.WriteLine("Choose event number");
                     if (!int.TryParse(Console.ReadLine(), out int index))
                     {
-                        Console.WriteLine("Invalid number");
+                        logger.Error("Invalid number");
                         break;
                     }
                     
                     if (index < 1 || index > evenimente.Count)
                     {
-                        Console.WriteLine("Invalid number");
+                        logger.Error("Invalid number");
                     }
                     Event e =evenimente[index-1];
                     Console.WriteLine("\n--- Event Details ---");
@@ -186,7 +220,7 @@ public class Client : User
                     Console.WriteLine("\n----Tickets-----");
                     if (e.OptiuniTichete == null || e.OptiuniTichete.Count == 0)
                     {
-                        Console.WriteLine("No ticket is available for this event");
+                        logger.Warning("No ticket is available for this event");
                     }
                     else
                     {
@@ -198,9 +232,11 @@ public class Client : User
                     }
                     break;
                 case "3"://Buying tickets
+                    logger.Info("Buying tickets");
+
                     if (evenimente.Count == 0)
                     {
-                        Console.WriteLine("No events found");
+                        logger.Warning("No events found");
                         Console.ReadKey();
                         break;
                     }
@@ -212,31 +248,31 @@ public class Client : User
                     Console.Write("Choose event number: ");
                     if (!int.TryParse(Console.ReadLine(), out int eventIndex))
                     {
-                        Console.WriteLine("Invalid number");
+                        logger.Error("Invalid number");
                         break;
                     }
 
                     if (eventIndex < 1 || eventIndex > evenimente.Count)
                     {
-                        Console.WriteLine("Invalid event number");
+                        logger.Error("Invalid event number");
                         break;
                     }
 
                     Event e3 = evenimente[eventIndex - 1];
                     if (e3.EventStatus != null && e3.EventStatus.Equals("canceled", StringComparison.OrdinalIgnoreCase))// in cazul in care e anulat
                     {
-                        Console.WriteLine("This event is canceled,you cannot buy tickets");
+                        logger.Warning("This event is canceled,you cannot buy tickets");
                         break;
                     }
                     if (e3.OptiuniTichete == null || e3.OptiuniTichete.Count == 0)
                     {
-                        Console.WriteLine("No ticket is available for this event");
+                        logger.Warning("No ticket is available for this event");
                         break;
                     }
 
                     if (e3.EventDate < DateTime.Now)
                     {
-                        Console.WriteLine("This event happened, you cannot buy a ticket");// daca deja s a intamplat 
+                        logger.Warning("This event happened, you cannot buy a ticket");// daca deja s a intamplat 
                         break;
                     }
                     Console.WriteLine("\n----Tickets-----");
@@ -249,30 +285,30 @@ public class Client : User
                     Console.WriteLine("Choose ticket category number");
                     if (!int.TryParse(Console.ReadLine(), out int typeIndex))
                     {
-                        Console.WriteLine("Invalid number");
+                        logger.Error("Invalid number");
                         break;
                     }
                     if (typeIndex < 1 || typeIndex > e3.OptiuniTichete.Count)
                     {
-                        Console.WriteLine("Invalid ticket type number");
+                        logger.Error("Invalid ticket type number");
                         break;
                     }
                     TicketType chosenType = e3.OptiuniTichete[typeIndex - 1];
                     Console.Write("How many tickets do you want to buy? ");
                     if (!int.TryParse(Console.ReadLine(), out int cantitate))
                     {
-                        Console.WriteLine("Invalid quantity.");
+                        logger.Error("Invalid quantity.");
                         break;
                     }
                     if (cantitate <= 0)
                     {
-                        Console.WriteLine("Quantity must be greater than 0.");
+                        logger.Warning("Quantity must be greater than 0.");
                         break;
                     }
                     int ramase3= chosenType.MaxQuantity - chosenType.SoldCount;
                     if (cantitate > ramase3)
                     {
-                        Console.WriteLine($"Not enough tickets available. Remaining: {ramase3}");
+                        logger.Warning($"Not enough tickets available. Remaining: {ramase3}");
                         break;
                     }
                     // cumparam cantitate de bilete
@@ -285,14 +321,16 @@ public class Client : User
                             AddTicket(biletnou);
                         }
 
-                        Console.WriteLine($" You bought {cantitate} ticket/s");
+                        logger.Info($" You bought {cantitate} ticket/s");
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine($"Purchase failed: {ex.Message}");
+                        logger.Error($"Purchase failed: {ex.Message}");
                     }
                     break;
                 case "4":
+                    logger.Info("Managing personal tickets");
+
                     bool caz4 = false;
                     while (!caz4)// tot ca la 1 un mic meniu
                     {
@@ -319,7 +357,7 @@ public class Client : User
                                 }
                                 if (!verificare)
                                 {
-                                    Console.WriteLine("No available tickets found");
+                                    logger.Error("No available tickets found");
                                 }
                                 break;
                             case "2":
@@ -336,14 +374,14 @@ public class Client : User
                                 }
                                 if (!verificare2)
                                 {
-                                    Console.WriteLine("No history available");
+                                    logger.Error("No history available");
                                 }
                                 break;
                             case "3"://partea de anulare a evenimentului
                                 Console.WriteLine("\n-------Cancel ticket----------");
                                 if (Tichetemele.Count == 0)
                                 {
-                                    Console.WriteLine("No tickets available");
+                                    logger.Error("No tickets available");
                                 }
                                 var activeTickets=new List<Ticket>();
                                 Console.WriteLine("----------Your tikets------");
@@ -359,50 +397,50 @@ public class Client : User
                                 }
                                 if (activeTickets.Count == 0)
                                 {
-                                    Console.WriteLine("No tickets available");
+                                    logger.Error("No tickets available");
                                     break;
                                 }
                                 Console.WriteLine("Choose a ticket to cancel");
                                 if (!int.TryParse(Console.ReadLine(), out int index3))
                                 {
-                                    Console.WriteLine("Invalid number");
+                                    logger.Error("Invalid number");
                                     break;
                                 }
 
                                 if (index3 < 1 || index3 >= Tichetemele.Count)
                                 {
-                                    Console.WriteLine("Invalid number");
+                                    logger.Error("Invalid number");
                                     break;
                                 }
                                 Ticket selected=activeTickets[index3-1];
                                 Event evSelected = evenimente.FirstOrDefault(x => x.EventName == selected.EventName);
                                 if (evSelected == null)
                                 {
-                                    Console.WriteLine("Event not found");
+                                    logger.Error("Event not found");
                                     break;
                                 }
                                 // regulile pentru a putea anula un eveniment
                                 if (evSelected != null && evSelected.EventStatus.Equals("Completed", StringComparison.OrdinalIgnoreCase) || evSelected.EventStatus.Equals("Cancelled", StringComparison.OrdinalIgnoreCase))
                                 {
-                                    Console.WriteLine("You cannot cancel tickets for completed/canceled events");// mai sus verificam daca e copleted sau canceld
+                                    logger.Warning("You cannot cancel tickets for completed/canceled events");// mai sus verificam daca e copleted sau canceld
                                     break;
                                 }
                                 TimeSpan dif=evSelected.EventDate-DateTime.Now;
                                 if (dif.TotalHours < 48)// nu putem anula un eveniment cu mai putin de 48 de ore inainte
                                 {
-                                    Console.WriteLine("You cannot cancel an event less than 48h before");
+                                    logger.Warning("You cannot cancel an event less than 48h before");
                                     break;
                                 }
 
                                 if (dif.TotalDays >= 7)
                                 {
-                                    Console.WriteLine("Since you cancelled more than a week before the event, you will receive 100% of the ticket price back the following week");
+                                    logger.Info("Since you cancelled more than a week before the event, you will receive 100% of the ticket price back the following week");
                                     break;
                                 }
 
                                 if (dif.TotalDays < 7 && dif.TotalHours > 48)
                                 {
-                                    Console.WriteLine("Since you cancelled less than a week before the event you will receive 50% of the ticket price back the following week ");
+                                    logger.Info("Since you cancelled less than a week before the event you will receive 50% of the ticket price back the following week ");
                                     break;
                                 }
                                 TicketType tichet=evSelected.OptiuniTichete.FirstOrDefault(x=> x.CategoryName == selected.CategoryName);
@@ -411,7 +449,7 @@ public class Client : User
                                     tichet.DecrementSales();
                                 }
                                 Tichetemele.RemoveAt(index3);// scoatem tichetul din portofel
-                                Console.WriteLine("Ticket canceled successfully!");
+                                logger.Info("Ticket canceled successfully!");
                                 break;
                             case "4":
                                 caz4 = true;
@@ -420,7 +458,11 @@ public class Client : User
                     }
                     break;
                 case "5":
+                    logger.Info($"Client {Username} logged out");
                     logout = true;
+                    break;
+                default:
+                    logger.Error("Invalid option");
                     break;
             }
         }

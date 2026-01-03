@@ -148,6 +148,6 @@ public static class AuthService
         string json = JsonSerializer.Serialize(utilizatori, options);
         File.WriteAllText(filePath, json);
 
-        logger.Info("Lista de utilizatori a fost salvata.");
+        //logger.Info("Lista de utilizatori a fost salvata.");
     }
 }

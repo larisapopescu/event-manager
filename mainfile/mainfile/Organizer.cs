@@ -7,10 +7,19 @@ public class Organizer : User
     // Lista de evenimente create de acest organizator specific
     //public List<Event> CreatedEvents { get; set; } = new List<Event>();
 
+    // seteam ilogger
+    private ILogger logger = new ConsoleLogger();
+    
     [JsonConstructor]
     public Organizer(string Username, string Password) : base(Username, Password, "Organizer")
     {
         //Console.WriteLine("organizer json");
+    }
+    
+    public void SetLogger(ILogger logger)
+    {
+        if (logger != null)
+            this.logger = logger;
     }
     private List<Event> MyEvents(List<Event> evenimente)
     {
@@ -107,7 +116,7 @@ public class Organizer : User
         Event newEvent = new Event(eventName, eventDescription, eventLocation, "scheduled", date, capacity, new List<TicketType>(),this.Username );
         evenimente.Add(newEvent);    // evenimentul global (toata aplicatia)
 
-        Console.WriteLine("Event created successfully!");
+        logger.Info("Event created successfully!");
     }
 
     // Metoda de modificare a unui eveniment existent
@@ -116,7 +125,7 @@ public class Organizer : User
         var evenimentem = MyEvents(evenimente);
         if (evenimentem.Count == 0)
         {
-            Console.WriteLine("No events created");
+            logger.Warning("No events created");
             return;
         }
 
@@ -152,7 +161,7 @@ public class Organizer : User
             {
                 if (!int.TryParse(capacitatenoua ,out newcapacity))
                 {
-                    Console.WriteLine("Invalid capacity input,keeping old capacity");
+                    logger.Warning("Invalid capacity input,keeping old capacity");
                     newcapacity = ev.EventCapacity;
                 }
             }
@@ -162,27 +171,27 @@ public class Organizer : User
             {
                 // Apelăm metoda din Event pentru a valida regulile de business (ex: data în viitor)
                 ev.UpdateDetails(newName, newDescription, eventLocation, newdate, newcapacity);
-                Console.WriteLine("Event modified!");
+                logger.Info("Event modified!");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Update Failed: {ex.Message}");
+                logger.Error($"Update Failed: {ex.Message}");
             }
         }
         else
         {
-            Console.WriteLine("Invalid input");
+            logger.Error("Invalid input");
         }
     }
 
     // Ștergerea unui eveniment
     public void DeleteEvent(List<Event> evenimente)
     {
-        Console.WriteLine("Deleting Event");
+        logger.Info("Deleting Event");
         var evenimentem = MyEvents(evenimente);
         if (evenimentem.Count == 0)
         {
-            Console.WriteLine("No events deleted");
+            logger.Warning("No events deleted");
             return;
         }
 
@@ -206,18 +215,18 @@ public class Organizer : User
 
             if (totalTicketSold > 0)
             {
-                Console.WriteLine("Cannot delete event, tickets already sold");
-                Console.WriteLine("change status to 'Canceled' instead");
+                logger.Error("Cannot delete event, tickets already sold");
+                logger.Warning("change status to 'Canceled' instead");
             }
             else
             {
                 evenimentem.RemoveAt(index - 1);
-                Console.WriteLine("Event removed!");
+                logger.Info("Event removed!");
             }
         }
         else
         {
-            Console.WriteLine("Invalid input");
+            logger.Error("Invalid input");
         }
     }
 
@@ -227,7 +236,7 @@ public class Organizer : User
         var evenimentem = MyEvents(evenimente);
         if (evenimentem.Count == 0)
         {
-            Console.WriteLine("\nNo events created");
+            logger.Warning("\nNo events created");
             return;
         }
 
@@ -266,7 +275,7 @@ public class Organizer : User
                     // Validare capacitate înainte de a cere datele
                     if (remaining <= 0)
                     {
-                        Console.WriteLine("Error: You can't add more tickets");
+                        logger.Error("Error: You can't add more tickets");
                         continue;
                     }
                     // Citire date bilet
@@ -280,11 +289,11 @@ public class Organizer : User
                     {
                         // Încercare adăugare bilet în eveniment
                         ev.AddTicketType(CategoryName, Price, Quantity);
-                        Console.WriteLine("Ticket type created!");
+                        logger.Info("Ticket type created!");
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine($"Failed {ex.Message}");
+                        logger.Error($"Failed {ex.Message}");
                     }
                 }
                 else if (choice == "2")
@@ -299,7 +308,7 @@ public class Organizer : User
         var evenimentem = MyEvents(evenimente);
         if (evenimentem.Count == 0)
         {
-            Console.WriteLine("No events created");
+            logger.Warning("No events created");
             Console.ReadKey();
             return;
         }
@@ -311,13 +320,13 @@ public class Organizer : User
         Console.Write("Choose event number: ");
         if (!int.TryParse(Console.ReadLine(), out int index))
         {
-            Console.WriteLine("Invalid number");
+            logger.Error("Invalid number");
             Console.ReadKey();
             return;
         }
         if (index < 1 || index > evenimentem.Count)
         {
-            Console.WriteLine("Invalid event number");
+            logger.Error("Invalid event number");
             Console.ReadKey();
             return;
         }
@@ -338,7 +347,7 @@ public class Organizer : User
         Console.WriteLine($"Revenue: ${totalRevenue}");
         if (ev.EventStatus.Equals("Canceled", StringComparison.OrdinalIgnoreCase))
         {
-            Console.WriteLine("!!! THIS EVENT IS CANCELED - SALES STOPPED !!!");
+            logger.Error("!!! THIS EVENT IS CANCELED - SALES STOPPED !!!");
         }
         Console.WriteLine("\nPress any key to return...");
         Console.ReadKey();

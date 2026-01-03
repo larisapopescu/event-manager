@@ -17,7 +17,7 @@ public class TicketType
         this.MaxQuantity = MaxQuantity;
         this.SoldCount = SoldCount;
         
-        logger.Info($"TicketType created: {CategoryName}, ");
+        //logger.Info($"TicketType created: {CategoryName}, ");
     }
 
     // Optional: permite setarea loggerului din exterior
@@ -44,7 +44,7 @@ public class TicketType
         if (IsAvailable)
         {
             SoldCount++;
-            logger.Info($"Ticket sold for category {CategoryName}.");
+            //logger.Info($"Ticket sold for category {CategoryName}.");
         }
         else
         {

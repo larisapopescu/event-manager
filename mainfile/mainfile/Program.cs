@@ -64,7 +64,7 @@ class Program
                 else
                 {
                     logger.Warning("Username sau parola incorecta.");
-                    Console.WriteLine("Username or password is incorrect");
+                    //Console.WriteLine("Username or password is incorrect");
                 }
             }
             else if (choice == "2")

@@ -17,7 +17,7 @@ public abstract class User
         this.Password=Password;
         this.Role=Role;
         
-        logger.Info($"User created: {Username} with role {Role}");
+        //logger.Info($"User created: {Username} with role {Role}");
     }
     
     // Optional: permite setarea loggerului din exterior
