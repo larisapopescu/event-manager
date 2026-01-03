@@ -11,7 +11,7 @@ public abstract class User
     public string Password { get; private set; } // Aici se stochează hash-ul parolei, nu parola în clar
     public string Role { get; private set; } // Rolul: "Organizer" sau "Client"
 
-    public User(string Username, string Password, string Role)
+    protected User(string Username, string Password, string Role)
     {
         this.Username=Username;
         this.Password=Password;
