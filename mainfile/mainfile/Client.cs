@@ -19,8 +19,7 @@ public class Client : User
     {
         Tichetemele.Add(ticket);
     }
-    // Meniul Clientului 
-    public override void DisplayMenu(List<Event> evenimente)
+    public override void DisplayMenu(List<Event> evenimente) // Meniul Clientului 
     {
         bool logout = false;
         while (!logout)
@@ -71,12 +70,10 @@ public class Client : User
                                     }
 
                                 }
-
                                 if (!verificare)
                                 {
                                     Console.WriteLine("Invalid event name");
                                 }
-
                                 break;
                             case "2":
                                 Console.WriteLine("Enter event's date");
@@ -106,8 +103,7 @@ public class Client : User
                                 bool verificare3 = false;
                                 foreach (var ev in evenimente)
                                 {
-                                    if (ev.EventLocation != null && ev.EventLocation.Contains(location ?? "",
-                                            StringComparison.OrdinalIgnoreCase))
+                                    if (ev.EventLocation != null && ev.EventLocation.Contains(location ?? "",StringComparison.OrdinalIgnoreCase))
                                     {
                                         Console.WriteLine(
                                             $"{ev.EventName} | {ev.EventDate:yyyy-MM-dd} | {ev.EventLocation} | {ev.EventStatus}");

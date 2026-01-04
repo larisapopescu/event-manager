@@ -70,22 +70,13 @@ public static class AuthService
         string json = JsonSerializer.Serialize(Utilizatori, Options);
         File.WriteAllText(FilePath, json);
     }
-    
-    // Logica de login
-    public static User Login(List<User> Utilizatori)
+    // mutam citirea din consola 
+    public static User LoginWithCredentials(List<User> utilizatori, string username, string password)
     {
-        Console.Write("Username: ");
-        string u = Console.ReadLine();
-        Console.Write("Password: ");
-        string p = Console.ReadLine();
-        
-        // Hășuim parola introdusă pentru a o compara cu cea stocată
-        string hp = Hashing.ToSHA256(p);
-        
-        // Căutăm utilizatorul care are ȘI username-ul ȘI parola corecte
-        return Utilizatori.FirstOrDefault(user => user.Username == u && user.Password == hp);
+        string hp = Hashing.ToSHA256(password);
+        return utilizatori.FirstOrDefault(u =>
+            u.Username.Equals(username, StringComparison.OrdinalIgnoreCase) && u.Password == hp);
     }
-    
     // Metodă generică pentru salvarea listei curente în fișier
     public static void Save(List<User> Utilizatori, string FilePath, JsonSerializerOptions Options)
     {

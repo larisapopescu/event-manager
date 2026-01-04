@@ -54,7 +54,7 @@ public class Organizer : User
         }
     }
 
-    // Sub-meniu pentru gestionarea evenimentelor (Creare, Modificare, Ștergere)
+    // Sub-meniu pentru gestionarea evenimentelor (Creare, Modificare, Stergere)
     private void ManageEvent(List<Event> evenimente)
     {
         bool exit = false;
@@ -278,7 +278,7 @@ public class Organizer : User
                     int.TryParse(Console.ReadLine(), out int Quantity);
                     try
                     {
-                        // Încercare adăugare bilet în eveniment
+                        // Incercare adăugare bilet în eveniment
                         ev.AddTicketType(CategoryName, Price, Quantity);
                         Console.WriteLine("Ticket type created!");
                     }

@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "BnHaBSa8K6A=",
+  "dgSpecHash": "7pvUZyE4HSY=",
   "success": true,
   "projectFilePath": "C:\\Users\\laris\\Desktop\\event-manager\\mainfile\\mainfile\\mainfile.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\laris\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.7\\guna.ui2.winforms.2.0.4.7.nupkg.sha512",
+    "C:\\Users\\laris\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
+    "C:\\Users\\laris\\.nuget\\packages\\system.management\\7.0.0\\system.management.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
