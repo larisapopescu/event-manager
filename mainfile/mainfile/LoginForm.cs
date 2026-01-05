@@ -2,14 +2,13 @@
 
 namespace mainfile;
 
-public partial class Form1 : Form
+public partial class LoginForm : Form
 {
     private readonly string usersPath = "test.json";
-    private readonly string eventsPath = "events.json";
     private readonly JsonSerializerOptions options;
     private List<User> utilizatori;
     private List<Event> evenimente;
-    public Form1()
+    public LoginForm()
     {
         InitializeComponent();
         options = new JsonSerializerOptions
@@ -18,10 +17,10 @@ public partial class Form1 : Form
             PropertyNameCaseInsensitive = true
         };
         utilizatori = AuthService.LoadUsers(usersPath, options); // incarc datele când porneste form-ul
-        evenimente = EventsStore.LoadEvents(eventsPath, options);
-        button1.Click += button1_Click;   // Login
-        button2.Click += button2_Click;   // Exit
-        label5.Click += label5_Click;     // Sign up
+        button1.Click += button1_Click;   // LOGIN
+        button2.Click += button2_Click;   // EXIT
+        label5.Click += label5_Click;     // SIGN UP
+        label5.Cursor = Cursors.Hand;// aici il fac sa arate ca link
     }
     private void button1_Click(object? sender, EventArgs e)
     {
@@ -32,6 +31,7 @@ public partial class Form1 : Form
             MessageBox.Show("Write your username and password.");
             return;
         }
+        utilizatori = AuthService.LoadUsers(usersPath, options);// reincarc userii inainte de login
         var user = AuthService.LoginWithCredentials(utilizatori, username, password);
         if (user == null)
         {
@@ -46,6 +46,18 @@ public partial class Form1 : Form
     }
     private void label5_Click(object? sender, EventArgs e)// aici urmeaza pagina de sign up
     {
-        MessageBox.Show("Sign up");
+        this.Hide();// ascundem login ul cat timp creeam un cont nou pt ca va trebui sa ne intoarcem la el
+        using (var register = new RegisterForm(usersPath, options))
+        {
+            var result=register.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                utilizatori = AuthService.LoadUsers(usersPath, options);// am creat contul deci reincarcam utilizatorii
+                MessageBox.Show("Account has been successfully registered");
+            }
+        }
+        this.Show();// revenim la login
+        this.Activate();
     }
+    
 }

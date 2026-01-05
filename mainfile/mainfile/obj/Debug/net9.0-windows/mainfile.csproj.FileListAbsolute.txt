@@ -18,5 +18,6 @@ C:\Users\laris\Desktop\event-manager\mainfile\mainfile\obj\Debug\net9.0-windows\
 C:\Users\laris\Desktop\event-manager\mainfile\mainfile\obj\Debug\net9.0-windows\mainfile.pdb
 C:\Users\laris\Desktop\event-manager\mainfile\mainfile\obj\Debug\net9.0-windows\mainfile.genruntimeconfig.cache
 C:\Users\laris\Desktop\event-manager\mainfile\mainfile\obj\Debug\net9.0-windows\ref\mainfile.dll
-C:\Users\laris\Desktop\event-manager\mainfile\mainfile\obj\Debug\net9.0-windows\mainfile.Form1.resources
 C:\Users\laris\Desktop\event-manager\mainfile\mainfile\obj\Debug\net9.0-windows\mainfile.csproj.GenerateResource.cache
+C:\Users\laris\Desktop\event-manager\mainfile\mainfile\obj\Debug\net9.0-windows\mainfile.LoginForm.resources
+C:\Users\laris\Desktop\event-manager\mainfile\mainfile\obj\Debug\net9.0-windows\mainfile.RegisterForm.resources

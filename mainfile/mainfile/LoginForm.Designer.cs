@@ -2,7 +2,7 @@
 
 namespace mainfile;
 
-partial class Form1
+partial class LoginForm
 {
     /// <summary>
     /// Required designer variable.
@@ -31,7 +31,7 @@ partial class Form1
     /// </summary>
     private void InitializeComponent()
     {
-        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
         pictureBox1 = new System.Windows.Forms.PictureBox();
         label1 = new System.Windows.Forms.Label();
         label2 = new System.Windows.Forms.Label();
@@ -44,7 +44,11 @@ partial class Form1
         label4 = new System.Windows.Forms.Label();
         label5 = new System.Windows.Forms.Label();
         button2 = new System.Windows.Forms.Button();
+        pictureBox2 = new System.Windows.Forms.PictureBox();
+        pictureBox3 = new System.Windows.Forms.PictureBox();
         ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
         SuspendLayout();
         // 
         // pictureBox1
@@ -166,12 +170,34 @@ partial class Form1
         button2.Text = "Exit page";
         button2.UseVisualStyleBackColor = true;
         // 
-        // Form1
+        // pictureBox2
+        // 
+        pictureBox2.Image = ((System.Drawing.Image)resources.GetObject("pictureBox2.Image"));
+        pictureBox2.Location = new System.Drawing.Point(93, 238);
+        pictureBox2.Name = "pictureBox2";
+        pictureBox2.Size = new System.Drawing.Size(35, 20);
+        pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+        pictureBox2.TabIndex = 14;
+        pictureBox2.TabStop = false;
+        // 
+        // pictureBox3
+        // 
+        pictureBox3.Image = ((System.Drawing.Image)resources.GetObject("pictureBox3.Image"));
+        pictureBox3.Location = new System.Drawing.Point(93, 306);
+        pictureBox3.Name = "pictureBox3";
+        pictureBox3.Size = new System.Drawing.Size(35, 20);
+        pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+        pictureBox3.TabIndex = 15;
+        pictureBox3.TabStop = false;
+        // 
+        // LoginForm
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         BackColor = System.Drawing.Color.LightCyan;
-        ClientSize = new System.Drawing.Size(331, 608);
+        ClientSize = new System.Drawing.Size(338, 611);
+        Controls.Add(pictureBox3);
+        Controls.Add(pictureBox2);
         Controls.Add(button2);
         Controls.Add(label5);
         Controls.Add(label4);
@@ -188,9 +214,14 @@ partial class Form1
         StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
         Text = "Form1";
         ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+        ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+        ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
         ResumeLayout(false);
         PerformLayout();
     }
+
+    private System.Windows.Forms.PictureBox pictureBox2;
+    private System.Windows.Forms.PictureBox pictureBox3;
 
     private System.Windows.Forms.Button button2;
 

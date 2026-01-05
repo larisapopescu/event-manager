@@ -16,7 +16,7 @@ public static class AuthService
         return new List<User>();
     }
     
-    // Logica de înregistrare cont nou
+    /*// Logica de înregistrare cont nou
     public static void RegisterUser(List<User> Utilizatori, string FilePath, JsonSerializerOptions Options)
     {
         string username =" ";
@@ -70,17 +70,47 @@ public static class AuthService
         string json = JsonSerializer.Serialize(Utilizatori, Options);
         File.WriteAllText(FilePath, json);
     }
-    // mutam citirea din consola 
-    public static User LoginWithCredentials(List<User> utilizatori, string username, string password)
-    {
-        string hp = Hashing.ToSHA256(password);
-        return utilizatori.FirstOrDefault(u =>
-            u.Username.Equals(username, StringComparison.OrdinalIgnoreCase) && u.Password == hp);
-    }
+    
     // Metodă generică pentru salvarea listei curente în fișier
     public static void Save(List<User> Utilizatori, string FilePath, JsonSerializerOptions Options)
     {
         string json = JsonSerializer.Serialize(Utilizatori, Options);
         File.WriteAllText(FilePath, json);
+    }*/
+    
+    
+    
+    
+    // login ul din WINDOWS FORMS
+    public static User LoginWithCredentials(List<User> utilizatori, string username, string password)
+    {
+        string hp = Hashing.ToSHA256(password);
+        return utilizatori.FirstOrDefault(u => u.Username.Equals(username, StringComparison.OrdinalIgnoreCase) &&u.Password == hp);
     }
+    public static (bool ok, string error) RegisterWithCredentials(List<User> utilizatori, string username, string password, bool isOrganizer, string filePath, JsonSerializerOptions options)
+    {
+        if (string.IsNullOrWhiteSpace(username))
+        { 
+            return (false, "Username is empty");
+        }
+        if (utilizatori.Any(u => u.Username.Equals(username, StringComparison.OrdinalIgnoreCase)))
+        {
+            return (false, "Username is already in use");
+        }
+        if (string.IsNullOrWhiteSpace(password))
+        {
+            return (false, "Password cannot be empty");
+        }
+        string hashedPassword = Hashing.ToSHA256(password);
+        User newUser = isOrganizer ? new Organizer(username, hashedPassword) : new Client(username, hashedPassword, new List<Ticket>());
+        utilizatori.Add(newUser);
+        Save(utilizatori, filePath, options);
+        return (true, " ");
+    }
+    public static void Save(List<User> utilizatori, string filePath, JsonSerializerOptions options)
+    {
+        string json = JsonSerializer.Serialize(utilizatori, options);
+        File.WriteAllText(filePath, json);// salvam lista de utilizatori
+    }
+    
 }

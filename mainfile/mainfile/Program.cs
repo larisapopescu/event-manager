@@ -11,7 +11,10 @@ class Program
     static void Main(string[] args)
     {
         ApplicationConfiguration.Initialize();
-        Application.Run(new Form1()); // pentru interfata
+        Application.Run(new LoginForm()); // pentru interfata
+        
+        
+        // aici e partea care se facea pana acum in terminal
         /*// Calea către fișierul JSON unde stocăm toți utilizatorii
         string filePath = "test.json";
         string eventsPath = "events.json";
