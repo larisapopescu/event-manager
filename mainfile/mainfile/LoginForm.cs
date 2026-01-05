@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using System.Runtime.CompilerServices;
+using System.Text.Json;
 
 namespace mainfile;
 
@@ -38,7 +39,24 @@ public partial class LoginForm : Form
             MessageBox.Show("Username or password is incorrect.");
             return;
         }
-        MessageBox.Show($"You ve succesfully logged in as {user.Role}: {user.Username}");// aici decizi ce form deschizi mai departe (Client/Organizer)
+        this.Hide();// ascund login ul
+        Form next;// aici pt ca urmeaza un form ori de client ori de organizator
+        if (user.Role.Equals("Organizer", StringComparison.OrdinalIgnoreCase))
+        {
+            next = new MeniuOrganizator();
+        }
+        else
+        {
+            next = new MeniuClient();
+        }
+        next.FormClosed += (_, __) =>// aici daca apas logout revenim la pagina de login(principala noastra)
+        {
+            textBox1.Clear();
+            textBox2.Clear();
+            this.Show();// aratam iar loginul
+            this.Activate();
+        };
+        next.Show(); 
     }
     private void button2_Click(object? sender, EventArgs e)
     {
