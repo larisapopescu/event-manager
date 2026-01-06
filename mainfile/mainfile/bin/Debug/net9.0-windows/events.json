@@ -1,3 +1,39 @@
 [
-  
+  {
+    "EventName": "BookClub",
+    "EventDescription": "sdf",
+    "EventLocation": "fdsf",
+    "EventStatus": "Completed",
+    "EventDate": "2026-01-13T23:35:00.968",
+    "EventCapacity": 10,
+    "OrganizerUsername": "larisao",
+    "ImagePath": null,
+    "OptiuniTichete": [
+      {
+        "CategoryName": "Standard",
+        "Price": 2,
+        "MaxQuantity": 7,
+        "SoldCount": 0,
+        "IsAvailable": true
+      },
+      {
+        "CategoryName": "VIP",
+        "Price": 100,
+        "MaxQuantity": 3,
+        "SoldCount": 0,
+        "IsAvailable": true
+      }
+    ]
+  },
+  {
+    "EventName": "Party",
+    "EventDescription": "sdfsdfg",
+    "EventLocation": "fdsfasdfg",
+    "EventStatus": "scheduled",
+    "EventDate": "2026-01-21T23:35:00.968",
+    "EventCapacity": 100,
+    "OrganizerUsername": "larisao",
+    "ImagePath": null,
+    "OptiuniTichete": []
+  }
 ]

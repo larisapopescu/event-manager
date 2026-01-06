@@ -53,7 +53,7 @@ public partial class SalesStatus : Form
         {
             available = 0;
         }
-        label3.Text = $"Event: {ev.EventName}\n" + $"Status: {ev.EventStatus}\n\n" + $"Capacity: {capacity}\n" + $"Tickets sold: {totalSold}\n" + $"Available: {available}\n" + $"Revenue: {totalRevenue}$\n\n" + $"--- Breakdown ---\n" + $"{FormatType(ev, "VIP")}\n" + $"{FormatType(ev, "Standard")}\n" + $"{FormatType(ev, "Early Bird", "Early Access")}";
+        label3.Text = $"Event: {ev.EventName}\n" + $"Status: {ev.EventStatus}\n\n" + $"Capacity: {capacity}\n" + $"Tickets sold: {totalSold}\n" + $"Available: {available}\n" + $"Revenue: {totalRevenue}$\n\n"  + $"{FormatType(ev, "VIP")}\n" + $"{FormatType(ev, "Standard")}\n" + $"{FormatType(ev, "Early Bird", "Early Access")}";
     }
     private string FormatType(Event ev, string name, string? alt = null)
     {

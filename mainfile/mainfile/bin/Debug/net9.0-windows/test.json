@@ -1,4 +1,8 @@
 [
- 
-  
+  {
+    "$type": "Organizer",
+    "Username": "larisao",
+    "Password": "d39814833b65aad1b71047ded63d4eec9ec628cdc6c7f4b5f8c41762ee811698",
+    "Role": "Organizer"
+  }
 ]
