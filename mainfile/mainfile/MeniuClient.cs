@@ -19,7 +19,7 @@ public partial class MeniuClient : Form
     }
     private void button2_Click(object? sender, EventArgs e)
     {
-        //var f = new ViewEventdetail();//urmeaza sa o fac
+        //var f = new ViewEventDetail();//urmeaza sa o fac
         //f.ShowDialog();
         MessageBox.Show("Urmeaza");
     }

@@ -13,13 +13,14 @@ public class Event
     public DateTime EventDate { get;private set; }
     public int EventCapacity { get;private set; }
     public string OrganizerUsername { get; private set; }
+    public string? ImagePath { get;private set; }// aici pt poza din interfata
 
     
     // Lista cu tipurile de bilete disponibile (VIP, Standard)
     [JsonPropertyName("OptiuniTichete")]
     public List<TicketType> OptiuniTichete { get; set; } = new List<TicketType>();
     public Event(string EventName, string EventDescription, string EventLocation, string EventStatus, DateTime EventDate,
-        int EventCapacity, List<TicketType> OptiuniTichete,string OrganizerUsername)
+        int EventCapacity, List<TicketType> OptiuniTichete,string OrganizerUsername,string? ImagePath=null)
     {
         this.EventName = EventName;
         this.EventDescription = EventDescription;
@@ -29,6 +30,7 @@ public class Event
         this.EventCapacity = EventCapacity;
         this.OptiuniTichete = OptiuniTichete ?? new List<TicketType>();
         this.OrganizerUsername = OrganizerUsername;
+        this.ImagePath = ImagePath;
     }
 
     // Adaugă o categorie nouă de bilete cu validare de capacitate

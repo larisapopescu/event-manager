@@ -28,6 +28,39 @@
       <Compile Update="MeniuOrganizator.cs">
         <SubType>Form</SubType>
       </Compile>
+      <Compile Update="ManageEvents.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="ManageTicketTypes.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="SalesStatus.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="ChangeEventStatus.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="SearchEvents.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="ViewEventDetail.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="BuyingTickets.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="ManageTickets.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="CreateEvent.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="ModifyEvent.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="DeleteEvent.cs">
+        <SubType>Form</SubType>
+      </Compile>
     </ItemGroup>
 
 </Project>

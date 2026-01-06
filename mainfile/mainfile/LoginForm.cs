@@ -2,13 +2,15 @@
 using System.Text.Json;
 
 namespace mainfile;
-
+using System.IO;
+using System.Text.Json;
 public partial class LoginForm : Form
 {
-    private readonly string usersPath = "test.json";
+    private readonly string usersPath = Path.Combine(AppContext.BaseDirectory, "test.json");
+    private readonly string eventsPath = Path.Combine(AppContext.BaseDirectory, "events.json");
     private readonly JsonSerializerOptions options;
-    private List<User> utilizatori;
-    private List<Event> evenimente;
+    private List<User> utilizatori = new();
+    private List<Event> evenimente = new();
     public LoginForm()
     {
         InitializeComponent();
@@ -17,11 +19,18 @@ public partial class LoginForm : Form
             WriteIndented = true,
             PropertyNameCaseInsensitive = true
         };
+        textBox2.UseSystemPasswordChar = true;// sa ascundem scrisul de la parola
+        ReloadData();
         utilizatori = AuthService.LoadUsers(usersPath, options); // incarc datele când porneste form-ul
         button1.Click += button1_Click;   // LOGIN
         button2.Click += button2_Click;   // EXIT
         label5.Click += label5_Click;     // SIGN UP
         label5.Cursor = Cursors.Hand;// aici il fac sa arate ca link
+    }
+    private void ReloadData()// reincarcare users si events ca sa nu ramana null
+    {
+        utilizatori = AuthService.LoadUsers(usersPath, options) ?? new List<User>();
+        evenimente = EventsStore.LoadEvents(eventsPath, options) ?? new List<Event>();
     }
     private void button1_Click(object? sender, EventArgs e)
     {
@@ -32,7 +41,7 @@ public partial class LoginForm : Form
             MessageBox.Show("Write your username and password.");
             return;
         }
-        utilizatori = AuthService.LoadUsers(usersPath, options);// reincarc userii inainte de login
+        ReloadData();// reincarc userii inainte de login
         var user = AuthService.LoginWithCredentials(utilizatori, username, password);
         if (user == null)
         {
@@ -43,7 +52,7 @@ public partial class LoginForm : Form
         Form next;// aici pt ca urmeaza un form ori de client ori de organizator
         if (user.Role.Equals("Organizer", StringComparison.OrdinalIgnoreCase))
         {
-            next = new MeniuOrganizator();
+            next = new MeniuOrganizator(user, evenimente, eventsPath, options);
         }
         else
         {
