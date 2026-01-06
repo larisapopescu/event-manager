@@ -23,27 +23,23 @@ public partial class MeniuOrganizator : Form
     }
     private void button1_Click(object? sender, EventArgs e)
     {
-        var f = new ManageEvents(user, evenimente, eventsPath, options);// asta urmeaza sa o fac
+        var f = new ManageEvents(user, evenimente, eventsPath, options);
         f.ShowDialog(); // teoretic aici se opreste codul ca sa pot face ce trebuie facut in manageevenst
     }
     private void button2_Click(object? sender, EventArgs e)
     {
-        /*var f = new ManageTicketTypes();// asta urmeaza sa o fac
-        f.ShowDialog(); */
-        MessageBox.Show("Urmeaza");
+        var f = new ManageTicketTypes(user, evenimente, eventsPath, options);
+        f.ShowDialog(); 
     }
-
     private void button3_Click(object? sender, EventArgs e)
     {
-        /*var f = new SalesStatus(); // asta urmeaza sa o fac
-        f.ShowDialog();*/
-        MessageBox.Show("Urmeaza");
+        var f = new SalesStatus(user, evenimente); 
+        f.ShowDialog();
     }
     private void button4_Click(object? sender, EventArgs e)
     {
-        /*var f = new ChangeEventStatus();// asta urmeaza sa o fac
-        f.ShowDialog();*/
-        MessageBox.Show("Urmeaza");
+        var f = new ChangeEventStatus(user, evenimente, eventsPath, options);
+        f.ShowDialog();
     }
     private void button5_Click(object? sender, EventArgs e)
     {
