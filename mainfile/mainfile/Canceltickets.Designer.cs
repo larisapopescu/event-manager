@@ -51,7 +51,6 @@ partial class Canceltickets
         // listBox1
         // 
         listBox1.FormattingEnabled = true;
-        listBox1.HorizontalScrollbar = true;
         listBox1.Location = new System.Drawing.Point(12, 99);
         listBox1.Name = "listBox1";
         listBox1.Size = new System.Drawing.Size(303, 344);

@@ -1,5 +1,6 @@
 ﻿namespace mainfile;
 using System.Text.Json;
+
 public partial class ManageTicketTypes : Form
 {
     private readonly User user;
@@ -7,14 +8,13 @@ public partial class ManageTicketTypes : Form
     private readonly string eventsPath;
     private readonly JsonSerializerOptions options;
     private List<Event> myEvents = new();
-
     public ManageTicketTypes(User user, List<Event> evenimente, string eventsPath, JsonSerializerOptions options)
     {
         InitializeComponent();
         this.user = user;
         this.evenimente = evenimente;
-        this.eventsPath = eventsPath ;
-        this.options = options ;
+        this.eventsPath = eventsPath;
+        this.options = options;
         button1.Click += button1_Click;
         button2.Click += button2_Click;
         //button3.Click += button3_Click;
@@ -24,7 +24,6 @@ public partial class ManageTicketTypes : Form
         LoadMyEvents();
         ResetInputs();
     }
-
     private void SetupTicketTypesCombo()
     {
         comboBox2.DataSource = null;
@@ -34,11 +33,9 @@ public partial class ManageTicketTypes : Form
         comboBox2.Items.Add("Early Bird");
         comboBox2.SelectedIndex = 0;
     }
-
     private void LoadMyEvents()
     {
         myEvents = evenimente.Where(e => e.OrganizerUsername == user.Username).ToList();
-
         comboBox1.DataSource = null;
         comboBox1.DisplayMember = nameof(Event.EventName);
         comboBox1.DataSource = myEvents;
@@ -82,7 +79,7 @@ public partial class ManageTicketTypes : Form
         {
             return;
         }
-        var existing = ev.OptiuniTichete?.FirstOrDefault(t => t.CategoryName.Equals(typeName, StringComparison.OrdinalIgnoreCase));
+        var existing = ev.OptiuniTichete?.FirstOrDefault(t => t.CategoryName.Equals(typeName, StringComparison.OrdinalIgnoreCase));// incarcam valorile
         if (existing != null)
         {
             numericUpDown1.Value = existing.MaxQuantity;// daca biletul exista,lasam cantitatea default
@@ -99,6 +96,7 @@ public partial class ManageTicketTypes : Form
     {
         numericUpDown1.Value = 0; // cantitate
         numericUpDown2.Value = 0; // pret
+
         if (comboBox2.Items.Count > 0)
         {
             comboBox2.SelectedIndex = 0;
@@ -120,7 +118,7 @@ public partial class ManageTicketTypes : Form
         }
         int qty = (int)numericUpDown1.Value;
         decimal price = numericUpDown2.Value;
-        
+
         if (qty == 0)
         {
             MessageBox.Show("Nothing was saved for this ticket type");
@@ -136,9 +134,34 @@ public partial class ManageTicketTypes : Form
         {
             allocated += t.MaxQuantity;
         }
-        var existing = ev.OptiuniTichete.FirstOrDefault(t => t.CategoryName.Equals(typeName, StringComparison.OrdinalIgnoreCase));
+        var existing = ev.OptiuniTichete
+            .FirstOrDefault(t => t.CategoryName.Equals(typeName, StringComparison.OrdinalIgnoreCase));
+        if (existing != null && existing.SoldCount > 0)
+        {
+            if (price != existing.Price) // nu putem schimba pretul dupa ce s au vandut bilete
+            {
+                MessageBox.Show(
+                    "You cannot change the price after tickets have been sold.",
+                    "Operation not allowed",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+            if (qty < existing.SoldCount) // nu ai voie sa scazi cantitatea sub biletele vandute
+            {
+                MessageBox.Show(
+                    $"You cannot set quantity below sold tickets ({existing.SoldCount}).",
+                    "Operation not allowed",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+        }
         int oldQty = existing?.MaxQuantity ?? 0;
         int newAllocated = allocated - oldQty + qty;// daca exista scadem
+
         if (newAllocated > ev.EventCapacity)
         {
             int remaining = ev.EventCapacity - (allocated - oldQty);
@@ -160,7 +183,6 @@ public partial class ManageTicketTypes : Form
         else
         {
             int sold = existing.SoldCount;
-
             if (qty < sold)
             {
                 MessageBox.Show($"You cannot set quantity below sold count ({sold})");
@@ -209,7 +231,10 @@ public partial class ManageTicketTypes : Form
         {
             remaining = 0;
         }
-        lblEventInfo.Text = $"Capacity: {capacity}\n" + $"Allocated: {allocated} | Remaining: {remaining}\n" + $"VIP: {vip} | Standard: {standard} | Early Bird: {early}";
+        lblEventInfo.Text =
+            $"Capacity: {capacity}\n" +
+            $"Allocated: {allocated} | Remaining: {remaining}\n" +
+            $"VIP: {vip} | Standard: {standard} | Early Bird: {early}";
     }
     private bool IsLocked(Event ev)// verifica daca e calcelled sau completed ca sa nu mai poti seta bilete
     {
@@ -233,5 +258,4 @@ public partial class ManageTicketTypes : Form
             lblEventInfo.Text += $"\n\n This event is {ev.EventStatus}. You cannot set ticket types.";
         }
     }
-
 }

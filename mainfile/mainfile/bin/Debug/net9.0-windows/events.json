@@ -13,8 +13,8 @@
         "CategoryName": "Standard",
         "Price": 25,
         "MaxQuantity": 6,
-        "SoldCount": 2,
-        "IsAvailable": true
+        "SoldCount": 6,
+        "IsAvailable": false
       },
       {
         "CategoryName": "Early Bird",

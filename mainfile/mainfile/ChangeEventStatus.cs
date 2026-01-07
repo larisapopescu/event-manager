@@ -1,7 +1,5 @@
 ﻿using System.Text.Json;
-
 namespace mainfile;
-
 public partial class ChangeEventStatus : Form
 {
     private readonly User user;
@@ -12,19 +10,18 @@ public partial class ChangeEventStatus : Form
     public ChangeEventStatus(User user, List<Event> evenimente, string eventsPath, JsonSerializerOptions options)
     {
         InitializeComponent();
-        this.user = user ;
-        this.evenimente = evenimente ;
-        this.eventsPath = eventsPath ;
-        this.options = options ;
-
+        this.user = user;
+        this.evenimente = evenimente;
+        this.eventsPath = eventsPath;
+        this.options = options;
         comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
         button1.Click += button1_Click;
         button2.Click += button2_Click;
         SetupStatusCombo();
         LoadMyEvents();
         SyncStatusWithSelectedEvent();
+        ApplySoldTicketsLock();
     }
-
     private void SetupStatusCombo()
     {
         comboBox2.DataSource = null;
@@ -35,7 +32,6 @@ public partial class ChangeEventStatus : Form
         comboBox2.Items.Add("Completed");
         comboBox2.SelectedIndex = 0;
     }
-
     private void LoadMyEvents()
     {
         myEvents = evenimente.Where(e => e.OrganizerUsername == user.Username).ToList();
@@ -59,11 +55,15 @@ public partial class ChangeEventStatus : Form
     private void comboBox1_SelectedIndexChanged(object? sender, EventArgs e)
     {
         SyncStatusWithSelectedEvent();
+        ApplySoldTicketsLock();
     }
     private void SyncStatusWithSelectedEvent()
     {
         var ev = GetSelectedEvent();
-        if (ev == null) return;
+        if (ev == null)
+        {
+            return;
+        }
         string currentStatus = ev.EventStatus ?? "Scheduled";
         // alegem în combo statusul curent
         for (int i = 0; i < comboBox2.Items.Count; i++)
@@ -77,6 +77,32 @@ public partial class ChangeEventStatus : Form
         // dacă nu gssim statusul, punem scheduled by default
         comboBox2.SelectedIndex = 0;
     }
+    private int TotalSoldTickets(Event ev)
+    {
+        int sold = 0;
+        if (ev.OptiuniTichete == null)
+        {
+            return 0;
+        }
+        foreach (var t in ev.OptiuniTichete)
+        {
+            sold += t.SoldCount;
+        }
+        return sold;
+    }
+    private void ApplySoldTicketsLock()
+    {
+        var ev = GetSelectedEvent();
+        if (ev == null)
+        {
+            return;
+        }
+        int sold = TotalSoldTickets(ev);
+        bool locked = sold > 0;// daca sunt bilete cumparate blocam
+        comboBox2.Enabled = !locked;
+        button1.Enabled = !locked;
+        
+    }
     private void button1_Click(object? sender, EventArgs e)
     {
         var ev = GetSelectedEvent();
@@ -85,20 +111,21 @@ public partial class ChangeEventStatus : Form
             MessageBox.Show("Choose an event first");
             return;
         }
+        int sold = TotalSoldTickets(ev);// daca sunt bilete vandute nu putem modifica statusul
+        if (sold > 0)
+        {
+            MessageBox.Show($"You cannot change status. This event already has {sold} sold ticket(s)");
+            return;
+        }
         string newStatus = comboBox2.SelectedItem?.ToString() ?? "";
         if (string.IsNullOrWhiteSpace(newStatus))
         {
             MessageBox.Show("Choose a status.");
             return;
         }
-        // confirmare dacă anuleaza
-        if (newStatus.Equals("Canceled", StringComparison.OrdinalIgnoreCase))
+        if (newStatus.Equals("Canceled", StringComparison.OrdinalIgnoreCase))// confirmare daca anuleaza
         {
-            var confirm = MessageBox.Show(
-                "Are you sure you want to cancel this event?",
-                "Confirm",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning);
+            var confirm = MessageBox.Show("Are you sure you want to cancel this event?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (confirm != DialogResult.Yes)
             {
                 return;
@@ -108,7 +135,6 @@ public partial class ChangeEventStatus : Form
         EventsStore.SaveEvents(evenimente, eventsPath, options);
         MessageBox.Show("Status updated and saved!");
     }
-
     private void button2_Click(object? sender, EventArgs e)
     {
         Close();
