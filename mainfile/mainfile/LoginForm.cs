@@ -1,6 +1,4 @@
 ﻿using System.Runtime.CompilerServices;
-using System.Text.Json;
-
 namespace mainfile;
 using System.IO;
 using System.Text.Json;
@@ -56,7 +54,7 @@ public partial class LoginForm : Form
         }
         else
         {
-            next = new MeniuClient();
+            next = new MeniuClient(user, evenimente, eventsPath, options);
         }
         next.FormClosed += (_, __) =>// aici daca apas logout revenim la pagina de login(principala noastra)
         {

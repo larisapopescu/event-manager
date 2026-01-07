@@ -1,25 +1,32 @@
 [
   {
     "EventName": "BookClub",
-    "EventDescription": "sdf",
-    "EventLocation": "fdsf",
-    "EventStatus": "Completed",
-    "EventDate": "2026-01-13T23:35:00.968",
+    "EventDescription": "club literatura",
+    "EventLocation": "biblioteca",
+    "EventStatus": "Modified",
+    "EventDate": "2026-01-14T16:13:06.357",
     "EventCapacity": 10,
     "OrganizerUsername": "larisao",
-    "ImagePath": null,
+    "ImagePath": "C:\\Users\\laris\\Desktop\\event-manager\\mainfile\\mainfile\\bin\\Debug\\net9.0-windows\\event_images\\06cf43b2-37d2-46e6-ad6e-e3dc2fe76e45.jpg",
     "OptiuniTichete": [
       {
-        "CategoryName": "Standard",
-        "Price": 2,
-        "MaxQuantity": 7,
+        "CategoryName": "VIP",
+        "Price": 50,
+        "MaxQuantity": 3,
         "SoldCount": 0,
         "IsAvailable": true
       },
       {
-        "CategoryName": "VIP",
-        "Price": 100,
-        "MaxQuantity": 3,
+        "CategoryName": "Standard",
+        "Price": 25,
+        "MaxQuantity": 6,
+        "SoldCount": 0,
+        "IsAvailable": true
+      },
+      {
+        "CategoryName": "Early Bird",
+        "Price": 10,
+        "MaxQuantity": 1,
         "SoldCount": 0,
         "IsAvailable": true
       }
@@ -27,13 +34,13 @@
   },
   {
     "EventName": "Party",
-    "EventDescription": "sdfsdfg",
-    "EventLocation": "fdsfasdfg",
+    "EventDescription": "petrecere",
+    "EventLocation": "club",
     "EventStatus": "scheduled",
-    "EventDate": "2026-01-21T23:35:00.968",
+    "EventDate": "2026-01-14T16:16:02.995",
     "EventCapacity": 100,
-    "OrganizerUsername": "larisao",
-    "ImagePath": null,
+    "OrganizerUsername": "larisao2",
+    "ImagePath": "C:\\Users\\laris\\Desktop\\event-manager\\mainfile\\mainfile\\bin\\Debug\\net9.0-windows\\event_images\\514e5adc-3a23-410f-aa8a-c264cafde83c.jpg",
     "OptiuniTichete": []
   }
 ]

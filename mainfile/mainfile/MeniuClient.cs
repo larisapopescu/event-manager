@@ -1,27 +1,29 @@
 ﻿namespace mainfile;
-
+using System.IO;
+using System.Text.Json;
 public partial class MeniuClient : Form
 {
-    public MeniuClient()
+    private readonly User user;
+    private readonly List<Event> evenimente;
+    private readonly string eventsPath;
+    private readonly JsonSerializerOptions options;
+  
+    public MeniuClient(User user, List<Event> evenimente, string eventsPath, JsonSerializerOptions options)
     {
         InitializeComponent();
         button1.Click += button1_Click;
-        button2.Click += button2_Click;
         button3.Click += button3_Click;
         button4.Click += button4_Click;
         button5.Click += button5_Click;
+        this.user = user;
+        this.evenimente = evenimente;
+        this.eventsPath = eventsPath;
+        this.options = options;
     }
     private void button1_Click(object? sender, EventArgs e)
     {
-        //var f = new SearchEvents();//urmeaza sa o fac
-        MessageBox.Show("Urmeaza");
-        //f.ShowDialog();
-    }
-    private void button2_Click(object? sender, EventArgs e)
-    {
-        //var f = new ViewEventDetail();//urmeaza sa o fac
-        //f.ShowDialog();
-        MessageBox.Show("Urmeaza");
+        using var f = new SearchEvents(evenimente);
+        f.ShowDialog(this);
     }
     private void button3_Click(object? sender, EventArgs e)
     {

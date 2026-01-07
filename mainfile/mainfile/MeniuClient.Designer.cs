@@ -34,7 +34,6 @@ partial class MeniuClient
         label1 = new System.Windows.Forms.Label();
         label2 = new System.Windows.Forms.Label();
         button1 = new System.Windows.Forms.Button();
-        button2 = new System.Windows.Forms.Button();
         button3 = new System.Windows.Forms.Button();
         button4 = new System.Windows.Forms.Button();
         button5 = new System.Windows.Forms.Button();
@@ -67,31 +66,19 @@ partial class MeniuClient
         button1.ForeColor = System.Drawing.Color.White;
         button1.Location = new System.Drawing.Point(24, 139);
         button1.Name = "button1";
-        button1.Size = new System.Drawing.Size(271, 60);
+        button1.Size = new System.Drawing.Size(271, 93);
         button1.TabIndex = 2;
         button1.Text = "Search event";
         button1.UseVisualStyleBackColor = false;
-        // 
-        // button2
-        // 
-        button2.BackColor = System.Drawing.Color.MidnightBlue;
-        button2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        button2.ForeColor = System.Drawing.Color.White;
-        button2.Location = new System.Drawing.Point(24, 245);
-        button2.Name = "button2";
-        button2.Size = new System.Drawing.Size(271, 60);
-        button2.TabIndex = 3;
-        button2.Text = "Viewing event details";
-        button2.UseVisualStyleBackColor = false;
         // 
         // button3
         // 
         button3.BackColor = System.Drawing.Color.MidnightBlue;
         button3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         button3.ForeColor = System.Drawing.Color.White;
-        button3.Location = new System.Drawing.Point(24, 341);
+        button3.Location = new System.Drawing.Point(24, 273);
         button3.Name = "button3";
-        button3.Size = new System.Drawing.Size(271, 60);
+        button3.Size = new System.Drawing.Size(271, 90);
         button3.TabIndex = 4;
         button3.Text = "Buying tickets";
         button3.UseVisualStyleBackColor = false;
@@ -101,9 +88,9 @@ partial class MeniuClient
         button4.BackColor = System.Drawing.Color.MidnightBlue;
         button4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         button4.ForeColor = System.Drawing.Color.White;
-        button4.Location = new System.Drawing.Point(24, 444);
+        button4.Location = new System.Drawing.Point(24, 402);
         button4.Name = "button4";
-        button4.Size = new System.Drawing.Size(271, 60);
+        button4.Size = new System.Drawing.Size(271, 91);
         button4.TabIndex = 5;
         button4.Text = "Managing personal tickets";
         button4.UseVisualStyleBackColor = false;
@@ -126,7 +113,6 @@ partial class MeniuClient
         Controls.Add(button5);
         Controls.Add(button4);
         Controls.Add(button3);
-        Controls.Add(button2);
         Controls.Add(button1);
         Controls.Add(label2);
         Controls.Add(label1);
@@ -137,7 +123,6 @@ partial class MeniuClient
     }
 
     private System.Windows.Forms.Button button1;
-    private System.Windows.Forms.Button button2;
     private System.Windows.Forms.Button button3;
     private System.Windows.Forms.Button button4;
     private System.Windows.Forms.Button button5;
