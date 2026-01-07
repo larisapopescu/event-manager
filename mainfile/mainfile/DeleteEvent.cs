@@ -10,8 +10,8 @@ public partial class DeleteEvent : Form
     public DeleteEvent(User user, List<Event> evenimente)
     {
         InitializeComponent();
-        this.user = user ?? throw new ArgumentNullException(nameof(user));
-        this.evenimente = evenimente ?? throw new ArgumentNullException(nameof(evenimente));
+        this.user = user ;
+        this.evenimente = evenimente;
         button1.Click += button1_Click;
         button2.Click += button2_Click;
         LoadMyEvents();

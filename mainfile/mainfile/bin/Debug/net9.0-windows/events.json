@@ -10,25 +10,25 @@
     "ImagePath": "C:\\Users\\laris\\Desktop\\event-manager\\mainfile\\mainfile\\bin\\Debug\\net9.0-windows\\event_images\\06cf43b2-37d2-46e6-ad6e-e3dc2fe76e45.jpg",
     "OptiuniTichete": [
       {
-        "CategoryName": "VIP",
-        "Price": 50,
-        "MaxQuantity": 3,
-        "SoldCount": 0,
-        "IsAvailable": true
-      },
-      {
         "CategoryName": "Standard",
         "Price": 25,
         "MaxQuantity": 6,
-        "SoldCount": 0,
+        "SoldCount": 2,
         "IsAvailable": true
       },
       {
         "CategoryName": "Early Bird",
         "Price": 10,
         "MaxQuantity": 1,
-        "SoldCount": 0,
-        "IsAvailable": true
+        "SoldCount": 1,
+        "IsAvailable": false
+      },
+      {
+        "CategoryName": "VIP",
+        "Price": 100,
+        "MaxQuantity": 3,
+        "SoldCount": 3,
+        "IsAvailable": false
       }
     ]
   },
@@ -36,11 +36,90 @@
     "EventName": "Party",
     "EventDescription": "petrecere",
     "EventLocation": "club",
-    "EventStatus": "scheduled",
+    "EventStatus": "Scheduled",
     "EventDate": "2026-01-14T16:16:02.995",
     "EventCapacity": 100,
     "OrganizerUsername": "larisao2",
     "ImagePath": "C:\\Users\\laris\\Desktop\\event-manager\\mainfile\\mainfile\\bin\\Debug\\net9.0-windows\\event_images\\514e5adc-3a23-410f-aa8a-c264cafde83c.jpg",
-    "OptiuniTichete": []
+    "OptiuniTichete": [
+      {
+        "CategoryName": "VIP",
+        "Price": 100,
+        "MaxQuantity": 30,
+        "SoldCount": 30,
+        "IsAvailable": false
+      },
+      {
+        "CategoryName": "Standard",
+        "Price": 100,
+        "MaxQuantity": 60,
+        "SoldCount": 60,
+        "IsAvailable": false
+      },
+      {
+        "CategoryName": "Early Bird",
+        "Price": 50,
+        "MaxQuantity": 10,
+        "SoldCount": 10,
+        "IsAvailable": false
+      }
+    ]
+  },
+  {
+    "EventName": "sdfg",
+    "EventDescription": "fgh",
+    "EventLocation": "gh",
+    "EventStatus": "scheduled",
+    "EventDate": "2026-01-14T22:58:49.189",
+    "EventCapacity": 10,
+    "OrganizerUsername": "larisao",
+    "ImagePath": null,
+    "OptiuniTichete": [
+      {
+        "CategoryName": "Standard",
+        "Price": 10,
+        "MaxQuantity": 10,
+        "SoldCount": 10,
+        "IsAvailable": false
+      }
+    ]
+  },
+  {
+    "EventName": "sdfgfg",
+    "EventDescription": "ffg",
+    "EventLocation": "fsaas",
+    "EventStatus": "scheduled",
+    "EventDate": "2026-01-15T23:00:42.234",
+    "EventCapacity": 5,
+    "OrganizerUsername": "larisao",
+    "ImagePath": null,
+    "OptiuniTichete": [
+      {
+        "CategoryName": "Standard",
+        "Price": 12,
+        "MaxQuantity": 5,
+        "SoldCount": 5,
+        "IsAvailable": false
+      }
+    ]
+  },
+  {
+    "EventName": "test",
+    "EventDescription": "test",
+    "EventLocation": "test",
+    "EventStatus": "Completed",
+    "EventDate": "2026-01-08T23:21:09.863",
+    "EventCapacity": 5,
+    "OrganizerUsername": "larisao",
+    "ImagePath": null,
+    "OptiuniTichete": [
+      {
+        "CategoryName": "Standard",
+        "Price": 10,
+        "MaxQuantity": 5,
+        "SoldCount": 5,
+        "IsAvailable": false
+      }
+    ]
   }
 ]

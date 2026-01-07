@@ -11,8 +11,8 @@ public partial class CreateEvent : Form
         button1.Click += button1Image_Click;
         button2.Click += buttonCreate_Click;
         button3.Click += button3_Click;
-        this.user = user ?? throw new ArgumentNullException(nameof(user));
-        this.evenimente = evenimente ?? new List<Event>();
+        this.user = user;
+        this.evenimente = evenimente;
     }
     private void button1Image_Click(object sender, EventArgs e)
     {

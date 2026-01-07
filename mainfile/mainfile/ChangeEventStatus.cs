@@ -12,10 +12,10 @@ public partial class ChangeEventStatus : Form
     public ChangeEventStatus(User user, List<Event> evenimente, string eventsPath, JsonSerializerOptions options)
     {
         InitializeComponent();
-        this.user = user ?? throw new ArgumentNullException(nameof(user));
-        this.evenimente = evenimente ?? throw new ArgumentNullException(nameof(evenimente));
-        this.eventsPath = eventsPath ?? throw new ArgumentNullException(nameof(eventsPath));
-        this.options = options ?? throw new ArgumentNullException(nameof(options));
+        this.user = user ;
+        this.evenimente = evenimente ;
+        this.eventsPath = eventsPath ;
+        this.options = options ;
 
         comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
         button1.Click += button1_Click;

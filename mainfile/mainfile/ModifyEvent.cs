@@ -8,8 +8,8 @@ public partial class ModifyEvent : Form
     public ModifyEvent(User user, List<Event> evenimente)
     {
         InitializeComponent();
-        this.user = user ?? throw new ArgumentNullException(nameof(user));
-        this.evenimente = evenimente ?? throw new ArgumentNullException(nameof(evenimente));
+        this.user = user;
+        this.evenimente = evenimente;
         comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
         button1.Click += button1_Click;
         button2.Click += button2_Click;

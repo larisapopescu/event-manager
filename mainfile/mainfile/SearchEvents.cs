@@ -8,7 +8,7 @@ public partial class SearchEvents : Form
     public SearchEvents(List<Event> evenimente)
     {
         InitializeComponent();
-        this.evenimente = evenimente ?? new List<Event>();
+        this.evenimente = evenimente;
         pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;// ne asiguram ca poza se potriveste
         comboBox1.Items.Clear();
         comboBox1.Items.Add("Name");

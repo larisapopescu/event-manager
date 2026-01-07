@@ -10,8 +10,8 @@ public partial class SalesStatus : Form
     {
         InitializeComponent();
 
-        this.user = user ?? throw new ArgumentNullException(nameof(user));// daca e null aplicatia se opreste
-        this.evenimente = evenimente ?? throw new ArgumentNullException(nameof(evenimente));
+        this.user = user;
+        this.evenimente = evenimente;
         comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
         button1.Click += button1_Click;
         LoadMyEvents();

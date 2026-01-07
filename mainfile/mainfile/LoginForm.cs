@@ -54,7 +54,7 @@ public partial class LoginForm : Form
         }
         else
         {
-            next = new MeniuClient(user, evenimente, eventsPath, options);
+            next = new MeniuClient(user, utilizatori, evenimente, usersPath, eventsPath, options);
         }
         next.FormClosed += (_, __) =>// aici daca apas logout revenim la pagina de login(principala noastra)
         {

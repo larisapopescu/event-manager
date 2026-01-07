@@ -11,10 +11,10 @@ public partial class ManageTicketTypes : Form
     public ManageTicketTypes(User user, List<Event> evenimente, string eventsPath, JsonSerializerOptions options)
     {
         InitializeComponent();
-        this.user = user ?? throw new ArgumentNullException(nameof(user));
-        this.evenimente = evenimente ?? throw new ArgumentNullException(nameof(evenimente));
-        this.eventsPath = eventsPath ?? throw new ArgumentNullException(nameof(eventsPath));
-        this.options = options ?? throw new ArgumentNullException(nameof(options));
+        this.user = user;
+        this.evenimente = evenimente;
+        this.eventsPath = eventsPath ;
+        this.options = options ;
         button1.Click += button1_Click;
         button2.Click += button2_Click;
         //button3.Click += button3_Click;
