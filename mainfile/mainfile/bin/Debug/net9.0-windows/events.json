@@ -121,5 +121,31 @@
         "IsAvailable": false
       }
     ]
+  },
+  {
+    "EventName": "Rock la Mures",
+    "EventDescription": "Festival Rock",
+    "EventLocation": "Mures",
+    "EventStatus": "Modified",
+    "EventDate": "2026-04-23T14:55:46.981",
+    "EventCapacity": 5,
+    "OrganizerUsername": "DenisaO",
+    "ImagePath": "C:\\Users\\Denisa\\OneDrive\\Desktop\\poo4\\mainfile\\mainfile\\bin\\Debug\\net9.0-windows\\event_images\\a60b5a5c-2fc4-4a82-a39b-1a81720b5770.jpg",
+    "OptiuniTichete": [
+      {
+        "CategoryName": "VIP",
+        "Price": 100,
+        "MaxQuantity": 1,
+        "SoldCount": 1,
+        "IsAvailable": false
+      },
+      {
+        "CategoryName": "Standard",
+        "Price": 20,
+        "MaxQuantity": 4,
+        "SoldCount": 1,
+        "IsAvailable": true
+      }
+    ]
   }
 ]

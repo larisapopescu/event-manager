@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\laris\\Desktop\\event-manager\\mainfile\\mainfile\\mainfile.csproj": {}
+    "C:\\Users\\Denisa\\OneDrive\\Desktop\\poo4\\mainfile\\mainfile\\mainfile.csproj": {}
   },
   "projects": {
-    "C:\\Users\\laris\\Desktop\\event-manager\\mainfile\\mainfile\\mainfile.csproj": {
+    "C:\\Users\\Denisa\\OneDrive\\Desktop\\poo4\\mainfile\\mainfile\\mainfile.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\laris\\Desktop\\event-manager\\mainfile\\mainfile\\mainfile.csproj",
+        "projectUniqueName": "C:\\Users\\Denisa\\OneDrive\\Desktop\\poo4\\mainfile\\mainfile\\mainfile.csproj",
         "projectName": "mainfile",
-        "projectPath": "C:\\Users\\laris\\Desktop\\event-manager\\mainfile\\mainfile\\mainfile.csproj",
-        "packagesPath": "C:\\Users\\laris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\laris\\Desktop\\event-manager\\mainfile\\mainfile\\obj\\",
+        "projectPath": "C:\\Users\\Denisa\\OneDrive\\Desktop\\poo4\\mainfile\\mainfile\\mainfile.csproj",
+        "packagesPath": "C:\\Users\\Denisa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Denisa\\OneDrive\\Desktop\\poo4\\mainfile\\mainfile\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\laris\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Denisa\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0-windows"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -49,6 +47,18 @@
             "Guna.UI2.WinForms": {
               "target": "Package",
               "version": "[2.0.4.7, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
+            "Microsoft.Extensions.Logging.Console": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[10.0.1, )"
             }
           },
           "imports": [
@@ -70,7 +80,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\laris\\.dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

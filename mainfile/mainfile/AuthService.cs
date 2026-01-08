@@ -1,9 +1,14 @@
 ﻿using System.Text.Json;
+using Microsoft.Extensions.Logging;
 
 namespace mainfile;
 
 public static class AuthService
 {
+    private static readonly ILogger logger =
+        Program.LoggerFactory.CreateLogger("AuthService");
+
+    
     // Încarcă datele din fișierul JSON și le transformă în obiecte
     public static List<User> LoadUsers(string FilePath, JsonSerializerOptions Options)
     {
@@ -84,6 +89,8 @@ public static class AuthService
     // login ul din WINDOWS FORMS
     public static User LoginWithCredentials(List<User> utilizatori, string username, string password)
     {
+        logger.LogDebug("Login attempt for {Username}", username);
+
         string hp = Hashing.ToSHA256(password);
         return utilizatori.FirstOrDefault(u => u.Username.Equals(username, StringComparison.OrdinalIgnoreCase) &&u.Password == hp);
     }
@@ -105,12 +112,16 @@ public static class AuthService
         User newUser = isOrganizer ? new Organizer(username, hashedPassword) : new Client(username, hashedPassword, new List<Ticket>());
         utilizatori.Add(newUser);
         Save(utilizatori, filePath, options);
+        
+        logger.LogInformation("User saved: {Username}", username);
+
         return (true, " ");
     }
     public static void Save(List<User> utilizatori, string filePath, JsonSerializerOptions options)
     {
         string json = JsonSerializer.Serialize(utilizatori, options);
         File.WriteAllText(filePath, json);// salvam lista de utilizatori
+        logger.LogInformation("Users saved to file");
     }
     
 }

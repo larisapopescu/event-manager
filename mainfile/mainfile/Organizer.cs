@@ -10,7 +10,7 @@ public class Organizer : User
     [JsonConstructor]
     public Organizer(string Username, string Password) : base(Username, Password, "Organizer")
     {
-        Console.WriteLine("organizer json");
+        //Console.WriteLine("organizer json");
     }
     private List<Event> MyEvents(List<Event> evenimente)
     {

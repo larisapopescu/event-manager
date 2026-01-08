@@ -1,15 +1,20 @@
 ﻿using System.Text.Json;
+using Microsoft.Extensions.Logging;
 
 namespace mainfile;
 
 public partial class RegisterForm : Form
 {
+    private readonly ILogger<RegisterForm> logger;
     private readonly string usersPath;
     private readonly JsonSerializerOptions options;
 
     public RegisterForm(string usersPath, JsonSerializerOptions options)
     {
         InitializeComponent();
+        
+        logger = Program.LoggerFactory.CreateLogger<RegisterForm>();
+        
         this.usersPath = usersPath;
         this.options = options;
         radioButton2.Checked = true; // default client
@@ -24,9 +29,14 @@ public partial class RegisterForm : Form
         var (ok, err) = AuthService.RegisterWithCredentials(utilizatori, username, password, isOrganizer, usersPath, options);
         if (!ok)
         {
+            logger.LogWarning("Register failed for {Username}: {Error}", username, err);
+
             MessageBox.Show(err);
             return;
         }
+        
+        logger.LogInformation("User registered: {Username}", username);
+
         this.DialogResult = DialogResult.OK;
         this.Close();
     }

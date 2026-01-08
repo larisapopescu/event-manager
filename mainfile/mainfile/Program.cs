@@ -3,14 +3,34 @@ using System.Linq;
 using System.Runtime.InteropServices.JavaScript;
 using System.Security.Cryptography;
 using System.Windows.Forms;
+using Microsoft.Extensions.Logging;
+
 namespace mainfile;
 
-class Program
+internal static class Program
 {
+    public static ILoggerFactory LoggerFactory { get; private set; }
+    
     [STAThread] // pentru interfata
     static void Main(string[] args)
     {
+        // ApplicationConfiguration.Initialize();
+        // Application.Run(new LoginForm()); // pentru interfata
+
         ApplicationConfiguration.Initialize();
+        
+        LoggerFactory = Microsoft.Extensions.Logging.LoggerFactory.Create(builder =>
+        {
+            builder
+                .AddConsole(options =>
+                {
+                    options.IncludeScopes = true;
+                    options.DisableColors = false;
+                })
+                .AddDebug()
+                .SetMinimumLevel(LogLevel.Debug);
+        });
+        
         Application.Run(new LoginForm()); // pentru interfata
         
         
