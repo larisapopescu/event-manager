@@ -126,7 +126,7 @@
     "EventName": "Rock la Mures",
     "EventDescription": "Festival Rock",
     "EventLocation": "Mures",
-    "EventStatus": "Modified",
+    "EventStatus": "Canceled",
     "EventDate": "2026-04-23T14:55:46.981",
     "EventCapacity": 5,
     "OrganizerUsername": "DenisaO",
@@ -144,6 +144,32 @@
         "Price": 20,
         "MaxQuantity": 4,
         "SoldCount": 1,
+        "IsAvailable": true
+      }
+    ]
+  },
+  {
+    "EventName": "Pop",
+    "EventDescription": "Festival Pop",
+    "EventLocation": "Timisoara",
+    "EventStatus": "Modified",
+    "EventDate": "2026-10-29T18:08:19.602",
+    "EventCapacity": 100,
+    "OrganizerUsername": "DenisaO",
+    "ImagePath": null,
+    "OptiuniTichete": [
+      {
+        "CategoryName": "VIP",
+        "Price": 100,
+        "MaxQuantity": 20,
+        "SoldCount": 1,
+        "IsAvailable": true
+      },
+      {
+        "CategoryName": "Standard",
+        "Price": 20,
+        "MaxQuantity": 80,
+        "SoldCount": 2,
         "IsAvailable": true
       }
     ]

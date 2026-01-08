@@ -1,7 +1,9 @@
 ﻿namespace mainfile;
 using System.Text.Json;
+using Microsoft.Extensions.Logging;
 public partial class BuyingTickets : Form
 {
+    private readonly ILogger<BuyingTickets> logger;
     private readonly User user;                 
     private readonly List<User> utilizatori;    
     private readonly List<Event> evenimente;  
@@ -12,6 +14,9 @@ public partial class BuyingTickets : Form
     public BuyingTickets(  User user, List<User> utilizatori, List<Event> evenimente, string usersPath, string eventsPath, JsonSerializerOptions options)
     {
         InitializeComponent();
+        
+        logger = Program.LoggerFactory.CreateLogger<BuyingTickets>();
+        
         this.user = user;
             this.utilizatori =utilizatori;
             this.evenimente = evenimente;
@@ -24,6 +29,9 @@ public partial class BuyingTickets : Form
         button2.Click += button2_Click;
         numericUpDown1.Minimum = 1;
         numericUpDown1.Value = 1;// initial valorile sunt 1
+        
+        logger.LogInformation("Buying tickets form opened for {Username}", user.Username);
+        
         LoadAvailableEvents();
     }
     private bool IsEventBuyable(Event ev)// daca e canceled sau completed nu mai poti lua bilet
@@ -39,6 +47,7 @@ public partial class BuyingTickets : Form
         comboBox1.DataSource = null;
         if (availableEvents.Count == 0)
         {
+            logger.LogWarning("No events available for buying tickets");
             MessageBox.Show("No events available for buying tickets");
             comboBox1.Enabled = false;
             comboBox2.Enabled = false;
@@ -64,6 +73,9 @@ public partial class BuyingTickets : Form
     {
         var ev = GetSelectedEvent();
         if (ev == null) return;
+        
+        logger.LogInformation("Selected event changed to {EventName}", ev.EventName);
+        
         LoadTicketTypes(ev); // pune tipurile de bilet 
     }
     private void LoadTicketTypes(Event ev)// biletele disponibile
@@ -72,6 +84,7 @@ public partial class BuyingTickets : Form
         comboBox2.Items.Clear();
         if (ev.OptiuniTichete == null || ev.OptiuniTichete.Count == 0)
         {
+            logger.LogWarning("Event {EventName} has no ticket types", ev.EventName);
             comboBox2.Enabled = false;
             numericUpDown1.Enabled = false;
             button1.Enabled = false;
@@ -81,6 +94,7 @@ public partial class BuyingTickets : Form
         var typesAvailable = ev.OptiuniTichete.Where(t => (t.MaxQuantity - t.SoldCount) > 0).ToList();
         if (typesAvailable.Count == 0)
         {
+            logger.LogWarning("All ticket types sold out for {EventName}", ev.EventName);
             comboBox2.Enabled = false;
             numericUpDown1.Enabled = false;
             button1.Enabled = false;
@@ -115,6 +129,7 @@ public partial class BuyingTickets : Form
     {
         if (user is not Client client)
         {
+            logger.LogWarning("Non client attempted to buy tickets");
             MessageBox.Show("Only clients can buy tickets");
             return;
         }
@@ -150,6 +165,7 @@ public partial class BuyingTickets : Form
                 tt.IncrementSales();
                 client.AddTicket(new Ticket(ev.EventName, tt.CategoryName, tt.Price));
             }
+            logger.LogInformation("Bought {Qty} tickets for {EventName}", qty, ev.EventName);
             
             EventsStore.SaveEvents(evenimente, eventsPath, options); 
             AuthService.Save(utilizatori, usersPath, options);
@@ -158,6 +174,7 @@ public partial class BuyingTickets : Form
         catch (Exception ex)
         {
             MessageBox.Show($"Purchase failed: {ex.Message}");
+            logger.LogError(ex, "Ticket purchase failed");
             return;
         }
         
@@ -165,6 +182,7 @@ public partial class BuyingTickets : Form
     }
     private void button2_Click(object sender, EventArgs e)
     {
+        logger.LogInformation("Buying tickets form closed");
         this.Close();
     }
 }

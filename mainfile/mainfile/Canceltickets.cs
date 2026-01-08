@@ -1,7 +1,9 @@
 ﻿namespace mainfile;
 using System.Text.Json;
+using Microsoft.Extensions.Logging;
 public partial class Canceltickets : Form
 {
+    private readonly ILogger<Canceltickets> logger;
     private readonly User user;
     private readonly List<User> utilizatori;
     private readonly List<Event> evenimente;
@@ -12,6 +14,9 @@ public partial class Canceltickets : Form
     public Canceltickets(User user, List<User> utilizatori, List<Event> evenimente, string usersPath, string eventsPath, JsonSerializerOptions options)
     {
         InitializeComponent();
+        
+        logger = Program.LoggerFactory.CreateLogger<Canceltickets>();
+        
         this.user = user;
         this.utilizatori = utilizatori;
         this.evenimente = evenimente;
@@ -20,6 +25,9 @@ public partial class Canceltickets : Form
         this.options = options;
         button1.Click += button1_Click;
         button2.Click += button2_Click; 
+        
+        logger.LogInformation("Cancel tickets form opened for {Username}", user.Username);
+        
         LoadTicketsIntoList();
     }
     private bool IsEventActive(Event ev)
@@ -42,6 +50,7 @@ public partial class Canceltickets : Form
         shownTickets.Clear();
         if (user is not Client client)
         {
+            logger.LogWarning("Non client attempted to cancel tickets");
             MessageBox.Show("Only clients can cancel tickets");
             button1.Enabled = false;
             return;
@@ -136,12 +145,14 @@ public partial class Canceltickets : Form
         }
         AuthService.Save(utilizatori, usersPath, options);
         EventsStore.SaveEvents(evenimente, eventsPath, options);
+        logger.LogInformation("Ticket cancelled for event {EventName}", selected.EventName);
         MessageBox.Show("Ticket cancelled successfully");
         LoadActiveTickets();
     }
 
     private void button2_Click(object? sender, EventArgs e)
     {
+        logger.LogInformation("Cancel tickets form closed");
         this.Close();
     }
 }

@@ -1,15 +1,23 @@
 ﻿namespace mainfile;
 
+using Microsoft.Extensions.Logging;
 public partial class Activetickets : Form
 {
+    private readonly ILogger<Activetickets> logger;
     private readonly User user;
     private readonly List<Event> evenimente;
     public Activetickets(User user, List<Event> evenimente)
     {
         InitializeComponent();
+        
+        logger = Program.LoggerFactory.CreateLogger<Activetickets>();
+        
         this.user = user;
         this.evenimente = evenimente;
         button1.Click += button1_Click;
+        
+        logger.LogInformation("Active tickets form opened for {Username}", user.Username);
+        
         LoadActiveTickets();
     }
     private bool IsEventActive(Event ev)
@@ -32,18 +40,22 @@ public partial class Activetickets : Form
 
         if (user is not Client client)
         {
+            logger.LogWarning("Non client attempted to view active tickets");
+            
             listBox1.Items.Add("Only clients have active tickets");
             return;
         }
 
         if (client.Tichetemele == null || client.Tichetemele.Count == 0)
         {
+            logger.LogInformation("Client has no tickets");
             listBox1.Items.Add("You have no active tickets");
             return;
         }
         var activeTickets = from t in client.Tichetemele let ev = evenimente.FirstOrDefault(e => e.EventName == t.EventName) where ev != null && IsEventActive(ev) select new { Ticket = t, Event = ev };
         if (!activeTickets.Any())// vedem care sunt active
         {
+            logger.LogInformation("Client has no active tickets after filtering");
             listBox1.Items.Add("You have no active tickets");
             return;
         }
@@ -56,6 +68,7 @@ public partial class Activetickets : Form
     }
     private void button1_Click(object sender, EventArgs e)
     {
+        logger.LogInformation("Active tickets form closed");
         this.Close();
     }
 }

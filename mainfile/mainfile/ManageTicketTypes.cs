@@ -1,8 +1,11 @@
 ﻿namespace mainfile;
 using System.Text.Json;
+using Microsoft.Extensions.Logging;
 
 public partial class ManageTicketTypes : Form
 {
+    private readonly ILogger<ManageTicketTypes> logger;
+    
     private readonly User user;
     private readonly List<Event> evenimente;
     private readonly string eventsPath;
@@ -11,6 +14,10 @@ public partial class ManageTicketTypes : Form
     public ManageTicketTypes(User user, List<Event> evenimente, string eventsPath, JsonSerializerOptions options)
     {
         InitializeComponent();
+        
+        logger = Program.LoggerFactory.CreateLogger<ManageTicketTypes>();
+        logger.LogInformation("ManageTicketTypes opened");
+        
         this.user = user;
         this.evenimente = evenimente;
         this.eventsPath = eventsPath;
@@ -32,10 +39,15 @@ public partial class ManageTicketTypes : Form
         comboBox2.Items.Add("Standard");
         comboBox2.Items.Add("Early Bird");
         comboBox2.SelectedIndex = 0;
+        
+        logger.LogInformation("Ticket types combo initialized");
     }
     private void LoadMyEvents()
     {
         myEvents = evenimente.Where(e => e.OrganizerUsername == user.Username).ToList();
+        
+        logger.LogInformation("Loaded {Count} events for ticket types", myEvents.Count);
+        
         comboBox1.DataSource = null;
         comboBox1.DisplayMember = nameof(Event.EventName);
         comboBox1.DataSource = myEvents;
@@ -48,6 +60,9 @@ public partial class ManageTicketTypes : Form
         }
         comboBox1.SelectedIndex = 0;
         var ev = GetSelectedEvent();
+        
+        logger.LogInformation("Selected event changed: {Event}", ev.EventName);
+        
         if (ev != null)
         {
             UpdateEventInfo(ev);
@@ -69,6 +84,7 @@ public partial class ManageTicketTypes : Form
     }
     private void comboBox2_SelectedIndexChanged(object? sender, EventArgs e)
     {
+        logger.LogInformation("Ticket type selection changed");
         var ev = GetSelectedEvent();
         if (ev == null)
         {
@@ -104,6 +120,7 @@ public partial class ManageTicketTypes : Form
     }
     private void button1_Click(object? sender, EventArgs e)
     {
+        logger.LogInformation("Save ticket type clicked");
         var ev = GetSelectedEvent();
         if (ev == null)
         {
@@ -194,6 +211,7 @@ public partial class ManageTicketTypes : Form
         }
         UpdateEventInfo(ev);
         EventsStore.SaveEvents(evenimente, eventsPath, options);
+        logger.LogInformation("Ticket type saved for event {Event}", ev.EventName);
         MessageBox.Show("Ticket type saved successfully!");
     }
     /*private void button3_Click(object? sender, EventArgs e)
@@ -202,6 +220,7 @@ public partial class ManageTicketTypes : Form
     }*/
     private void button2_Click(object? sender, EventArgs e)
     {
+        logger.LogInformation("ManageTicketTypes closed");
         this.Close();
     }
     private void UpdateEventInfo(Event ev)
