@@ -169,7 +169,7 @@
         "CategoryName": "Standard",
         "Price": 20,
         "MaxQuantity": 80,
-        "SoldCount": 2,
+        "SoldCount": 1,
         "IsAvailable": true
       }
     ]

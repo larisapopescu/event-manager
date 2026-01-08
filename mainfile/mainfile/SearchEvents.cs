@@ -1,13 +1,19 @@
 ﻿namespace mainfile;
 using System.Text;
+using Microsoft.Extensions.Logging;
 public partial class SearchEvents : Form
 {
+    private readonly ILogger<SearchEvents> logger;
     private Event? selectedEvent; // event-ul selectat din listBox
     private readonly List<Event> evenimente;
     private List<Event> results = new();// rezulatele ultimei cautari
     public SearchEvents(List<Event> evenimente)
     {
         InitializeComponent();
+        
+        logger = Program.LoggerFactory.CreateLogger<SearchEvents>();
+        logger.LogInformation("SearchEvents opened");
+        
         this.evenimente = evenimente;
         pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;// ne asiguram ca poza se potriveste
         comboBox1.Items.Clear();
@@ -29,6 +35,9 @@ public partial class SearchEvents : Form
     {
         string mode = comboBox1.SelectedItem?.ToString() ?? "Name";
         // dacă e "date", input devine dateTimePicker
+        
+        logger.LogInformation("Search mode changed to {Mode}", mode);
+        
         bool isDate = mode.Equals("Date", StringComparison.OrdinalIgnoreCase);
         dateTimePicker1.Visible = isDate;
         textBox1.Visible = !isDate;
@@ -51,6 +60,7 @@ public partial class SearchEvents : Form
         label2.Text = "";
         if (results.Count == 0)
         {
+            logger.LogInformation("Search returned no results");
             MessageBox.Show("No events found.");
             return;
         }
@@ -90,6 +100,7 @@ public partial class SearchEvents : Form
             return;// daca nu e selectat nimic, iesim
         }
         selectedEvent = results[idx];
+        logger.LogInformation("Selected event from results: {Event}", selectedEvent.EventName);
         ShowEvent(selectedEvent);  
     }
     private void ShowEvent(Event ev)
@@ -127,11 +138,15 @@ public partial class SearchEvents : Form
             MessageBox.Show("Select an event first.");
             return;
         }
+        
+        logger.LogInformation("ViewEventDetail opened for {Event}", selectedEvent.EventName);
+        
         using var f = new ViewEventDetail(selectedEvent);
         f.ShowDialog(this);
     }
     private void button5_Click(object? sender, EventArgs e)
     {
+        logger.LogInformation("SearchEvents closed");
         this.Close();
     }
 }

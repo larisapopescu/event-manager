@@ -1,11 +1,17 @@
 ﻿namespace mainfile;
 using System.Text;
+using Microsoft.Extensions.Logging;
 public partial class ViewEventDetail : Form
 {
+    private readonly ILogger<ViewEventDetail> logger;
     private readonly Event ev;
     public ViewEventDetail(Event ev)
     {
         InitializeComponent();
+        
+        logger = Program.LoggerFactory.CreateLogger<ViewEventDetail>();
+        logger.LogInformation("ViewEventDetail opened for {Event}", ev.EventName);
+        
         this.ev = ev ?? throw new ArgumentNullException(nameof(ev));
         pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
         button1.Click += button1_Click;
@@ -73,6 +79,7 @@ public partial class ViewEventDetail : Form
     }
     private void button1_Click(object? sender, EventArgs e)
     {
+        logger.LogInformation("ViewEventDetail closed");
         this.Close();
     }
 }

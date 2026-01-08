@@ -1,6 +1,8 @@
 ﻿namespace mainfile;
+using Microsoft.Extensions.Logging;
 public partial class ModifyEvent : Form
 {
+    private readonly ILogger<ModifyEvent> logger;
     private readonly User user;
     private readonly List<Event> evenimente;
     // lista filtrata(doar ale organizatorului)
@@ -8,6 +10,10 @@ public partial class ModifyEvent : Form
     public ModifyEvent(User user, List<Event> evenimente)
     {
         InitializeComponent();
+        
+        logger = Program.LoggerFactory.CreateLogger<ModifyEvent>();
+        logger.LogInformation("ModifyEvent opened");
+        
         this.user = user;
         this.evenimente = evenimente;
         comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
@@ -19,6 +25,8 @@ public partial class ModifyEvent : Form
     private void LoadMyEvents()
     {
         myEvents = evenimente.Where(e => e.OrganizerUsername == user.Username).ToList();
+        logger.LogInformation("Loaded {Count} events for modification", myEvents.Count);
+        
         comboBox1.DataSource = null;
         comboBox1.DisplayMember = nameof(Event.EventName);
         comboBox1.DataSource = myEvents;
@@ -33,6 +41,9 @@ public partial class ModifyEvent : Form
     private void LoadSelectedEventToInputs()
     {
         if (comboBox1.SelectedItem is not Event ev) return;
+        
+        logger.LogInformation("Loaded event into inputs: {Event}", ev.EventName);
+        
         textBox1.Text = ev.EventName;// default aratam valorile curente
         textBox2.Text = ev.EventDescription;
         textBox3.Text = ev.EventLocation;
@@ -48,8 +59,12 @@ public partial class ModifyEvent : Form
         if (comboBox1.SelectedItem is not Event ev)
         {
             MessageBox.Show("Choose an event first");
+            logger.LogWarning("ModifyEvent attempted without selecting event");
             return;
         }
+        
+        logger.LogInformation("Attempting to modify event {Event}", ev.EventName);
+        
         string newName = textBox1.Text.Trim();
         string newDesc = textBox2.Text.Trim();
         string newLoc  = textBox3.Text.Trim();
@@ -85,28 +100,34 @@ public partial class ModifyEvent : Form
         if (!changed)// aici verificam daca cumva s au produs modificari
         {
             MessageBox.Show("No changes to save");
+            logger.LogInformation("No changes detected for event {Event}", ev.EventName);
             return;
         }
         try
         {
             ev.UpdateDetails(finalName, finalDesc, finalLoc, finalDate, finalCap);
 
+            logger.LogInformation("Event updated successfully: {Event}", ev.EventName);
+            
             MessageBox.Show("Changes saved");
             DialogResult = DialogResult.OK;
             Close();
         }
         catch (Exception ex)
         {
+            logger.LogError(ex, "Failed to update event {Event}", ev.EventName);
             MessageBox.Show($"Update failed: {ex.Message}");
         }
     }
     private void button2_Click(object? sender, EventArgs e)
     {
+        logger.LogInformation("ModifyEvent canceled");
         DialogResult = DialogResult.Cancel;
         Close();
     }
     private void button3_Click(object? sender, EventArgs e)
     {
+        logger.LogInformation("ModifyEvent closed");
         DialogResult = DialogResult.Cancel;
         Close();
     }

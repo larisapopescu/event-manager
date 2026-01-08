@@ -1,7 +1,8 @@
 ﻿namespace mainfile;
-
+using Microsoft.Extensions.Logging;
 public partial class SalesStatus : Form
 {
+    private readonly ILogger<SalesStatus> logger;
     private readonly User user;
     private readonly List<Event> evenimente;
     private List<Event> myEvents = new();
@@ -9,7 +10,10 @@ public partial class SalesStatus : Form
     public SalesStatus(User user, List<Event> evenimente)
     {
         InitializeComponent();
-
+        
+        logger = Program.LoggerFactory.CreateLogger<SalesStatus>();
+        logger.LogInformation("SalesStatus opened");
+        
         this.user = user;
         this.evenimente = evenimente;
         comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
@@ -19,6 +23,9 @@ public partial class SalesStatus : Form
     private void LoadMyEvents()
     {
         myEvents = evenimente.Where(e => e.OrganizerUsername == user.Username).ToList();
+        
+        logger.LogInformation("Loaded {Count} events for sales status", myEvents.Count);
+        
         comboBox1.DataSource = null;
         comboBox1.DisplayMember = nameof(Event.EventName);
         comboBox1.DataSource = myEvents;
@@ -35,6 +42,7 @@ public partial class SalesStatus : Form
     {
         if (comboBox1.SelectedItem is Event ev)
         {
+            logger.LogInformation("SalesStatus selected event: {Event}", ev.EventName);
             UpdateSalesInfo(ev);
         }
     }
@@ -75,6 +83,7 @@ public partial class SalesStatus : Form
 
     private void button1_Click(object? sender, EventArgs e)
     {
+        logger.LogInformation("SalesStatus closed");
         Close();
     }
 }
