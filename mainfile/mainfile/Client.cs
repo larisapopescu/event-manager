@@ -4,7 +4,8 @@ namespace mainfile;
 using System.Text.Json.Serialization;
 using System.Linq;
 
-public class Client : User
+// mostenim o clasa record imutabila 
+public record Client : User
 {
     // Portofelul clientului: Lista de bilete cumpărate
     public List<Ticket> Tichetemele { get; private set; } = new List<Ticket>();

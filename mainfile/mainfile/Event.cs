@@ -2,7 +2,6 @@
 
 namespace mainfile;
 using System.Text.Json.Serialization;
-
 public class Event
 {
     // Proprietăți setate ca private set pentru a proteja datele (încapsulare)

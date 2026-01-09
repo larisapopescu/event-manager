@@ -2,7 +2,9 @@
 using System.Xml.Schema;
 using System.Linq;
 namespace mainfile;
-public class Organizer : User
+
+// folosim cuvantul cheie record pentru a transforma clas in una imutabila
+public record Organizer : User
 {
     // Lista de evenimente create de acest organizator specific
     //public List<Event> CreatedEvents { get; set; } = new List<Event>();

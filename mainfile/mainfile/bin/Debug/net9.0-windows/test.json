@@ -9,935 +9,935 @@
     "$type": "Client",
     "Tichetemele": [
       {
-        "TicketId": "233495d1-4ef4-4454-97ba-ae2edfb4bd91",
+        "TicketId": "d1c96a49-692f-4b99-8ba2-790ae2e82f94",
         "EventName": "BookClub",
         "CategoryName": "Standard",
         "PricePaid": 25,
-        "PurchaseDate": "2026-01-09T00:32:16.4376558+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6329401+02:00"
       },
       {
-        "TicketId": "671cab85-c4bf-465c-8a23-c23a2ad976da",
+        "TicketId": "f26cbb7d-0b39-4a99-8b75-f6b10fdc92d9",
         "EventName": "BookClub",
         "CategoryName": "Standard",
         "PricePaid": 25,
-        "PurchaseDate": "2026-01-09T00:32:16.4376815+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6329662+02:00"
       },
       {
-        "TicketId": "0b02a892-bc5d-4c71-b45d-008581c37202",
+        "TicketId": "49919837-4494-4ec7-a79f-cc3c33521e83",
         "EventName": "BookClub",
         "CategoryName": "Standard",
         "PricePaid": 25,
-        "PurchaseDate": "2026-01-09T00:32:16.4377017+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6329872+02:00"
       },
       {
-        "TicketId": "f46ecf20-e463-40fc-b4ae-519d7ed397aa",
+        "TicketId": "c06b47cf-b572-4327-a81d-750aee8b2a02",
         "EventName": "BookClub",
         "CategoryName": "Standard",
         "PricePaid": 25,
-        "PurchaseDate": "2026-01-09T00:32:16.4377145+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6330002+02:00"
       },
       {
-        "TicketId": "c12300bf-3d5c-4211-ac94-8482c9fb62c8",
+        "TicketId": "59e35174-515d-417b-8acb-bf66a0cdfa09",
         "EventName": "BookClub",
         "CategoryName": "Standard",
         "PricePaid": 25,
-        "PurchaseDate": "2026-01-09T00:32:16.4377296+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6330161+02:00"
       },
       {
-        "TicketId": "2deb348c-a29b-44a9-9a3b-74cfc53e1f13",
+        "TicketId": "e58f7dfe-60b2-4d80-badc-37b75782a8fb",
         "EventName": "BookClub",
         "CategoryName": "VIP",
         "PricePaid": 50,
-        "PurchaseDate": "2026-01-09T00:32:16.4377499+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6330441+02:00"
       },
       {
-        "TicketId": "c9fb7b9e-31b8-4e67-9a2c-01d5da93bd90",
+        "TicketId": "9a7db7ba-7cfb-4b9c-94f4-003d69c1de7c",
         "EventName": "BookClub",
         "CategoryName": "VIP",
         "PricePaid": 50,
-        "PurchaseDate": "2026-01-09T00:32:16.437763+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6330572+02:00"
       },
       {
-        "TicketId": "b33a5279-0035-4895-a9cf-eec2685cc008",
+        "TicketId": "1c7f6e3c-ca3f-4cb5-abfc-c949e176a658",
         "EventName": "BookClub",
         "CategoryName": "VIP",
         "PricePaid": 50,
-        "PurchaseDate": "2026-01-09T00:32:16.4377751+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6330698+02:00"
       },
       {
-        "TicketId": "42da9e36-5a6f-418e-9bae-c98c6d651e18",
+        "TicketId": "452e6f1c-6164-44ff-b804-44e9d58e6472",
         "EventName": "BookClub",
         "CategoryName": "Early Bird",
         "PricePaid": 10,
-        "PurchaseDate": "2026-01-09T00:32:16.4377912+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6330852+02:00"
       },
       {
-        "TicketId": "ede43e6b-7a7a-4dc7-bf34-ba48078bb087",
+        "TicketId": "afdc8c47-51fd-4bdb-9fc2-8257d92628c1",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4378047+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6331012+02:00"
       },
       {
-        "TicketId": "3c5283a5-5aa8-441e-9a04-c3ec60a6d18a",
+        "TicketId": "d7c2756a-fc54-4af2-a82c-6299527b0b59",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.437816+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6331134+02:00"
       },
       {
-        "TicketId": "b02d02ff-84a7-4448-93bb-7cba7a83d280",
+        "TicketId": "b6bb484d-63b2-44e9-ac2a-80397110d0dd",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4378278+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6331259+02:00"
       },
       {
-        "TicketId": "22c39765-3e10-48da-b5a8-318390119f69",
+        "TicketId": "059befe0-83f8-46d6-9f25-2ca27eed31c0",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4378448+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.633141+02:00"
       },
       {
-        "TicketId": "a2a28bff-2434-4c69-9285-01837137feea",
+        "TicketId": "8901d812-534f-4f41-852c-44e72d87a98d",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4378581+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6331547+02:00"
       },
       {
-        "TicketId": "a9216039-6380-40b8-b9dd-78c963e406d8",
+        "TicketId": "99b9ba00-52dd-41db-b8c9-f8dc9d5688d2",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4378737+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6331685+02:00"
       },
       {
-        "TicketId": "54731427-e7f8-4b7c-90c6-efe442df46fc",
+        "TicketId": "3cff1019-a1b0-436a-abdb-c190de56fb5c",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4378867+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6331823+02:00"
       },
       {
-        "TicketId": "bf7c0df2-981a-446e-81a0-362ccf1595a5",
+        "TicketId": "2c2f43bd-e22c-480f-aa7f-3afc668d99fb",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4378978+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6331935+02:00"
       },
       {
-        "TicketId": "50dbccd4-8777-4ef9-ab09-22ead965298e",
+        "TicketId": "79487259-8a1a-48d8-adfb-b7044e20bd7b",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4379089+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6332047+02:00"
       },
       {
-        "TicketId": "63f4c958-1a91-4cef-8a7e-fa54f938b5ea",
+        "TicketId": "7a3a5e0e-0d8c-4644-a119-8b1f47831aee",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4379243+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6332208+02:00"
       },
       {
-        "TicketId": "b1b9e56b-7f3f-4c9f-8c98-9884132f082d",
+        "TicketId": "9e794f85-204a-4609-8ec3-bef95ae794d4",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4379365+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6332328+02:00"
       },
       {
-        "TicketId": "69dac674-934d-405d-a36a-057b9b790b58",
+        "TicketId": "093aeb79-01fb-48c2-8918-2ddb93f20f1a",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4379483+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6332442+02:00"
       },
       {
-        "TicketId": "39f7a5c0-f69c-47b7-8f05-582f98dd2735",
+        "TicketId": "f51401ef-910d-49bd-ab80-5f9dc8e7a797",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4379599+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6332564+02:00"
       },
       {
-        "TicketId": "6f8ba5eb-f3dc-477f-92d4-e876c30d6077",
+        "TicketId": "60d8dd29-4bac-418b-9da6-67660277af5a",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4379722+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6332673+02:00"
       },
       {
-        "TicketId": "7325f053-f750-45f1-8af1-94d940275ee0",
+        "TicketId": "9a5981ee-7d53-497f-b7d2-9550f59e8366",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.437984+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6332793+02:00"
       },
       {
-        "TicketId": "495b67fd-1d1d-41e0-8b99-3528e15b4cc4",
+        "TicketId": "f560f250-2eaf-44f8-8aee-c352b9fc362e",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.437997+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6332924+02:00"
       },
       {
-        "TicketId": "683a3229-ec02-4d71-b502-0820310db5ef",
+        "TicketId": "d045dd5a-9677-4396-92be-d8bf267b74e3",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4380097+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.633305+02:00"
       },
       {
-        "TicketId": "4c0f7a63-8785-460e-8722-bafb42d25650",
+        "TicketId": "bc6a0347-2750-450f-92cf-9e0d47f02de8",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4380215+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6333169+02:00"
       },
       {
-        "TicketId": "068cacff-584b-4076-bbd5-5ab0f033b6fa",
+        "TicketId": "337c5005-00c3-4ff3-908e-433ea2bda785",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.438036+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6333321+02:00"
       },
       {
-        "TicketId": "1894a36c-e511-4128-8c7d-35163c962160",
+        "TicketId": "53ebffe3-5778-48f2-af05-e96d968dfca4",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4380487+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6333448+02:00"
       },
       {
-        "TicketId": "05d55331-251b-456d-a128-4a73c6734a2e",
+        "TicketId": "7c6f203a-20ab-48f0-bef7-0b1f175b50e3",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4380739+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6333704+02:00"
       },
       {
-        "TicketId": "2fdde882-96e0-4e89-b638-131e918773aa",
+        "TicketId": "d9fbcdab-e809-44fb-ad5d-ef06b6c46120",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4380906+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6333847+02:00"
       },
       {
-        "TicketId": "490ffeca-d2ab-47b8-840e-0a84f5414973",
+        "TicketId": "68c079e0-d336-4489-832f-d1a166a58ee1",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4381016+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6333961+02:00"
       },
       {
-        "TicketId": "ec3bc698-696a-41b2-8f15-b332248fceb8",
+        "TicketId": "92a4bc05-f770-44f6-ae83-715aaad1e5b9",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4381128+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.633407+02:00"
       },
       {
-        "TicketId": "f4332068-ede9-42d9-ab98-76e83acfe6c9",
+        "TicketId": "1c64c3c9-fafc-4e11-b3db-4c209f586258",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4381245+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6334188+02:00"
       },
       {
-        "TicketId": "96a492e7-2481-4828-8e8d-5272d43ce107",
+        "TicketId": "9d6985f9-e242-41f3-8f75-fe8d33f1589c",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4381363+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.63343+02:00"
       },
       {
-        "TicketId": "86251a4b-684e-45e2-bad0-66db195f0367",
+        "TicketId": "ef0d91db-b738-4b41-926e-6aebfaf21c42",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4381476+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6334412+02:00"
       },
       {
-        "TicketId": "5aba166b-b15f-4d9e-8bc3-51efe0143f4e",
+        "TicketId": "78c7f11f-5649-4c23-9373-926a35ee73d9",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4381584+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6334524+02:00"
       },
       {
-        "TicketId": "1c1c8106-c860-469a-b57d-da2dfa41b662",
+        "TicketId": "7a29d10b-4794-471e-b0a6-d93fc7609030",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4381695+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6334636+02:00"
       },
       {
-        "TicketId": "c82f533d-c0d8-4b06-bce0-85780635a2fb",
+        "TicketId": "3a68134f-5ea5-4019-8557-efbe1918d1fd",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4381811+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.633474+02:00"
       },
       {
-        "TicketId": "87152c25-f79e-4664-b82e-aa2277a80962",
+        "TicketId": "5c825e56-fab0-4610-b99f-f9134a0874b2",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4381924+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6334855+02:00"
       },
       {
-        "TicketId": "c8cbabab-ea3b-4672-9ea2-faee85ab70f7",
+        "TicketId": "fe8fd61d-398a-48dc-a564-ee6236a9f0d7",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4382079+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6335274+02:00"
       },
       {
-        "TicketId": "4351d36b-3ea3-4cf9-9d40-17ad706c2261",
+        "TicketId": "8c0e0737-5f49-49e1-92eb-e9959edccd76",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.43822+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.63354+02:00"
       },
       {
-        "TicketId": "e73b8514-20b2-4b2c-8e3d-da7ca4de01c2",
+        "TicketId": "a03bd9cf-8c32-4d3f-83fe-a9ebe61f1204",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4382316+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6335517+02:00"
       },
       {
-        "TicketId": "c8d65988-b5e5-477f-901f-22cd62ee9834",
+        "TicketId": "cd5d13b0-4028-418a-9059-1594611bc483",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4382428+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6335627+02:00"
       },
       {
-        "TicketId": "c14f4760-ea5e-4c4a-a94b-192a718ab9b8",
+        "TicketId": "b100d8be-3952-414d-bf5b-22306f7ffce4",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4382543+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6335744+02:00"
       },
       {
-        "TicketId": "376b267c-68ca-4cfe-8259-8d688f630f5c",
+        "TicketId": "1f486445-6c80-430c-bd32-2df97e1c7fac",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4382662+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6335856+02:00"
       },
       {
-        "TicketId": "badbe966-2956-40ab-a597-2fd620ec9bc5",
+        "TicketId": "bc80f1cc-f2f2-45e4-8c96-d431b503d129",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4382773+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6335971+02:00"
       },
       {
-        "TicketId": "0a84231a-5ffb-4728-a570-4725d69577f7",
+        "TicketId": "f0cbc72e-f227-400c-99f3-208a049deeda",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4382885+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6336083+02:00"
       },
       {
-        "TicketId": "7e6c977f-aeeb-46ea-9188-abde3cbad696",
+        "TicketId": "1ace79ef-4540-47de-9067-fef33e996ee6",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4382991+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6336199+02:00"
       },
       {
-        "TicketId": "ab323e38-96e9-4533-9d3e-ba44e66f2e47",
+        "TicketId": "bdd4fd85-a988-4257-b238-bbe545712497",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4383104+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.633631+02:00"
       },
       {
-        "TicketId": "08bf1fcc-bd46-453d-97ac-1a6b1e32d06e",
+        "TicketId": "a757dd9c-52df-46df-9496-dd94a6e29da0",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4383215+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6336418+02:00"
       },
       {
-        "TicketId": "8e453bb7-a07e-4220-ba54-dcb6a7003cd6",
+        "TicketId": "77985a9d-03e0-4b47-be8c-4f6c7ca2c77e",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4383542+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6336521+02:00"
       },
       {
-        "TicketId": "92556c9e-0207-48c4-9bed-c7564adc2c72",
+        "TicketId": "62c13dd0-1938-4a9f-b676-8b364fd27c0f",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4383665+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6336631+02:00"
       },
       {
-        "TicketId": "df1e29f7-1f82-4161-823c-f878a644f841",
+        "TicketId": "3c384b2b-e9c3-4ffc-ad36-60b7dbce67d2",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4383776+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6336745+02:00"
       },
       {
-        "TicketId": "37458a0f-6e6e-4b14-a403-430f53ee01ca",
+        "TicketId": "74565a10-6dfc-4fc7-a7b7-45d0620233d6",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4383892+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6336853+02:00"
       },
       {
-        "TicketId": "ff19c4cd-5b82-4a31-99ee-8807a6d21600",
+        "TicketId": "0fe4cf3f-e3ff-4b7d-8774-41e0c018d833",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4384003+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6336963+02:00"
       },
       {
-        "TicketId": "f7136f8e-a5af-444b-9d80-b35b4f98ee26",
+        "TicketId": "5ede41c2-0159-4e87-89ab-ac3a0257a1db",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4384115+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6337078+02:00"
       },
       {
-        "TicketId": "bad1474c-18f4-4f9f-9c97-3fd60cafc045",
+        "TicketId": "2c959b46-1593-44db-a1cc-7fb0efe1ff94",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4384224+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6337188+02:00"
       },
       {
-        "TicketId": "a380e4b6-ef27-4761-9d43-98c8d291bc56",
+        "TicketId": "b383376b-315e-43f2-b0aa-37f02ce757e9",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4384332+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6337302+02:00"
       },
       {
-        "TicketId": "fada1bef-2244-4d0e-b9eb-f000a85f1bba",
+        "TicketId": "81ac93cc-8ec0-4ff7-8e67-3ff3e8397b35",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4384447+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6337415+02:00"
       },
       {
-        "TicketId": "92e79242-9256-4f21-ace5-7b5b2fad4507",
+        "TicketId": "20e80053-ff68-4e5a-af6f-a23fd8a056ef",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4384563+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6337529+02:00"
       },
       {
-        "TicketId": "d72fd673-cfed-47c4-a124-3fad9b6b603b",
+        "TicketId": "a593077f-c5f0-4fb9-a40a-027844f2af8f",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4384677+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6337639+02:00"
       },
       {
-        "TicketId": "ec27d4d6-7868-4e41-8dbf-e6513f5a97da",
+        "TicketId": "336030c4-adcd-481a-aa3e-7f5299fb1ac8",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4384794+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.633775+02:00"
       },
       {
-        "TicketId": "b4aef01e-6df8-40bb-ad88-064f8620a6dc",
+        "TicketId": "8eb382b3-8f05-480c-89c4-8021224b85f6",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4384902+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6337859+02:00"
       },
       {
-        "TicketId": "065296e3-5226-479d-85c6-6befb05631fe",
+        "TicketId": "b159198b-aa03-44fc-a86f-84c2b7e091bf",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4385052+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6338006+02:00"
       },
       {
-        "TicketId": "5b391e12-545d-41aa-9edc-9392ababa646",
+        "TicketId": "dd3c6a1d-cf33-47e7-ba4c-9d2a5a882740",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4385176+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6338124+02:00"
       },
       {
-        "TicketId": "58bef77f-35a3-4401-bee6-39ef35286a6e",
+        "TicketId": "e1925786-c8f6-4330-9751-90109dbd997d",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4385287+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6338245+02:00"
       },
       {
-        "TicketId": "6f249757-b947-4516-aaf2-1dcb2a821e3f",
+        "TicketId": "25a6a1ce-b2db-4711-8542-4f27157df29e",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4385397+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6338362+02:00"
       },
       {
-        "TicketId": "341b73a7-7421-4abd-b8c9-3a4250d990bd",
+        "TicketId": "d03653a0-a90b-438e-a17a-e219d9b19403",
         "EventName": "Party",
         "CategoryName": "Standard",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4385509+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6338475+02:00"
       },
       {
-        "TicketId": "d8fc9181-4ab2-4230-a489-a5a650fe8578",
+        "TicketId": "093281cd-cca4-4207-b772-de7421054944",
         "EventName": "Party",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.438562+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6338588+02:00"
       },
       {
-        "TicketId": "7e984a52-2a16-45e9-ab28-6fd3cd48accf",
+        "TicketId": "1f18db99-81a7-4b82-a83e-b51a20e3d236",
         "EventName": "Party",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4385737+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6338703+02:00"
       },
       {
-        "TicketId": "dc2b2695-2aed-4265-a68f-b98b458187df",
+        "TicketId": "dfcb5b79-fe39-45b2-9420-1d7e61d339cf",
         "EventName": "Party",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4385844+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6338816+02:00"
       },
       {
-        "TicketId": "e69cf724-b508-42e1-ba9a-9a8d71dcfe2b",
+        "TicketId": "dbeff519-4149-49d6-98f8-d01fb057537b",
         "EventName": "Party",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4385954+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6338931+02:00"
       },
       {
-        "TicketId": "ac1c742a-4f90-4a89-a371-8a45b0592998",
+        "TicketId": "ba71eb39-33c6-4e6c-a00b-3110ba1281f3",
         "EventName": "Party",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.438606+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6339046+02:00"
       },
       {
-        "TicketId": "a087c307-b179-42fc-b148-58119c874436",
+        "TicketId": "eef19b7a-da4c-4116-a04e-f35682ae2444",
         "EventName": "Party",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4386169+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6339161+02:00"
       },
       {
-        "TicketId": "3da218d0-1af1-4564-822f-4f84d210ca54",
+        "TicketId": "94d368c1-bfdb-4374-ba97-d92c3850d3b6",
         "EventName": "Party",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4386282+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6339275+02:00"
       },
       {
-        "TicketId": "2bb7498c-3c99-4a68-b5cc-f616cb0266c6",
+        "TicketId": "aba80d76-eadc-4046-bef6-5ea508c28ef3",
         "EventName": "Party",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4386547+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6339386+02:00"
       },
       {
-        "TicketId": "eff48230-da18-4f16-bb93-7d6f8a3342f5",
+        "TicketId": "8072d260-b17c-42a2-ba13-8f8be98ad0d3",
         "EventName": "Party",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4386662+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6339499+02:00"
       },
       {
-        "TicketId": "d2fbdbe1-40b9-4dc5-b2ba-1b82087d14da",
+        "TicketId": "2afe40a7-0e3e-42f9-ab79-a1e5b0f3f9d0",
         "EventName": "Party",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4386779+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6339611+02:00"
       },
       {
-        "TicketId": "f215cde6-f439-4037-acf0-9fa62096a931",
+        "TicketId": "f2415ce4-ce53-46bc-a97f-1c8cac3f6b75",
         "EventName": "Party",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4386892+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6339722+02:00"
       },
       {
-        "TicketId": "1ecf76fe-a676-4887-ab31-651fc0dab941",
+        "TicketId": "c56ab117-88ee-4fed-9bb7-8cbbf9cec356",
         "EventName": "Party",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4387007+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6339836+02:00"
       },
       {
-        "TicketId": "e0c6edd3-7fcb-481e-bd17-08e328798855",
+        "TicketId": "632c3083-3752-4c7c-bd36-686125c10ce6",
         "EventName": "Party",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4387122+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6339947+02:00"
       },
       {
-        "TicketId": "4e3de048-2143-4df6-80e3-61c7713f470c",
+        "TicketId": "1ada1360-ab4c-4b6e-948e-d2add1201140",
         "EventName": "Party",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4387236+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6340063+02:00"
       },
       {
-        "TicketId": "1f0bf1e3-9f34-4de2-8801-8fa1de74f122",
+        "TicketId": "e1a49630-960c-4498-82b1-9005b5912d4f",
         "EventName": "Party",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4387355+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6340174+02:00"
       },
       {
-        "TicketId": "8ec3df4f-25cd-4636-966d-a03dc6f843b4",
+        "TicketId": "183ca48a-df59-4228-9189-b4cbd8a819d5",
         "EventName": "Party",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4387469+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6340285+02:00"
       },
       {
-        "TicketId": "bff9a4af-6d83-435a-9915-c15a49bd413e",
+        "TicketId": "29e51ff3-4f78-4c43-af18-a6023b4e2da2",
         "EventName": "Party",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4387852+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.634042+02:00"
       },
       {
-        "TicketId": "d960d9cf-9d52-48b7-8b17-497018ff90f3",
+        "TicketId": "3718cb67-6830-463e-8d78-db4980279ddf",
         "EventName": "Party",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4387973+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6340539+02:00"
       },
       {
-        "TicketId": "c15c9ad6-1c8b-4d72-8a5b-1431e563b94a",
+        "TicketId": "37fe8d3d-9d70-4c34-a810-6c59e8e75152",
         "EventName": "Party",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4388093+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6340656+02:00"
       },
       {
-        "TicketId": "1d1f7696-cfff-446f-9145-3ce44703a9a2",
+        "TicketId": "ee640008-0d8c-445b-b5b5-4f7e17d77031",
         "EventName": "Party",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4388201+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6340775+02:00"
       },
       {
-        "TicketId": "7087e3db-fa72-42a9-96d8-27c91a3c719e",
+        "TicketId": "df371ea5-3a27-4979-8c6a-45c40cb32579",
         "EventName": "Party",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4388316+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6340887+02:00"
       },
       {
-        "TicketId": "7239dd94-7806-4eca-a644-5deed963046d",
+        "TicketId": "740c4b27-2014-44ec-9a15-1c9082d49f39",
         "EventName": "Party",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4388428+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6340995+02:00"
       },
       {
-        "TicketId": "441a5d3f-ae4c-464f-aa05-ce4cdbac285b",
+        "TicketId": "dc03b900-c1fa-4074-869f-3e19f093216f",
         "EventName": "Party",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4388541+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6341107+02:00"
       },
       {
-        "TicketId": "b7f723c2-1eba-493d-bb96-f4541a2a5b7e",
+        "TicketId": "c5b04d55-fe2f-4960-b2b1-1ba8115f89a3",
         "EventName": "Party",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4388646+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.634122+02:00"
       },
       {
-        "TicketId": "ae9026c4-5319-4517-8b41-11224d1d0285",
+        "TicketId": "4d2e31c4-0bd7-45ad-9afb-e13656fa5038",
         "EventName": "Party",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4388759+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6341332+02:00"
       },
       {
-        "TicketId": "8c9cc0ac-ff38-49be-966f-3c0da9858e97",
+        "TicketId": "8b67979a-c637-4305-b43a-df4f6f15eaad",
         "EventName": "Party",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.438887+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.634144+02:00"
       },
       {
-        "TicketId": "5e642f14-5f1a-4449-a8bf-03feaf2e4fc6",
+        "TicketId": "1812df9b-7b85-40b2-814b-dd148f490461",
         "EventName": "Party",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4388983+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6341551+02:00"
       },
       {
-        "TicketId": "d2b13839-2b41-47c7-a444-5e43c4528ea0",
+        "TicketId": "ffd9ef98-dfa5-4044-a43f-f962e6518dae",
         "EventName": "Party",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4389091+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6341664+02:00"
       },
       {
-        "TicketId": "ec5dc705-82d2-4d74-88ec-264f31cc7fa9",
+        "TicketId": "2155eeb0-e6a3-4e36-ae8b-c6384574fa18",
         "EventName": "Party",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.43892+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6341993+02:00"
       },
       {
-        "TicketId": "a3b34b48-8ae9-4c53-868c-badfa8a3ebaa",
+        "TicketId": "31613f49-0c2b-4099-9798-7eb4eb4ed4db",
         "EventName": "Party",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4389311+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6342109+02:00"
       },
       {
-        "TicketId": "92ef9321-88e5-4ba4-9efd-aabb89028788",
+        "TicketId": "e98b7998-0b3f-49a5-9395-aced8cff429b",
         "EventName": "Party",
         "CategoryName": "Early Bird",
         "PricePaid": 50,
-        "PurchaseDate": "2026-01-09T00:32:16.4389418+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6342281+02:00"
       },
       {
-        "TicketId": "3217cdb6-2e4a-40f7-86ac-c3a3b3cbdb7c",
+        "TicketId": "4764afde-53fc-47e4-8d83-55f19b2e590a",
         "EventName": "Party",
         "CategoryName": "Early Bird",
         "PricePaid": 50,
-        "PurchaseDate": "2026-01-09T00:32:16.4389526+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6342395+02:00"
       },
       {
-        "TicketId": "4b6a452b-024a-4a00-8d09-7b717fbd7c1a",
+        "TicketId": "c0d869b5-b707-468b-b389-de175009f6ec",
         "EventName": "Party",
         "CategoryName": "Early Bird",
         "PricePaid": 50,
-        "PurchaseDate": "2026-01-09T00:32:16.4389633+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6342506+02:00"
       },
       {
-        "TicketId": "892992e3-0a48-4da0-b319-be17555605c8",
+        "TicketId": "4c67c8c2-f887-46a4-afbf-90980acc384d",
         "EventName": "Party",
         "CategoryName": "Early Bird",
         "PricePaid": 50,
-        "PurchaseDate": "2026-01-09T00:32:16.4389745+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6342614+02:00"
       },
       {
-        "TicketId": "4d10f525-95e6-43c5-a356-839da706af69",
+        "TicketId": "d991a923-e905-498f-bebd-4b12ed878e35",
         "EventName": "Party",
         "CategoryName": "Early Bird",
         "PricePaid": 50,
-        "PurchaseDate": "2026-01-09T00:32:16.4389853+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.634273+02:00"
       },
       {
-        "TicketId": "b7b32a3a-b898-4043-9f70-72f3edbe7d0a",
+        "TicketId": "e73f2806-d1f8-46e0-8423-36fc20b865a4",
         "EventName": "Party",
         "CategoryName": "Early Bird",
         "PricePaid": 50,
-        "PurchaseDate": "2026-01-09T00:32:16.4389962+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6342843+02:00"
       },
       {
-        "TicketId": "84ad9350-8d93-44f0-b1b9-149f15f9b73b",
+        "TicketId": "00141a4d-0d58-47ad-a06f-1e583428dd96",
         "EventName": "Party",
         "CategoryName": "Early Bird",
         "PricePaid": 50,
-        "PurchaseDate": "2026-01-09T00:32:16.4390069+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6342955+02:00"
       },
       {
-        "TicketId": "f4cf574d-c1cc-4cbb-b7f3-f329265cbfec",
+        "TicketId": "4cdf9cca-05c7-44d9-8fc2-5e9147945607",
         "EventName": "Party",
         "CategoryName": "Early Bird",
         "PricePaid": 50,
-        "PurchaseDate": "2026-01-09T00:32:16.4390183+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6343066+02:00"
       },
       {
-        "TicketId": "9e71bd30-5ae3-426c-a434-5e6625f9e7ae",
+        "TicketId": "ab355c60-15ce-4d8f-8a07-847b68c45669",
         "EventName": "Party",
         "CategoryName": "Early Bird",
         "PricePaid": 50,
-        "PurchaseDate": "2026-01-09T00:32:16.4390293+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.634318+02:00"
       },
       {
-        "TicketId": "fa87c3c1-5070-4486-b4ed-bcda4ce320ea",
+        "TicketId": "3bd846d7-673f-4450-b976-2ad0486add9c",
         "EventName": "Party",
         "CategoryName": "Early Bird",
         "PricePaid": 50,
-        "PurchaseDate": "2026-01-09T00:32:16.4390407+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6343293+02:00"
       },
       {
-        "TicketId": "1407f0f8-925f-4308-9506-c4653780750f",
+        "TicketId": "252ec97c-c354-4421-81e4-717a255b25c0",
         "EventName": "sdfg",
         "CategoryName": "Standard",
         "PricePaid": 10,
-        "PurchaseDate": "2026-01-09T00:32:16.4390519+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6343402+02:00"
       },
       {
-        "TicketId": "3831cbaa-1c03-4656-a72a-0d1e17574516",
+        "TicketId": "1a17d58c-4127-4f77-8240-a4f76ed69447",
         "EventName": "sdfg",
         "CategoryName": "Standard",
         "PricePaid": 10,
-        "PurchaseDate": "2026-01-09T00:32:16.4390627+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.634352+02:00"
       },
       {
-        "TicketId": "1588ace5-72cb-4629-b30b-78c69f34d35b",
+        "TicketId": "ececd9e1-9315-4bfb-9784-815adaeb83b7",
         "EventName": "sdfg",
         "CategoryName": "Standard",
         "PricePaid": 10,
-        "PurchaseDate": "2026-01-09T00:32:16.4390736+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6343632+02:00"
       },
       {
-        "TicketId": "d57a9285-4805-4160-a498-1356bfe43b85",
+        "TicketId": "f0de3623-7e15-4ded-9836-669f73d4353d",
         "EventName": "sdfg",
         "CategoryName": "Standard",
         "PricePaid": 10,
-        "PurchaseDate": "2026-01-09T00:32:16.4390847+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6343752+02:00"
       },
       {
-        "TicketId": "eaa82247-1df0-4cb3-b8e1-167c3a94f1bd",
+        "TicketId": "4d4a0893-58e5-41aa-9702-cbe433997fe0",
         "EventName": "sdfg",
         "CategoryName": "Standard",
         "PricePaid": 10,
-        "PurchaseDate": "2026-01-09T00:32:16.439096+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6343866+02:00"
       },
       {
-        "TicketId": "15d344cd-ea88-4bda-8abd-758cf6c277a9",
+        "TicketId": "dadbe994-9277-49c9-9a1f-3628fbb1e6e3",
         "EventName": "sdfg",
         "CategoryName": "Standard",
         "PricePaid": 10,
-        "PurchaseDate": "2026-01-09T00:32:16.4391071+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6343979+02:00"
       },
       {
-        "TicketId": "3dbebbfb-f85f-4c25-a78e-a5d67cba85cd",
+        "TicketId": "af1e720c-c5a9-4d25-a7de-fb25b19fed7d",
         "EventName": "sdfg",
         "CategoryName": "Standard",
         "PricePaid": 10,
-        "PurchaseDate": "2026-01-09T00:32:16.4391179+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6344093+02:00"
       },
       {
-        "TicketId": "d6291774-50ee-4380-b628-988f0527d662",
+        "TicketId": "5e0a88f2-3c26-4b04-a22d-2b6dfec5aa4b",
         "EventName": "sdfg",
         "CategoryName": "Standard",
         "PricePaid": 10,
-        "PurchaseDate": "2026-01-09T00:32:16.4391286+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6344204+02:00"
       },
       {
-        "TicketId": "e522e3ec-870e-42a7-991c-efbc5e8fb57e",
+        "TicketId": "b1bfa941-4e08-4023-aefc-b18f8ef53a12",
         "EventName": "sdfg",
         "CategoryName": "Standard",
         "PricePaid": 10,
-        "PurchaseDate": "2026-01-09T00:32:16.4391393+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6344312+02:00"
       },
       {
-        "TicketId": "4fc9159c-1ef5-4b2e-bade-7e885ccd6ebc",
+        "TicketId": "be4949f1-8c23-45ca-86cf-7c737d4191cd",
         "EventName": "sdfg",
         "CategoryName": "Standard",
         "PricePaid": 10,
-        "PurchaseDate": "2026-01-09T00:32:16.4391507+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6344428+02:00"
       },
       {
-        "TicketId": "76a2278e-0bd0-40bc-80d5-10c04ae71148",
+        "TicketId": "d300d0dc-997f-4fb3-bcf0-73ef7f07ca59",
         "EventName": "sdfgfg",
         "CategoryName": "Standard",
         "PricePaid": 12,
-        "PurchaseDate": "2026-01-09T00:32:16.4391675+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.634454+02:00"
       },
       {
-        "TicketId": "11a2c432-10ff-4318-868b-44c8702ca5a4",
+        "TicketId": "3a44cd20-d8cb-4f87-8b4d-b25253828a6d",
         "EventName": "sdfgfg",
         "CategoryName": "Standard",
         "PricePaid": 12,
-        "PurchaseDate": "2026-01-09T00:32:16.4391792+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6344649+02:00"
       },
       {
-        "TicketId": "7afff3b4-aec4-44e6-a98f-fa12c9febec5",
+        "TicketId": "c976ac3b-4f02-46cf-b73f-27de5c51087e",
         "EventName": "sdfgfg",
         "CategoryName": "Standard",
         "PricePaid": 12,
-        "PurchaseDate": "2026-01-09T00:32:16.4391904+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6344759+02:00"
       },
       {
-        "TicketId": "5693cf18-4cca-45d9-8b7f-ae54cbabd478",
+        "TicketId": "edeac089-22c3-4b49-ba31-d88ca2fcedaa",
         "EventName": "sdfgfg",
         "CategoryName": "Standard",
         "PricePaid": 12,
-        "PurchaseDate": "2026-01-09T00:32:16.439202+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6344872+02:00"
       },
       {
-        "TicketId": "89f64893-b3bc-40c4-a07c-53e1e1129bf6",
+        "TicketId": "51f254ff-6cc7-407b-b2db-0b89e09c01c3",
         "EventName": "sdfgfg",
         "CategoryName": "Standard",
         "PricePaid": 12,
-        "PurchaseDate": "2026-01-09T00:32:16.4392126+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6345049+02:00"
       },
       {
-        "TicketId": "b71fdf50-de06-45bc-a618-fbf1913567aa",
+        "TicketId": "62a35ea2-3059-4f5f-b5fd-5253c06992f9",
         "EventName": "test",
         "CategoryName": "Standard",
         "PricePaid": 10,
-        "PurchaseDate": "2026-01-09T00:32:16.4392242+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6345159+02:00"
       },
       {
-        "TicketId": "5f230f9b-3132-4372-9308-868dfedf2faf",
+        "TicketId": "8e76743a-a143-4cd6-84c2-8a8119373fc4",
         "EventName": "test",
         "CategoryName": "Standard",
         "PricePaid": 10,
-        "PurchaseDate": "2026-01-09T00:32:16.4392355+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6345276+02:00"
       },
       {
-        "TicketId": "c55500e1-e3f3-4c3f-aeb3-9a418e3f634f",
+        "TicketId": "7522f427-2b4d-4a5c-919d-049d04479feb",
         "EventName": "test",
         "CategoryName": "Standard",
         "PricePaid": 10,
-        "PurchaseDate": "2026-01-09T00:32:16.4392471+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6345388+02:00"
       },
       {
-        "TicketId": "8f75b75c-1eb8-47cc-a5c4-6f51ec9ff585",
+        "TicketId": "7e52a6f8-ffb5-407b-a1a7-ee950e98d3ba",
         "EventName": "test",
         "CategoryName": "Standard",
         "PricePaid": 10,
-        "PurchaseDate": "2026-01-09T00:32:16.4392581+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6345501+02:00"
       },
       {
-        "TicketId": "a8c4ab9e-e567-4602-ad24-aa0cf5ba64c6",
+        "TicketId": "5b75d5b4-cc73-4ed0-9ec3-3966f61c0dc3",
         "EventName": "test",
         "CategoryName": "Standard",
         "PricePaid": 10,
-        "PurchaseDate": "2026-01-09T00:32:16.4392694+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6345613+02:00"
       },
       {
-        "TicketId": "c407fef8-e6d3-47bd-aaf5-97a142354e36",
+        "TicketId": "a000f5cb-0913-49e6-b18c-047e905c16e5",
         "EventName": "BookClub",
         "CategoryName": "Standard",
         "PricePaid": 25,
-        "PurchaseDate": "2026-01-09T00:32:16.4392811+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6345724+02:00"
       },
       {
-        "TicketId": "e002f9ac-7db2-49cf-a28b-f2c9b5978526",
+        "TicketId": "d82e8e53-6168-40c2-a898-821dd69bde21",
         "EventName": "BookClub",
         "CategoryName": "Standard",
         "PricePaid": 25,
-        "PurchaseDate": "2026-01-09T00:32:16.4392921+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6345837+02:00"
       },
       {
-        "TicketId": "26990759-362c-4155-8faa-373f24f2c32f",
+        "TicketId": "5cc1e42c-7fc0-42c9-827d-200dae89c42a",
         "EventName": "BookClub",
         "CategoryName": "Standard",
         "PricePaid": 25,
-        "PurchaseDate": "2026-01-09T00:32:16.4393036+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6345947+02:00"
       },
       {
-        "TicketId": "9107d0e5-04f8-4e55-a288-3e5a1217f49e",
+        "TicketId": "fcb6eef9-db61-4c41-b56e-ea0366c81f78",
         "EventName": "BookClub",
         "CategoryName": "Standard",
         "PricePaid": 25,
-        "PurchaseDate": "2026-01-09T00:32:16.4393149+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6346058+02:00"
       }
     ],
     "Username": "larisaclient",
@@ -954,32 +954,46 @@
     "$type": "Client",
     "Tichetemele": [
       {
-        "TicketId": "88a22b7c-4a39-42a1-aa28-b26777c06e10",
+        "TicketId": "89313ae1-5b57-4329-9993-9f7fe582c2e4",
         "EventName": "Rock la Mures",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.4393701+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6346478+02:00"
       },
       {
-        "TicketId": "9af9f2d4-6827-4bbc-b8e6-4871f8791640",
+        "TicketId": "0ffbffaa-b4f3-4ea5-8095-085a7b906cfa",
         "EventName": "Rock la Mures",
         "CategoryName": "Standard",
         "PricePaid": 20,
-        "PurchaseDate": "2026-01-09T00:32:16.4393868+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6346592+02:00"
       },
       {
-        "TicketId": "6412ad5c-6d6d-4f87-85d6-8925ddd67432",
+        "TicketId": "a3ab7a5b-2fec-4020-83b5-3fe8a5c390ab",
         "EventName": "Pop",
         "CategoryName": "VIP",
         "PricePaid": 100,
-        "PurchaseDate": "2026-01-09T00:32:16.439399+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6346705+02:00"
       },
       {
-        "TicketId": "fcc52170-0587-47d8-b61e-76b0ee701616",
+        "TicketId": "3e181f4b-d858-4e6d-be72-29ad9aa596c6",
         "EventName": "Pop",
         "CategoryName": "Standard",
         "PricePaid": 20,
-        "PurchaseDate": "2026-01-09T00:32:16.4394104+02:00"
+        "PurchaseDate": "2026-01-09T16:35:50.6346813+02:00"
+      },
+      {
+        "TicketId": "5eea6b13-8040-401d-90d6-15d1fdca6be0",
+        "EventName": "Pop",
+        "CategoryName": "VIP",
+        "PricePaid": 100,
+        "PurchaseDate": "2026-01-09T16:35:50.6346922+02:00"
+      },
+      {
+        "TicketId": "78d681f3-db45-438e-aeb1-a6b98a361b76",
+        "EventName": "Pop",
+        "CategoryName": "Standard",
+        "PricePaid": 20,
+        "PurchaseDate": "2026-01-09T16:35:50.6347079+02:00"
       }
     ],
     "Username": "DenisaC",
@@ -1004,5 +1018,25 @@
     "Username": "DenisaO2",
     "Password": "cccc7e92bbce7dd167a45ffb09b652a1d39ec4a5529ed21425df4a859e14e586",
     "Role": "Organizer"
+  },
+  {
+    "$type": "Client",
+    "Tichetemele": [],
+    "Username": "David",
+    "Password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+    "Role": "Client"
+  },
+  {
+    "$type": "Organizer",
+    "Username": "David0",
+    "Password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+    "Role": "Organizer"
+  },
+  {
+    "$type": "Client",
+    "Tichetemele": [],
+    "Username": "DenisaC3",
+    "Password": "cccc7e92bbce7dd167a45ffb09b652a1d39ec4a5529ed21425df4a859e14e586",
+    "Role": "Client"
   }
 ]
