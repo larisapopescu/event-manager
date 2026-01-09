@@ -1,9 +1,10 @@
-﻿using System.Text.Json;
+﻿using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using System.Linq;
 using System.Runtime.InteropServices.JavaScript;
 using System.Security.Cryptography;
 using System.Windows.Forms;
-using Microsoft.Extensions.Logging;
 
 namespace mainfile;
 
@@ -14,10 +15,13 @@ internal static class Program
     [STAThread] // pentru interfata
     static void Main(string[] args)
     {
+        
         // ApplicationConfiguration.Initialize();
         // Application.Run(new LoginForm()); // pentru interfata
-
+        
         ApplicationConfiguration.Initialize();
+        
+        //initializm Ilogger si ii punem optiunile
         
         LoggerFactory = Microsoft.Extensions.Logging.LoggerFactory.Create(builder =>
         {

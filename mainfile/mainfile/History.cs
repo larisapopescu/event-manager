@@ -2,9 +2,8 @@
 using Microsoft.Extensions.Logging;
 public partial class History : Form
 {
-    private readonly ILogger<History> logger;
     private readonly User user;
-
+    private readonly ILogger<History> logger;
     public History(User user)
     {
         InitializeComponent();
@@ -22,6 +21,7 @@ public partial class History : Form
         if (user is not Client client)
         {
             logger.LogWarning("History opened by non-client");
+
             listBox1.Items.Add("Only clients have purchase history.");
             return;
         }

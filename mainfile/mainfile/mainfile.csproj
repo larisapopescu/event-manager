@@ -13,6 +13,8 @@
 
     <ItemGroup>
       <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.7" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.1" />
+      <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.1" />
       <PackageReference Include="Microsoft.Extensions.Logging" Version="10.0.1" />
       <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="10.0.1" />
       <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.1" />

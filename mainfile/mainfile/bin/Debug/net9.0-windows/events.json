@@ -162,14 +162,14 @@
         "CategoryName": "VIP",
         "Price": 100,
         "MaxQuantity": 20,
-        "SoldCount": 2,
+        "SoldCount": 1,
         "IsAvailable": true
       },
       {
         "CategoryName": "Standard",
         "Price": 20,
         "MaxQuantity": 80,
-        "SoldCount": 2,
+        "SoldCount": 4,
         "IsAvailable": true
       }
     ]
