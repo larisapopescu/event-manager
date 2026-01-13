@@ -162,14 +162,33 @@
         "CategoryName": "VIP",
         "Price": 100,
         "MaxQuantity": 20,
-        "SoldCount": 1,
+        "SoldCount": 0,
         "IsAvailable": true
       },
       {
         "CategoryName": "Standard",
         "Price": 20,
         "MaxQuantity": 80,
-        "SoldCount": 4,
+        "SoldCount": 3,
+        "IsAvailable": true
+      }
+    ]
+  },
+  {
+    "EventName": "Bere la pioana",
+    "EventDescription": "Bere",
+    "EventLocation": "Poiana",
+    "EventStatus": "Modified",
+    "EventDate": "2026-02-09T00:22:42.636",
+    "EventCapacity": 20,
+    "OrganizerUsername": "DenisaO",
+    "ImagePath": null,
+    "OptiuniTichete": [
+      {
+        "CategoryName": "Standard",
+        "Price": 20,
+        "MaxQuantity": 20,
+        "SoldCount": 1,
         "IsAvailable": true
       }
     ]

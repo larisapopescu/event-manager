@@ -10,11 +10,24 @@ namespace mainfile;
 
 internal static class Program
 {
+    // setam ilogger-ul pentru al putea folosi
     public static ILoggerFactory LoggerFactory { get; private set; }
     
     [STAThread] // pentru interfata
+    
     static void Main(string[] args)
     {
+        // Folosim .NET Core GenericHost
+        var host = Host.CreateDefaultBuilder()
+            .ConfigureServices(services =>
+            {
+                services.AddSingleton<EventService>(); // agregatul tău
+                services.AddSingleton<ConsoleUI>();
+            })
+            .Build();
+
+        var ui = host.Services.GetRequiredService<ConsoleUI>();
+        ui.Run();
         
         // ApplicationConfiguration.Initialize();
         // Application.Run(new LoginForm()); // pentru interfata
