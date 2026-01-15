@@ -63,7 +63,7 @@ partial class LoginForm
         // 
         // label1
         // 
-        label1.Font = new System.Drawing.Font("Goudy Stout", 25.800001F, ((System.Drawing.FontStyle)(System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)), System.Drawing.GraphicsUnit.Point, ((byte)0));
+        label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.800001F, ((System.Drawing.FontStyle)(System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)), System.Drawing.GraphicsUnit.Point, ((byte)0));
         label1.ForeColor = System.Drawing.Color.MidnightBlue;
         label1.Location = new System.Drawing.Point(12, 155);
         label1.Name = "label1";
@@ -73,7 +73,7 @@ partial class LoginForm
         // 
         // label2
         // 
-        label2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         label2.ForeColor = System.Drawing.Color.MidnightBlue;
         label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
         label2.Location = new System.Drawing.Point(8, 235);
@@ -101,7 +101,7 @@ partial class LoginForm
         // 
         // label3
         // 
-        label3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         label3.ForeColor = System.Drawing.Color.MidnightBlue;
         label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
         label3.Location = new System.Drawing.Point(12, 306);
@@ -130,7 +130,7 @@ partial class LoginForm
         // button1
         // 
         button1.BackColor = System.Drawing.Color.MidnightBlue;
-        button1.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         button1.ForeColor = System.Drawing.Color.White;
         button1.Location = new System.Drawing.Point(78, 381);
         button1.Name = "button1";
@@ -141,7 +141,7 @@ partial class LoginForm
         // 
         // label4
         // 
-        label4.Font = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         label4.ForeColor = System.Drawing.Color.MidnightBlue;
         label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
         label4.Location = new System.Drawing.Point(18, 460);
@@ -173,7 +173,7 @@ partial class LoginForm
         // pictureBox2
         // 
         pictureBox2.Image = ((System.Drawing.Image)resources.GetObject("pictureBox2.Image"));
-        pictureBox2.Location = new System.Drawing.Point(93, 238);
+        pictureBox2.Location = new System.Drawing.Point(121, 238);
         pictureBox2.Name = "pictureBox2";
         pictureBox2.Size = new System.Drawing.Size(35, 20);
         pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -183,7 +183,7 @@ partial class LoginForm
         // pictureBox3
         // 
         pictureBox3.Image = ((System.Drawing.Image)resources.GetObject("pictureBox3.Image"));
-        pictureBox3.Location = new System.Drawing.Point(93, 306);
+        pictureBox3.Location = new System.Drawing.Point(121, 306);
         pictureBox3.Name = "pictureBox3";
         pictureBox3.Size = new System.Drawing.Size(35, 20);
         pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

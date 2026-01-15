@@ -51,7 +51,7 @@ partial class RegisterForm
         // 
         // label1
         // 
-        label1.Font = new System.Drawing.Font("Goudy Stout", 18F, ((System.Drawing.FontStyle)(System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)), System.Drawing.GraphicsUnit.Point, ((byte)0));
+        label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)(System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)), System.Drawing.GraphicsUnit.Point, ((byte)0));
         label1.ForeColor = System.Drawing.Color.MidnightBlue;
         label1.Location = new System.Drawing.Point(3, 98);
         label1.Name = "label1";
@@ -62,11 +62,11 @@ partial class RegisterForm
         // 
         // label2
         // 
-        label2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         label2.ForeColor = System.Drawing.Color.MidnightBlue;
         label2.Location = new System.Drawing.Point(12, 183);
         label2.Name = "label2";
-        label2.Size = new System.Drawing.Size(171, 25);
+        label2.Size = new System.Drawing.Size(206, 25);
         label2.TabIndex = 1;
         label2.Text = "Choose an username";
         label2.UseWaitCursor = true;
@@ -82,11 +82,11 @@ partial class RegisterForm
         // 
         // label3
         // 
-        label3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         label3.ForeColor = System.Drawing.Color.MidnightBlue;
         label3.Location = new System.Drawing.Point(12, 271);
         label3.Name = "label3";
-        label3.Size = new System.Drawing.Size(171, 25);
+        label3.Size = new System.Drawing.Size(206, 25);
         label3.TabIndex = 3;
         label3.Text = "Choose a password\r\n\r\n";
         label3.UseWaitCursor = true;
@@ -123,7 +123,7 @@ partial class RegisterForm
         // button1
         // 
         button1.BackColor = System.Drawing.Color.MidnightBlue;
-        button1.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         button1.ForeColor = System.Drawing.Color.White;
         button1.Location = new System.Drawing.Point(73, 442);
         button1.Name = "button1";
@@ -136,7 +136,7 @@ partial class RegisterForm
         // pictureBox1
         // 
         pictureBox1.Image = ((System.Drawing.Image)resources.GetObject("pictureBox1.Image"));
-        pictureBox1.Location = new System.Drawing.Point(177, 189);
+        pictureBox1.Location = new System.Drawing.Point(216, 189);
         pictureBox1.Name = "pictureBox1";
         pictureBox1.Size = new System.Drawing.Size(29, 16);
         pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -147,7 +147,7 @@ partial class RegisterForm
         // pictureBox2
         // 
         pictureBox2.Image = ((System.Drawing.Image)resources.GetObject("pictureBox2.Image"));
-        pictureBox2.Location = new System.Drawing.Point(177, 277);
+        pictureBox2.Location = new System.Drawing.Point(216, 277);
         pictureBox2.Name = "pictureBox2";
         pictureBox2.Size = new System.Drawing.Size(29, 16);
         pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -157,7 +157,7 @@ partial class RegisterForm
         // 
         // radioButton1
         // 
-        radioButton1.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         radioButton1.ForeColor = System.Drawing.Color.MidnightBlue;
         radioButton1.Location = new System.Drawing.Point(13, 385);
         radioButton1.Name = "radioButton1";
@@ -166,10 +166,11 @@ partial class RegisterForm
         radioButton1.TabStop = true;
         radioButton1.Text = "Organizer";
         radioButton1.UseVisualStyleBackColor = true;
+        radioButton1.UseWaitCursor = true;
         // 
         // radioButton2
         // 
-        radioButton2.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         radioButton2.ForeColor = System.Drawing.Color.MidnightBlue;
         radioButton2.Location = new System.Drawing.Point(177, 385);
         radioButton2.Name = "radioButton2";
@@ -178,10 +179,11 @@ partial class RegisterForm
         radioButton2.TabStop = true;
         radioButton2.Text = "Client";
         radioButton2.UseVisualStyleBackColor = true;
+        radioButton2.UseWaitCursor = true;
         // 
         // label4
         // 
-        label4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         label4.ForeColor = System.Drawing.Color.MidnightBlue;
         label4.Location = new System.Drawing.Point(13, 348);
         label4.Name = "label4";

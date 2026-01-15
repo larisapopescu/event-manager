@@ -1910,11 +1910,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Denisa\\OneDrive\\Desktop\\poo4\\mainfile\\mainfile\\mainfile.csproj",
+      "projectUniqueName": "C:\\Users\\Denisa\\OneDrive\\Desktop\\poo5\\mainfile\\mainfile\\mainfile.csproj",
       "projectName": "mainfile",
-      "projectPath": "C:\\Users\\Denisa\\OneDrive\\Desktop\\poo4\\mainfile\\mainfile\\mainfile.csproj",
+      "projectPath": "C:\\Users\\Denisa\\OneDrive\\Desktop\\poo5\\mainfile\\mainfile\\mainfile.csproj",
       "packagesPath": "C:\\Users\\Denisa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Denisa\\OneDrive\\Desktop\\poo4\\mainfile\\mainfile\\obj\\",
+      "outputPath": "C:\\Users\\Denisa\\OneDrive\\Desktop\\poo5\\mainfile\\mainfile\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Denisa\\AppData\\Roaming\\NuGet\\NuGet.Config"

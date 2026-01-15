@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OxqjEfVQJP4=",
+  "dgSpecHash": "njDx+uDg97E=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Denisa\\OneDrive\\Desktop\\poo4\\mainfile\\mainfile\\mainfile.csproj",
+  "projectFilePath": "C:\\Users\\Denisa\\OneDrive\\Desktop\\poo5\\mainfile\\mainfile\\mainfile.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Denisa\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.7\\guna.ui2.winforms.2.0.4.7.nupkg.sha512",
     "C:\\Users\\Denisa\\.nuget\\packages\\microsoft.extensions.configuration\\10.0.1\\microsoft.extensions.configuration.10.0.1.nupkg.sha512",
