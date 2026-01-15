@@ -2,7 +2,9 @@
 using System.Xml.Schema;
 using System.Linq;
 namespace mainfile;
-public class Organizer : User
+
+// folosim cuvantul cheie record pentru a transforma clas in una imutabila
+public record Organizer : User
 {
     // Lista de evenimente create de acest organizator specific
     //public List<Event> CreatedEvents { get; set; } = new List<Event>();
@@ -10,7 +12,7 @@ public class Organizer : User
     [JsonConstructor]
     public Organizer(string Username, string Password) : base(Username, Password, "Organizer")
     {
-        Console.WriteLine("organizer json");
+        //Console.WriteLine("organizer json");
     }
     private List<Event> MyEvents(List<Event> evenimente)
     {
@@ -54,7 +56,7 @@ public class Organizer : User
         }
     }
 
-    // Sub-meniu pentru gestionarea evenimentelor (Creare, Modificare, Ștergere)
+    // Sub-meniu pentru gestionarea evenimentelor (Creare, Modificare, Stergere)
     private void ManageEvent(List<Event> evenimente)
     {
         bool exit = false;
@@ -278,7 +280,7 @@ public class Organizer : User
                     int.TryParse(Console.ReadLine(), out int Quantity);
                     try
                     {
-                        // Încercare adăugare bilet în eveniment
+                        // Incercare adăugare bilet în eveniment
                         ev.AddTicketType(CategoryName, Price, Quantity);
                         Console.WriteLine("Ticket type created!");
                     }

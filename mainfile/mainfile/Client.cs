@@ -4,7 +4,8 @@ namespace mainfile;
 using System.Text.Json.Serialization;
 using System.Linq;
 
-public class Client : User
+// mostenim o clasa record imutabila 
+public record Client : User
 {
     // Portofelul clientului: Lista de bilete cumpărate
     public List<Ticket> Tichetemele { get; private set; } = new List<Ticket>();
@@ -19,8 +20,7 @@ public class Client : User
     {
         Tichetemele.Add(ticket);
     }
-    // Meniul Clientului 
-    public override void DisplayMenu(List<Event> evenimente)
+    public override void DisplayMenu(List<Event> evenimente) // Meniul Clientului 
     {
         bool logout = false;
         while (!logout)
@@ -71,12 +71,10 @@ public class Client : User
                                     }
 
                                 }
-
                                 if (!verificare)
                                 {
                                     Console.WriteLine("Invalid event name");
                                 }
-
                                 break;
                             case "2":
                                 Console.WriteLine("Enter event's date");
@@ -106,8 +104,7 @@ public class Client : User
                                 bool verificare3 = false;
                                 foreach (var ev in evenimente)
                                 {
-                                    if (ev.EventLocation != null && ev.EventLocation.Contains(location ?? "",
-                                            StringComparison.OrdinalIgnoreCase))
+                                    if (ev.EventLocation != null && ev.EventLocation.Contains(location ?? "",StringComparison.OrdinalIgnoreCase))
                                     {
                                         Console.WriteLine(
                                             $"{ev.EventName} | {ev.EventDate:yyyy-MM-dd} | {ev.EventLocation} | {ev.EventStatus}");

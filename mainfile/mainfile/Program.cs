@@ -1,19 +1,62 @@
-﻿using System.Text.Json;
+﻿using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using System.Linq;
 using System.Runtime.InteropServices.JavaScript;
 using System.Security.Cryptography;
+using System.Windows.Forms;
 
 namespace mainfile;
 
-class Program
+internal static class Program
 {
+    // setam ilogger-ul pentru al putea folosi
+    public static ILoggerFactory LoggerFactory { get; private set; }
+    
+    [STAThread] // pentru interfata
+    
     static void Main(string[] args)
     {
-        // Calea către fișierul JSON unde stocăm toți utilizatorii
+        // Folosim .NET Core GenericHost
+        var host = Host.CreateDefaultBuilder()
+            .ConfigureServices(services =>
+            {
+                services.AddSingleton<EventService>(); // agregatul tău
+                services.AddSingleton<ConsoleUI>();
+            })
+            .Build();
+
+        var ui = host.Services.GetRequiredService<ConsoleUI>();
+        ui.Run();
+        
+        // ApplicationConfiguration.Initialize();
+        // Application.Run(new LoginForm()); // pentru interfata
+        
+        ApplicationConfiguration.Initialize();
+        
+        //initializm Ilogger si ii punem optiunile
+        
+        LoggerFactory = Microsoft.Extensions.Logging.LoggerFactory.Create(builder =>
+        {
+            builder
+                .AddConsole(options =>
+                {
+                    options.IncludeScopes = true;
+                    options.DisableColors = false;
+                })
+                .AddDebug()
+                .SetMinimumLevel(LogLevel.Debug);
+        });
+        
+        Application.Run(new LoginForm()); // pentru interfata
+        
+        
+        // aici e partea care se facea pana acum in terminal
+        /*// Calea către fișierul JSON unde stocăm toți utilizatorii
         string filePath = "test.json";
         string eventsPath = "events.json";
-        
-        // Configurări pentru JSON: 
+
+        // Configurări pentru JSON:
         // WriteIndented face fișierul ușor de citit de către oameni.
         // PropertyNameCaseInsensitive ajută la citirea datelor indiferent de litere mari/mici.
         var options = new JsonSerializerOptions()
@@ -21,7 +64,7 @@ class Program
             WriteIndented = true,
             PropertyNameCaseInsensitive=true
         };
-        
+
         // PAS 1: Încărcăm lista de utilizatori (Clienti și Organizatori) din fișier la pornirea aplicației
         List<User> utilizatori = AuthService.LoadUsers(filePath, options);
         List<Event> evenimente= EventsStore.LoadEvents(eventsPath, options);// lista evenimente
@@ -35,13 +78,13 @@ class Program
             {
                 // Încercare de autentificare
                 User sessionUser = AuthService.Login(utilizatori);
-                
+
                 if (sessionUser != null)
                 {
                     // Dacă login-ul reușește, afișăm meniul specific rolului (Client sau Organizator)
                     // Polimorfism: metoda DisplayMenu() corectă este apelată automat
                     sessionUser.DisplayMenu(evenimente);
-                    
+
                     // După ce utilizatorul face logout (iese din DisplayMenu), salvăm modificările
                     EventsStore.SaveEvents(evenimente, eventsPath, options);
                     AuthService.Save(utilizatori,filePath, options);
@@ -59,5 +102,6 @@ class Program
                 break;
             }
         }
+    }*/
     }
 }

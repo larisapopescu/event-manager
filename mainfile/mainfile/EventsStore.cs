@@ -8,7 +8,7 @@ public class EventsStore// aici incerc sa creez un fel de loc comun unde sa se p
     {
         if (File.Exists(filePath))
         {
-            string json= File.ReadAllText(filePath);
+            string json = File.ReadAllText(filePath);
             return JsonSerializer.Deserialize<List<Event>>(json, options) ?? new List<Event>();
         }
 
@@ -20,4 +20,4 @@ public class EventsStore// aici incerc sa creez un fel de loc comun unde sa se p
         string json = JsonSerializer.Serialize(events, options);
         File.WriteAllText(filePath, json);
     }
-} 
+}
